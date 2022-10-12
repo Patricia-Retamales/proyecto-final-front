@@ -34,7 +34,7 @@ function ComponetNavbar() {
               Link
             </Nav.Link>
           </Nav>
-          
+
           <Form className="d-flex">
             <Form.Control
               type="search"
@@ -46,11 +46,11 @@ function ComponetNavbar() {
           </Form>
         </Navbar.Collapse>
         <Link to="/login">
-				<button className="btn btn-primary">get into</button>
-				</Link>
-                <Link to="/login">
-				<button className="btn btn-primary">create</button>
-				</Link>
+          <button className="btn btn-primary">get into</button>
+        </Link>
+        <Link to="/registraion">
+          <button className="btn btn-primary">create</button>
+        </Link>
       </Container>
     </Navbar>
   );

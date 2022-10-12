@@ -44,7 +44,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"rut": registro.rut
 				});
 
-<<<<<<< Updated upstream
 				var requestOptions = {
 					method: 'POST',
 					headers: myHeaders,
@@ -191,17 +190,3 @@ const getState = ({ getStore, getActions, setStore }) => {
 };
 
 export default getState;
-=======
-        actions:{
- getproductos: () => {
-    fetch("https://3000-sneelyg-proyectofinalba-ri4zu5p0g46.ws-us70.gitpod.io/?vscodeBrowserReqId=1665536262792", {
-                    method: "GET",
-                    headers: { "Content-Type": "application/json" }
-                }).then(response => response.json())
-                    .then(data => setStore({ productos: data.results }))
-            },
- 
-        },
-    };
-}
->>>>>>> Stashed changes

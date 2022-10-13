@@ -4,6 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			productos: [],
 			marcas: [],
+			
 
 			// demo: [
 			// 	{

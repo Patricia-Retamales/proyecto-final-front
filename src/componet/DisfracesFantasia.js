@@ -6,47 +6,47 @@ import Table from 'react-bootstrap/Table';
 
 
 
-const Marcas = () => {
+const DisfracesFantasia = () => {
     return (
-        <div className='semillas' style={{background:'#ffffec'}}>
+        <div className='semillas' style={{ background: '#ffffec' }}>
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://i.blogs.es/13d967/1366_20001/1366_2000.jpg"
+                        src="https://arcoirisjugueteria.cl/wp-content/uploads/2020/12/AMAN-C00101-1.jpg"
                         alt="First slide"
                         height={500}
                     />
                     <Carousel.Caption>
-                        <h3>El jardin Mistico</h3>
-                        <p>Te ofrecemos variedades de Semillas</p>
+                        <h3>Disfraces Fantasía</h3>
+                        <p>Te ofrecemos variedades de productos </p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://www.eluniversal.com.mx/sites/default/files/2021/05/17/munara_ciclo_de_semillas_portada.jpg"
+                        src="https://static1.funidelia.com/img/fr_landing_block/funidelia6/landings/20210908_LANDING_3COLS_DISFRACES_HALLOWEEN.jpg"
                         alt="Second slide"
                         height={500}
                     />
 
                     <Carousel.Caption>
-                        <h3>El jardin Mistico</h3>
-                        <p>Te ofrecemos variedades de Semillas</p>
+                        <h3>Disfraces Fantasía</h3>
+                        <p>Te ofrecemos variedades de productos</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://thumbs.dreamstime.com/z/venta-de-semillas-envasadas-en-el-almacén-para-jardinero-minsk-belarus-junio-189021275.jpg"
+                        src="https://prensaeventos.cl/wp-content/uploads/2017/10/El-mejor-dato-de-Meiggs-para-comprar-disfraces-y-disfrutar-Halloween.jpg"
                         alt="Third slide"
                         height={500}
                     />
 
                     <Carousel.Caption>
-                        <h3>El jardin Mistico</h3>
+                        <h3>Disfraces Fantasía</h3>
                         <p>
-                        Te ofrecemos variedades de Semillas
+                            Te ofrecemos variedades de productos
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -58,10 +58,10 @@ const Marcas = () => {
                     height={180}
 
                     alt="171x180"
-                    src="https://jumbo.vtexassets.com/arquivos/ids/325530-360-360?width=360&height=360&aspect=true"
+                    src="https://cf.shopee.cl/file/71a14371ee395e416a4233684ca8795e"
                 />
                 <Figure.Caption>
-                    Semilla Zapallo<br></br>
+                    Salchicha<br />
                     $1.990
                 </Figure.Caption>
             </Figure>
@@ -71,10 +71,10 @@ const Marcas = () => {
                     width={171}
                     height={180}
                     alt="171x180"
-                    src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/839/794/products/semillas-de-lino1-398dad853a54d9533516313012782087-1024-1024.png"
+                    src="https://static1.mujerhoy.com/www/multimedia/201910/28/media/cortadas/disfraces-halloween-baratos-primark-14-k1D--739x555@MujerHoy.jpg"
                 />
                 <Figure.Caption>
-                    Semilla Lino<br></br>
+                    Calabaza<br></br>
                     $1.590
                 </Figure.Caption>
             </Figure>
@@ -85,11 +85,11 @@ const Marcas = () => {
                     height={180}
 
                     alt="171x180"
-                    src="https://floramedia.es/wp-content/uploads/2021/07/sobres-de-semillas-floramedia.jpg"
+                    src="https://static.guiainfantil.com/media/2788/blobid0.jpg"
 
                 />
                 <Figure.Caption>
-                    Semillas varidad<br></br>
+                    Fantasma<br></br>
                     $1990
                 </Figure.Caption>
             </Figure>
@@ -99,10 +99,10 @@ const Marcas = () => {
                     width={171}
                     height={180}
                     alt="171x180"
-                    src="https://cdn.shopify.com/s/files/1/0293/8952/0975/products/4195_600x.jpg?v=1629944171"
+                    src="https://www.dondisfraz.com/media/catalog/product/cache/1b7efd9c23603a41861e943185fdf7f2/d/i/disfraz-de-diablesa-presumida-para-nina.jpg.jpg"
                 />
                 <Figure.Caption>
-                    Linaza<br></br>
+                    Diablita <br></br>
                     $1990
                 </Figure.Caption>
             </Figure>
@@ -112,10 +112,10 @@ const Marcas = () => {
                     width={171}
                     height={180}
                     alt="171x180"
-                    src="https://aldeanativa.cl/wp-content/uploads/1d1a0eb0-5159-4459-8cb0-6125afdfa455-606110105309-semillas-de-sesamo-negro-125gr-positiv-1.jpeg"
+                    src="https://www.hola.com/imagenes/seleccion/20211006197191/mejores-disfraces-halloween-para-ninos/1-6-682/baby-joda-z.jpg"
                 />
                 <Figure.Caption>
-                    Sesamo Negro<br></br>
+                    Baby Yoda<br />
                     $1990
                 </Figure.Caption>
             </Figure>
@@ -133,37 +133,37 @@ const Marcas = () => {
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>semillas de Zapallo</td>
+                        <td>spiderman</td>
                         <td>$ 1990</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Semillas de Girasol</td>
+                        <td>Tarzan</td>
                         <td>$ 1990</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Semillas de Linaza</td>
+                        <td>Sirenita</td>
                         <td>$1990</td>
                     </tr>
 
                     <tr>
                         <td>4</td>
-                        <td>semillas de Zapallo</td>
+                        <td>Gato Cosmico</td>
                         <td>$ 1990</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>Semillas de Girasol</td>
+                        <td>Minnion</td>
                         <td>$ 1990</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>6</td>
-                        <td>Semillas de Linaza</td>
+                        <td>Perrito </td>
                         <td>$ 1990</td>
                     </tr>
                 </tbody>
@@ -176,24 +176,16 @@ const Marcas = () => {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Informaciones sobre nosotros</Accordion.Header>
                     <Accordion.Body>
-                        Encuentra todo lo que buscas en venta de semillas hortalizas y flores, y si requieres más que semillas, contamos también con Tierras , Semillas y fertilizantes al mejor precio. Visita huertosalma.cl y conoce nuestra gran variedad.
+                        Sus fundadores, Manuel y Claudia, en el momento que decidieron contraer matrimonio se dieron cuenta de la importancia que tienen los símbolos que representan al amor.
 
-                        Encuentra las semillas para germinar plantas más GRANDES y FUERTES, aquí en nuestra tienda, realiza tu compra de forma segura. Realizamos la venta de semillas de hortalizas al detalle o semillas a granel, también contamos con semillas orgánicas.
+                        Así fue como Manuel, siguiendo con el oficio familiar de la joyería, creó con sus manos el anillo de compromiso con el que pediría matrimonio al amor de su vida.
 
-                        Las semillas deben plantarse en tierra húmeda.  Contamos con las mejores y más amplia variedad de semillas tipos y tamaños. Las mejores semillas de hortalizas y flores las encuentra en Huertos Alma.
-
-                        Disponemos de espectaculares variedades, Consiga las mejores semillas de Chile! Elija entre una amplia selección de variedades superiores y de gran calidad.
-
-                        Regalos ecológicos y sustentables en Santiago y todo Chile, Regala vida en lugar de objetos tóxicos.
-
-                        Contamos con la mejor colección de semillas. Aquí encontrarás todo lo que necesitas saber sobre las mejores semillas, Tenemos la mayor variedad de semillas en Santiago con envío a todo Chile. Gran precio y calidad.
-
-                        Pueden ser plantadas desde un huerto caso, una mesa de cultivo, o en cualquier parte que cumpla con las condiciones de germinación de las semillas. Son ideales para hacer almácigo, tienen un gran porcentaje de germinación y algunas no tienen ningún tratamiento, de ningún tipo<br />
+                        Su intención no era dedicarse a la joyería, pero la experiencia de crear ese anillo tan especial, le hizo cambiar de idea, inspirándolo a compartir con otras parejas, este momento tan único y especial.<br />
 
 
-                        * vendemos al mayor y al detalle<br />
-                        * aceptamos todo medio de pago <br />
-                        * solo envios en RM
+                        * Vendemos al mayor y al detalle<br />
+                        * Aceptamos todo medio de pago <br />
+                        * Solo envios en RM
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
@@ -202,4 +194,5 @@ const Marcas = () => {
         </div>
     );
 }
-export default Marcas
+export default DisfracesFantasia
+

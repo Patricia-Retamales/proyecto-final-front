@@ -6,47 +6,47 @@ import Table from 'react-bootstrap/Table';
 
 
 
-const Marcas = () => {
+const LaTiendita = () => {
     return (
-        <div className='semillas' style={{background:'#ffffec'}}>
+        <div className='semillas' style={{ background: '#ffffec' }}>
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://i.blogs.es/13d967/1366_20001/1366_2000.jpg"
+                        src="https://www.esdesignbarcelona.com/sites/default/files/imagenes/haz-crecer-tu-marca-de-ropa-frente-la-competencia_1.jpg"
                         alt="First slide"
                         height={500}
                     />
                     <Carousel.Caption>
-                        <h3>El jardin Mistico</h3>
-                        <p>Te ofrecemos variedades de Semillas</p>
+                        <h3>La Tiendita</h3>
+                        <p>Te ofrecemos variedades de productos </p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://www.eluniversal.com.mx/sites/default/files/2021/05/17/munara_ciclo_de_semillas_portada.jpg"
+                        src="https://www.hogarmania.com/archivos/201911/ropa-listado-belleza-848x477x80xX.jpg"
                         alt="Second slide"
                         height={500}
                     />
 
                     <Carousel.Caption>
-                        <h3>El jardin Mistico</h3>
-                        <p>Te ofrecemos variedades de Semillas</p>
+                        <h3>La Tiendita</h3>
+                        <p>Te ofrecemos variedades de productos</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://thumbs.dreamstime.com/z/venta-de-semillas-envasadas-en-el-almacén-para-jardinero-minsk-belarus-junio-189021275.jpg"
+                        src="https://blog.oxfamintermon.org/wp-content/uploads/2017/03/iStock-500395950.jpg"
                         alt="Third slide"
                         height={500}
                     />
 
                     <Carousel.Caption>
-                        <h3>El jardin Mistico</h3>
+                        <h3>La Tiendita</h3>
                         <p>
-                        Te ofrecemos variedades de Semillas
+                            Te ofrecemos variedades de productos
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -58,10 +58,10 @@ const Marcas = () => {
                     height={180}
 
                     alt="171x180"
-                    src="https://jumbo.vtexassets.com/arquivos/ids/325530-360-360?width=360&height=360&aspect=true"
+                    src="https://i.pinimg.com/736x/7f/47/f7/7f47f7cf94601d5ee87c1192e0bd492c.jpg"
                 />
                 <Figure.Caption>
-                    Semilla Zapallo<br></br>
+                    Conjuntos<br />
                     $1.990
                 </Figure.Caption>
             </Figure>
@@ -71,10 +71,10 @@ const Marcas = () => {
                     width={171}
                     height={180}
                     alt="171x180"
-                    src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/839/794/products/semillas-de-lino1-398dad853a54d9533516313012782087-1024-1024.png"
+                    src="https://http2.mlstatic.com/D_NQ_NP_787221-MLC49436145703_032022-W.jpg"
                 />
                 <Figure.Caption>
-                    Semilla Lino<br></br>
+                    Pulceras<br></br>
                     $1.590
                 </Figure.Caption>
             </Figure>
@@ -85,11 +85,11 @@ const Marcas = () => {
                     height={180}
 
                     alt="171x180"
-                    src="https://floramedia.es/wp-content/uploads/2021/07/sobres-de-semillas-floramedia.jpg"
+                    src="https://www.chilepromo.cl/3056-large_default/polera-con-cuello-para-mujer-poliester.jpg"
 
                 />
                 <Figure.Caption>
-                    Semillas varidad<br></br>
+                    Poleras<br></br>
                     $1990
                 </Figure.Caption>
             </Figure>
@@ -99,10 +99,10 @@ const Marcas = () => {
                     width={171}
                     height={180}
                     alt="171x180"
-                    src="https://cdn.shopify.com/s/files/1/0293/8952/0975/products/4195_600x.jpg?v=1629944171"
+                    src="https://media.vozpopuli.com/2020/03/ZARA-Pantalon-PVP-BERSHKA-Supernenas_1335176561_14804356_660x371.jpg"
                 />
                 <Figure.Caption>
-                    Linaza<br></br>
+                    Pantalon <br></br>
                     $1990
                 </Figure.Caption>
             </Figure>
@@ -112,10 +112,10 @@ const Marcas = () => {
                     width={171}
                     height={180}
                     alt="171x180"
-                    src="https://aldeanativa.cl/wp-content/uploads/1d1a0eb0-5159-4459-8cb0-6125afdfa455-606110105309-semillas-de-sesamo-negro-125gr-positiv-1.jpeg"
+                    src="https://cf.shopee.cl/file/be52ba9190a403047c0e0b3d0f79ebae"
                 />
                 <Figure.Caption>
-                    Sesamo Negro<br></br>
+                    Vestidos<br />
                     $1990
                 </Figure.Caption>
             </Figure>
@@ -133,37 +133,37 @@ const Marcas = () => {
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>semillas de Zapallo</td>
+                        <td>Chalecos</td>
                         <td>$ 1990</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Semillas de Girasol</td>
+                        <td>Poleras</td>
                         <td>$ 1990</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Semillas de Linaza</td>
+                        <td>Pantalones</td>
                         <td>$1990</td>
                     </tr>
 
                     <tr>
                         <td>4</td>
-                        <td>semillas de Zapallo</td>
+                        <td>Calzas</td>
                         <td>$ 1990</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>Semillas de Girasol</td>
+                        <td>Chaquetas</td>
                         <td>$ 1990</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>6</td>
-                        <td>Semillas de Linaza</td>
+                        <td>Vestidos </td>
                         <td>$ 1990</td>
                     </tr>
                 </tbody>
@@ -176,24 +176,16 @@ const Marcas = () => {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Informaciones sobre nosotros</Accordion.Header>
                     <Accordion.Body>
-                        Encuentra todo lo que buscas en venta de semillas hortalizas y flores, y si requieres más que semillas, contamos también con Tierras , Semillas y fertilizantes al mejor precio. Visita huertosalma.cl y conoce nuestra gran variedad.
+                        Sus fundadores, Manuel y Claudia, en el momento que decidieron contraer matrimonio se dieron cuenta de la importancia que tienen los símbolos que representan al amor.
 
-                        Encuentra las semillas para germinar plantas más GRANDES y FUERTES, aquí en nuestra tienda, realiza tu compra de forma segura. Realizamos la venta de semillas de hortalizas al detalle o semillas a granel, también contamos con semillas orgánicas.
+                        Así fue como Manuel, siguiendo con el oficio familiar de la joyería, creó con sus manos el anillo de compromiso con el que pediría matrimonio al amor de su vida.
 
-                        Las semillas deben plantarse en tierra húmeda.  Contamos con las mejores y más amplia variedad de semillas tipos y tamaños. Las mejores semillas de hortalizas y flores las encuentra en Huertos Alma.
-
-                        Disponemos de espectaculares variedades, Consiga las mejores semillas de Chile! Elija entre una amplia selección de variedades superiores y de gran calidad.
-
-                        Regalos ecológicos y sustentables en Santiago y todo Chile, Regala vida en lugar de objetos tóxicos.
-
-                        Contamos con la mejor colección de semillas. Aquí encontrarás todo lo que necesitas saber sobre las mejores semillas, Tenemos la mayor variedad de semillas en Santiago con envío a todo Chile. Gran precio y calidad.
-
-                        Pueden ser plantadas desde un huerto caso, una mesa de cultivo, o en cualquier parte que cumpla con las condiciones de germinación de las semillas. Son ideales para hacer almácigo, tienen un gran porcentaje de germinación y algunas no tienen ningún tratamiento, de ningún tipo<br />
+                        Su intención no era dedicarse a la joyería, pero la experiencia de crear ese anillo tan especial, le hizo cambiar de idea, inspirándolo a compartir con otras parejas, este momento tan único y especial.<br />
 
 
-                        * vendemos al mayor y al detalle<br />
-                        * aceptamos todo medio de pago <br />
-                        * solo envios en RM
+                        * Vendemos al mayor y al detalle<br />
+                        * Aceptamos todo medio de pago <br />
+                        * Solo envios en RM
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
@@ -202,4 +194,4 @@ const Marcas = () => {
         </div>
     );
 }
-export default Marcas
+export default LaTiendita

@@ -5,8 +5,11 @@ import {FaInstagram } from "react-icons/fa";
 
 
 export const Footer = () => (
+  
 	<footer className="footer mt-auto py-3 text-center">
 		<p>
+
+   
     
 		<dif class="row p-5 bg-dark text-white">  
 
@@ -49,6 +52,7 @@ export const Footer = () => (
          </dif> 
 
 		
+
 		</p>
 	</footer>
 );

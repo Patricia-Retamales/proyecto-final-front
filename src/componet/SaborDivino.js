@@ -3,12 +3,14 @@ import Figure from 'react-bootstrap/Figure';
 
 import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
-
+import ComponentNabar from './ComponentNavbar';
+import Footer from "../componet/ComponenteFooter";
 
 
 const  SaborDivino = () => {
     return (
         <div className='semillas' style={{background:'#ffffec'}}>
+            <ComponentNabar/>
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -189,8 +191,7 @@ Su intención no era dedicarse a la joyería, pero la experiencia de crear ese a
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-
-
+            <Footer/>
         </div>
     );
 }

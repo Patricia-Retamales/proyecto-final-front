@@ -3,12 +3,15 @@ import Figure from 'react-bootstrap/Figure';
 
 import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
+import ComponentNabar from './ComponentNavbar';
+import Footer from "../componet/ComponenteFooter";
 
 
 
 const ElQuijotedelaMancha = () => {
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
+            <ComponentNabar/>
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -189,7 +192,7 @@ const ElQuijotedelaMancha = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-
+            <Footer/>
 
         </div>
     );

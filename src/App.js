@@ -13,6 +13,7 @@ import LaTiendita from "./componet/LaTiendita";
 import Marcas from "./componet/Marcas";
 import SaborDivino from "./componet/SaborDivino";
 import BellaPandora from "./componet/BellaPandora";
+import Productos from "./componet/Productos";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={< Login />} />
                 <Route path="/registration" element={<Registration />} />
-                <Route path="/private" element={<private />} />
+                <Route path="/Productos" element={<Productos/>} />
                 <Route path="/CardTajetas" element={<CardTajetas />} />
                 <Route path="/CupcakeParadise" element={<CupcakeParadise />} />
                 <Route path="/DisfracesFantasia" element={<DisfracesFantasia/>} />

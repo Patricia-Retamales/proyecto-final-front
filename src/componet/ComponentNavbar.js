@@ -14,33 +14,33 @@ function ComponentNabar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">home</Nav.Link>
+            <Nav.Link href="#features"><Link to="productos">Productos</Link></Nav.Link>
             
-            <NavDropdown title="Productos" id="collasible-nav-dropdown">
+            <NavDropdown  title="Producto" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
-               <Link to="/jardinmistico"> Semillas</Link>
+               <Link to="/marcas"> Semillas</Link>
                 </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 <Link to="/cupcakeparadise">Tortas</Link>
                 </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">
-              <Link to="/disfrases">Disfrases</Link>
+              <Link to="/disfracesfantasia">Disfrases</Link>
                 </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
+              <NavDropdown.Item href="#action/3.4">
               <Link to="/elestudiante">Utiles Escolares</Link> 
                 </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
-              <Link to='bellasoandoras'>joyas</Link> 
+              <NavDropdown.Item href="#action/3.5">
+              <Link to='bellapandora'>joyas</Link> 
                 </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
+              <NavDropdown.Item href="#action/3.6">
               <Link to="sabordivino">Chocolate</Link>
                 </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
-              <Link>limpieza</Link> 
+              <NavDropdown.Item href="#action/3.7">
+              <Link to="elquijotedelamancha">limpieza</Link> 
                 </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-               
+            
+              <NavDropdown.Item href="#action/3.8">
+               <Link to="/latiendita">Ropa</Link>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

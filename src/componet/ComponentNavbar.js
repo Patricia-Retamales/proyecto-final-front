@@ -57,8 +57,9 @@ function ComponentNabar() {
           <Nav ClassName="me-auto">
             <NavDropdown title="Usuario" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
-                Datos de usuario
+                <Link to="/datosusuario">configuracion</Link>
                 </NavDropdown.Item>
+                
               <NavDropdown.Item href="#action/3.2">
                Vender
               </NavDropdown.Item>

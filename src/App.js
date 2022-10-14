@@ -14,6 +14,7 @@ import Marcas from "./componet/Marcas";
 import SaborDivino from "./componet/SaborDivino";
 import BellaPandora from "./componet/BellaPandora";
 import Productos from "./componet/Productos";
+import DatosUsuario from "./componet/DatosUsuario";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/Marcas" element={<Marcas />} />
                 <Route path="/SaborDivino" element={<SaborDivino />} />
                 <Route path="BellaPandora" element={<BellaPandora/>} />
+                <Route path="/DatosUsuario" element={<DatosUsuario/>} />
 
             </Routes>
         </BrowserRouter>

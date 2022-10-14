@@ -105,6 +105,22 @@ function Compras() {
                         <option>10</option>
                     </Form.Select>
                 </Form.Group>
+                <Form.Group as={Col} controlId="formGridState">
+                    <Form.Label>stock</Form.Label>
+                    <Form.Select defaultValue="Quantity">
+                        <option>Seleccione</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </Form.Select>
+                </Form.Group>
             </Row>
 
             <Row>
@@ -133,7 +149,7 @@ function Compras() {
                 </Form.Group>
 
                 <Form.Group as={Col} controlId="formGridZip" style={{ margin: "25px", }}>
-                    <Form.Label>Fecha de Expiracion</Form.Label>
+                    <Form.Label>Fecha de Entrega</Form.Label>
                     <Form.Control placeholder="Expiration date" />
                 </Form.Group>
             </Row>

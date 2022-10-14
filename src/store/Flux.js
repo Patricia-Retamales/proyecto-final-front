@@ -183,7 +183,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => response.text())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));
-			}
+			},
+			addFavorite: (favorite) => {
+                const store = getStore();
+                const actions = getActions();
+                if(!store.favoriteList.includes(favorite)){
+                    setStore({
+                        favoriteList: [...store.favoriteList, favorite]
+                    });
+                }else{
+                    const array = store.favoriteList;
+                    const exist = currentFavorite => currentFavorite === favorite;
+                    let index = array.findIndex(exist);
+                    if( index > -1) actions.removeFavorite(index);
+                }
+            },
+            removeFavorite: (index) => {
+                const store = getStore();
+                store.favoriteList.splice(index, 1);
+                setStore({
+                    favoriteList: store.favoriteList
+                });
+            }
 
 
 		}

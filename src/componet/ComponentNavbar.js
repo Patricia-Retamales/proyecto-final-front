@@ -37,13 +37,13 @@ function ComponentNabar() {
               <Link to="/elestudiante">Utiles Escolares</Link> 
                 </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.5">
-              <Link to='bellapandora'>joyas</Link> 
+              <Link to='/bellapandora'>joyas</Link> 
                 </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.6">
-              <Link to="sabordivino">Chocolate</Link>
+              <Link to="/sabordivino">Chocolate</Link>
                 </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.7">
-              <Link to="elquijotedelamancha">limpieza</Link> 
+              <Link to="/elquijotedelamancha">limpieza</Link> 
                 </NavDropdown.Item>
             
               <NavDropdown.Item href="#action/3.8">
@@ -81,7 +81,7 @@ function ComponentNabar() {
               Mis favoritos
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-               Lista
+               
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">

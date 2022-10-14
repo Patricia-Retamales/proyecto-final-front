@@ -10,9 +10,9 @@ import ComponentNabar from './ComponentNavbar';
 function Registration() {
   return (
     <Form>
-       <ComponentNabar/>
+      <ComponentNabar />
       <Row>
-     
+
         <Col>
           <Form.Control placeholder=" name" />
         </Col>

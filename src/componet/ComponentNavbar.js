@@ -68,12 +68,14 @@ function ComponentNabar() {
                 </NavDropdown.Item>
                 
               <NavDropdown.Item href="#action/3.2">
-                <Link to="/formulario">
+                <Link to="/Compras">
                Vender
                </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">
+                <Link to="/formulario">
                 Comprar
+                </Link>
                 </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
               Mis favoritos

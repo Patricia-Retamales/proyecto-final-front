@@ -7,53 +7,53 @@ import { FaInstagram } from "react-icons/fa";
 function Footer() {
 	return (
 		<footer className="footer mt-auto py-3 text-center">
-			<p>
 
 
 
-				<dif class="row p-5 bg-dark text-white">
+				<div className="row p-5 bg-dark text-white">
 
-					<dif class="col-xs-12 col-md-6 col-lg-3">
-						<p class="h3"> Contenido </p>
-						<div class="mb-2">
-							<a class="text-white text-decoration-none" href="#">De todo un poquito va dirigido a los pequeños emprendedores, en el cual estan iniciando con grandes ideas y sueños . </a>
+					<div className="col-xs-12 col-md-6 col-lg-3">
+						<p className="h3"> Contenido </p>
+						<div className="mb-2">
+							<a className="text-white text-decoration-none" href="#">De todo un poquito va dirigido a los 
+							pequeños emprendedores, en el cual estan iniciando con grandes ideas y sueños . </a>
 						</div>
-					</dif>
+					</div>
 
-					<dif class="col-xs-12 col-md-6 col-lg-3">
-						<p class="h5"> Terminos y Condiciones  </p>
-						<div class="mb-2">
-							<a class="text-white text-decoration-none" href="#">Politica de privacidad
+					<div className="col-xs-12 col-md-6 col-lg-3">
+						<p className="h5"> Terminos y Condiciones  </p>
+						<div className="mb-2">
+							<a className="text-white text-decoration-none" href="#">Politica de privacidad
 							</a>
 						</div>
 
-						<a class="text-white text-decoration-none" href="#"> 100% Confiable </a>
-					</dif>
+						<a className="text-white text-decoration-none" href="#"> 100% Confiable </a>
+					</div>
 
-					<dif class="col-xs-12 col-md-6 col-lg-3">
-						<p class="h5 mb-3"> Contacto </p>
-						<div class="mb-2">
-							<a class="text-white text-decoration-none" href> <h6> Instagram  < FaInstagram /></h6></a>
+					<div className="col-xs-12 col-md-6 col-lg-3">
+						<p className="h5 mb-3"> Contacto </p>
+						<div className="mb-2">
+							<a className="text-white text-decoration-none" href> <h6> Instagram  < FaInstagram /></h6></a>
 						</div>
-						<div class="mb-2">
-							<a class="text-white text-decoration-none" href> <h6> Github < FaGithubSquare /></h6></a>
+						<div className="mb-2">
+							<a className="text-white text-decoration-none" href> <h6> Github < FaGithubSquare /></h6></a>
 						</div>
-						<div class="mb-2">
-							<a class="text-white text-decoration-none" href> <h6> Facebook < FaFacebookSquare /></h6></a>
+						<div className="mb-2">
+							<a className="text-white text-decoration-none" href> <h6> Facebook < FaFacebookSquare /></h6></a>
 						</div>
 
-					</dif>
+					</div>
 
 
-					<dif class="col-xs-12 pt-5">
-						<p class="text-white text-center">Colaboradores Santiago ,Angelica, Patricia y joceline .2022</p>
-					</dif>
+					<div className="col-xs-12 pt-5">
+						<p className="text-white text-center">Colaboradores Santiago ,Angelica, Patricia y joceline .2022</p>
+					</div>
 
-				</dif>
+				</div>
 
 
 
-			</p>
+			
 		</footer>
 
 	);

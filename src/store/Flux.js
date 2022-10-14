@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			productos: [],
 			marcas: [],
-			
+			url_api : ["https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io"],
 
 			// demo: [
 			// 	{
@@ -23,6 +23,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
+			},
+			getMessage: async () => {
+				try {
+					// fetching data from the backend
+					const resp = await fetch("https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io" + "/api/hello")
+					const data = await resp.json()
+					setStore({ message: data.message })
+					// don't forget to return something, that is how the async resolves
+					return data;
+				} catch (error) {
+					console.log("Error loading message from backend", error)
+				}
 			},
 			loadSomeData: () => {
 				/**
@@ -52,13 +64,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/registro", requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io/registro", requestOptions)
 					.then(response => response.text())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));
 
 			},
-			login_funcion: (login) => {
+			login_function: (login) => {
 
 				console.log("Haciendo login con" + login.email + "  clave es  " + login.password)
 				var myHeaders = new Headers();
@@ -76,8 +88,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/login", requestOptions)
-					.then(response => response.text())
+				fetch("https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io/login", requestOptions)
+					.then(response => response.json())
 					.then(result => {
 						console.log(result)
 						localStorage.setItem("token", result.token)

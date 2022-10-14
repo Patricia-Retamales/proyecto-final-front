@@ -15,6 +15,7 @@ import SaborDivino from "./componet/SaborDivino";
 import BellaPandora from "./componet/BellaPandora";
 import Productos from "./componet/Productos";
 import DatosUsuario from "./componet/DatosUsuario";
+import FormulariodeCompras from "./componet/FormulariodeCompras";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
                 <Route path="/SaborDivino" element={<SaborDivino />} />
                 <Route path="BellaPandora" element={<BellaPandora/>} />
                 <Route path="/DatosUsuario" element={<DatosUsuario/>} />
+                <Route path="/FormulariodeCompras" element={<FormulariodeCompras/>} />
 
             </Routes>
         </BrowserRouter>

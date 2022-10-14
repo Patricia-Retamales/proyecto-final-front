@@ -194,4 +194,4 @@ const LaTiendita = () => {
         </div>
     );
 }
-export default LaTiendita
+export default LaTiendita;

@@ -12,6 +12,7 @@ import ElQuijotedelaMancha from "./componet/ElQuijotedelamancha";
 import LaTiendita from "./componet/LaTiendita";
 import Marcas from "./componet/Marcas";
 import SaborDivino from "./componet/SaborDivino";
+import BellaPandora from "./componet/BellaPandora";
 
 
 function App() {
@@ -24,12 +25,13 @@ function App() {
                 <Route path="/private" element={<private />} />
                 <Route path="/CardTajetas" element={<CardTajetas />} />
                 <Route path="/CupcakeParadise" element={<CupcakeParadise />} />
-                <Route path="/DisfracesFantasia" element={<DisfracesFantasia />} />
-                <Route path="/ElEstudiante" element={<ElEstudiante />} />
-                <Route path="/ElQuijotedelaMancha" element={<ElQuijotedelaMancha />} />
-                <Route path="/ LaTiendita " element={< LaTiendita />} />
+                <Route path="/DisfracesFantasia" element={<DisfracesFantasia/>} />
+                <Route path="/ElEstudiante" element={<ElEstudiante/>} />
+                <Route path="/ElQuijotedelaMancha" element={<ElQuijotedelaMancha/>} />
+                <Route path="/LaTiendita" element={<LaTiendita/>} />
                 <Route path="/Marcas" element={<Marcas />} />
                 <Route path="/SaborDivino" element={<SaborDivino />} />
+                <Route path="BellaPandora" element={<BellaPandora/>} />
 
             </Routes>
         </BrowserRouter>

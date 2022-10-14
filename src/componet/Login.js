@@ -1,19 +1,17 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import ComponetNavbar from './ComponentNavbar';
+import ComponentNavbar from './ComponentNavbar';
 import React, { useContext } from "react";
+import ComponenteFooter from "../componet/ComponenteFooter";
 
 
 function Login() {
 
-  
 
-  
   return (
 
-    
     <Form>
-    <ComponetNavbar/>
+      <ComponentNavbar />
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
@@ -32,6 +30,7 @@ function Login() {
       <Button variant="primary" type="submit">
         Submit
       </Button>
+      <ComponenteFooter/>
     </Form>
   );
 }

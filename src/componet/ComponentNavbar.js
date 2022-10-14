@@ -1,76 +1,75 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-function ComponetNavbar() {
+function ComponentNabar() {
   return (
-    <div className='navbar' >
-      <Navbar bg="light" expand="lg" >
-        <Container fluid>
-          <Navbar.Brand href="#">Mini Pymes a su dispocicion</Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: '100px' }}
-              navbarScroll
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#features">home</Nav.Link>
+            
+            <NavDropdown title="Productos" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">
+               <Link to=""> Semillas</Link>
+                </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                <Link to="/cupcakeparadise">Tortas</Link>
+                </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+              <Link to="/disfrases">Disfrases</Link>
+                </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+              <Link to="/elestudiante">Utiles Escolares</Link> 
+                </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+              <Link>joyas</Link> 
+                </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+              <Link to="sabordivino">Chocolate</Link>
+                </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+              <Link>limpieza</Link> 
+                </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+               
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
 
-            >
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Form className="d-flex">
-                <Form.Control
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form>
-
-              <div className='registro' style={{ left: "200px" }}>
-                <Link to="/login" >
-                  <button className="btn btn-primary"> get into</button>
-                </Link>
-                <Link to="/registration">
-                  <button className="btn btn-primary">create</button>
-                </Link>
-              </div>
+          <Link to="/login">
+				<button className="btn btn-primary">Ingresar</button>
+				</Link>
+        <Link to="/registration">
+				<button className="btn btn-primary">Registrar</button>
+				</Link>
 
 
-              <NavDropdown title="Link" id="navbarScrollingDropdown" style={{ left: "70%" }}>
-                <NavDropdown.Item href="#action3">
-                  mis datos
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  productos
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action5">
-                  Vender
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action6">
-                  Comprar
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action7">
-                  mis favoritos
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action8">
-                  cerrar secion
-                </NavDropdown.Item>
-              </NavDropdown>
 
+          <Nav ClassName="me-auto">
+            <NavDropdown title="Usuario" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
             </Nav>
-
-          </Navbar.Collapse>
-
-        </Container>
-      </Navbar>
-    </div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default ComponetNavbar;
+export default ComponentNabar;
+  ;

@@ -3,13 +3,16 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import ComponentNabar from './ComponentNavbar';
 
 
 
 function Registration() {
   return (
     <Form>
+       <ComponentNabar/>
       <Row>
+     
         <Col>
           <Form.Control placeholder=" name" />
         </Col>

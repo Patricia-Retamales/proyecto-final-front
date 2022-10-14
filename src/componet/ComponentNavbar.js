@@ -10,13 +10,20 @@ function ComponentNabar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+      <img
+          src="https://c8.alamy.com/compes/wwcbtt/icono-de-compras-online-en-el-comic-de-estilo-tienda-smartphone-cartoon-vectoriales-ilustracion-sobre-fondo-blanco-aisladas-concepto-de-negocio-en-el-mercado-efecto-splash-wwcbtt.jpg"
+          width="100"
+          height="50"
+          className="d-inline-block align-top"
+          alt=""
+        />
+        <Navbar.Brand href="#home"><Link to="/">De todo un poco</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#features"><Link to="productos">Productos</Link></Nav.Link>
             
-            <NavDropdown  title="Producto" id="collasible-nav-dropdown">
+            <NavDropdown  title="Tiendas" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
                <Link to="/marcas"> Semillas</Link>
                 </NavDropdown.Item>
@@ -61,7 +68,9 @@ function ComponentNabar() {
                 </NavDropdown.Item>
                 
               <NavDropdown.Item href="#action/3.2">
+                <Link to="/formulario">
                Vender
+               </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">
                 Comprar

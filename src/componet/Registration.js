@@ -9,7 +9,7 @@ import ComponentNabar from './ComponentNavbar';
 
 function Registration() {
   return (
-    <Form>
+    <Form className=''>
        <ComponentNabar/>
       <Row>
      

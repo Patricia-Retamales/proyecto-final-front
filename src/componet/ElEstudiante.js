@@ -6,7 +6,7 @@ import Table from 'react-bootstrap/Table';
 
 
 
-const ElEstudiante = () => {
+function ElEstudiante() {
     return (
         <div className='semillas' style={{background:'#ffffec'}}>
             <Carousel slide={false}>
@@ -194,4 +194,4 @@ Su intención no era dedicarse a la joyería, pero la experiencia de crear ese a
         </div>
     );
 }
-export default ElEstudiante
+export default ElEstudiante;

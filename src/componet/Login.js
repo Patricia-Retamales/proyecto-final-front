@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import ComponentNavbar from './ComponentNavbar';
 import React, { useContext } from "react";
-import ComponenteFooter from "../componet/ComponenteFooter";
+import Footer from "../componet/ComponenteFooter";
 
 
 function Login() {
@@ -30,7 +30,7 @@ function Login() {
       <Button variant="primary" type="submit">
         Submit
       </Button>
-      <ComponenteFooter/>
+      <Footer/>
     </Form>
   );
 }

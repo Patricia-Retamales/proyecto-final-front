@@ -16,7 +16,7 @@ import BellaPandora from "./componet/BellaPandora";
 import Productos from "./componet/Productos";
 import DatosUsuario from "./componet/DatosUsuario";
 import Formulario from "./componet/Formulario";
-
+import Compras from "./componet/Compras";
 
 function App() {
     return (
@@ -37,6 +37,7 @@ function App() {
                 <Route path="BellaPandora" element={<BellaPandora/>} />
                 <Route path="/DatosUsuario" element={<DatosUsuario/>} />
                 <Route path="/Formulario" element={<Formulario/>} />
+                <Route path="/Compras" element={<Compras/>} />
                 
                 
                

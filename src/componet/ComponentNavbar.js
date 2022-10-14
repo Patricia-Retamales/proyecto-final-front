@@ -15,13 +15,27 @@ function ComponentNabar() {
             <Nav.Link href="#features">home</Nav.Link>
             
             <NavDropdown title="Productos" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Semillas</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Tortas</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Disfrases</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Utiles Escolares</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">joyas</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Chocolate</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">limpieza</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">
+               <Link to=""> Semillas</Link>
+                </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                <Link to="/cupcakeparadise">Tortas</Link>
+                </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+              <Link to="/disfrases">Disfrases</Link>
+                </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+              <Link to="/elestudiante">Utiles Escolares</Link> 
+                </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+              <Link>joyas</Link> 
+                </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+              <Link to="sabordivino">Chocolate</Link>
+                </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+              <Link>limpieza</Link> 
+                </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                

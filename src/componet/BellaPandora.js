@@ -194,4 +194,4 @@ Su intención no era dedicarse a la joyería, pero la experiencia de crear ese a
         </div>
     );
 }
-export default BellaPandora
+export default BellaPandora;

@@ -6,7 +6,7 @@ import Table from 'react-bootstrap/Table';
 
 
 
-const  SaborDivino= () => {
+const  SaborDivino = () => {
     return (
         <div className='semillas' style={{background:'#ffffec'}}>
             <Carousel slide={false}>

@@ -25,7 +25,9 @@ const CardTajetas = () => {
             <p>Contactos: +569 12345678 </p>
 
           </Card.Text>
+          <Link to="/SaborDivino">
           <Button variant="primary">Ver mas</Button>
+          </Link>
         </Card.Body>
       </Card>
 
@@ -40,7 +42,9 @@ const CardTajetas = () => {
             <p>Contactos: +569 12345678 </p>
 
           </Card.Text>
+          <Link to="/Marcas">
           <Button variant="primary">Ver mas</Button>
+          </Link>
         </Card.Body>
       </Card>
 
@@ -53,7 +57,9 @@ const CardTajetas = () => {
             <p>Contactos: +569 12345678 </p>
 
           </Card.Text>
+          <Link to="/LaTiendita">
           <Button variant="primary">Ver mas</Button>
+          </Link>
         </Card.Body>
       </Card>
 
@@ -66,7 +72,9 @@ const CardTajetas = () => {
             <p>Contactos: +569 12345678 </p>
 
           </Card.Text>
-          <Button variant="primary">Ver mas</Button>
+          <Link to="/BellaPandora">
+         <Button variant="primary">Ver mas</Button>
+         </Link>
         </Card.Body>
       </Card>
 
@@ -109,7 +117,9 @@ const CardTajetas = () => {
             <p>Contactos: +569 12345678 </p>
 
           </Card.Text>
+          <Link to="/SaborDivino">
           <Button variant="primary">Ver mas</Button>
+          </Link>
         </Card.Body>
       </Card>
 
@@ -122,7 +132,9 @@ const CardTajetas = () => {
             <p>Contactos: +569 12345678 </p>
 
           </Card.Text>
+          <Link to="/DisfracesFantasia">
           <Button variant="primary">Ver mas</Button>
+          </Link>
         </Card.Body>
       </Card>
 

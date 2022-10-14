@@ -4,6 +4,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from "react-router-dom";
 
+
+
 function ComponentNabar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -16,7 +18,7 @@ function ComponentNabar() {
             
             <NavDropdown title="Productos" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
-               <Link to=""> Semillas</Link>
+               <Link to="/jardinmistico"> Semillas</Link>
                 </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 <Link to="/cupcakeparadise">Tortas</Link>
@@ -28,7 +30,7 @@ function ComponentNabar() {
               <Link to="/elestudiante">Utiles Escolares</Link> 
                 </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">
-              <Link>joyas</Link> 
+              <Link to='bellasoandoras'>joyas</Link> 
                 </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">
               <Link to="sabordivino">Chocolate</Link>
@@ -54,17 +56,28 @@ function ComponentNabar() {
 
           <Nav ClassName="me-auto">
             <NavDropdown title="Usuario" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">
+                Datos de usuario
+                </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+               Vender
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+                Comprar
+                </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+              Mis favoritos
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+               Lista
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                Cerrar sesion
               </NavDropdown.Item>
             </NavDropdown>
             </Nav>
+            
         </Navbar.Collapse>
       </Container>
     </Navbar>

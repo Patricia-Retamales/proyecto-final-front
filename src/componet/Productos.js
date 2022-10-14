@@ -25,7 +25,9 @@ const CardTajetas = () => {
             <p>Contactos: +569 12345678 </p>
 
           </Card.Text>
+          <Link to="/tortas">
           <Button variant="primary">Ver mas</Button>
+          </Link>
         </Card.Body>
       </Card>
 

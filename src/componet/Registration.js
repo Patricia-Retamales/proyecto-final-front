@@ -12,95 +12,112 @@ function Registration() {
   const [signup_email, setEmail] = useState("");
   const [signup_password, setPassword] = useState("");
   const [signup_username, setUsername] = useState("");
-  const [apelldo, setApellidod] = useState("");
+  const [apellido, setApellido] = useState("");
   const [nombre, setNombre] = useState("");
   const [rut, setRut] = useState("");
 
 
   let datos_registro = {
-    "email": "",
-    "password": "",
+    "email": signup_email,
+    "password": signup_password,
     "is_active": "True",
-    "username": "",
-    "nombre": "",
-    "apellido": "",
-    "rut": 1
+    "username": signup_username,
+    "nombre": nombre,
+    "apellido": apellido,
+    "rut": rut
   }
 
   return (
     <Form>
       <ComponentNabar />
+      <div>
+        <div className="row mx-5">
 
-      <div className="row mx-5">
+          <div className="col-md-6">
+            <label className="form-label">Nombre</label>
+            <input type="Nombre" className="form-control"
+              onChange={e => setNombre(e.target.value)}
+              value={nombre}
+              id="Nombre" aria-describedby="emailHelp"
+              placeholder="Nombre" />
+          </div>
 
-        <div className="col-md-6">
-          <p>Nombre</p>
-          <Form.Control placeholder=" Nombre" />
-        </div>
+          <div className="col-md-6">
+            <label className="form-label">Apellido</label>
+            <input type="Nombre" className="form-control"
+              onChange={e => setApellido(e.target.value)}
+              value={apellido}
+              id="Apellido" aria-describedby="emailHelp"
+              placeholder="Apellido" />
+          </div>
 
-        <div className="col-md-6">
-          <p>Apellido</p>
-          <Form.Control placeholder="Apellido"  />
-        </div>
-
-        <div className=" col-md-6" controlId="formGridAddress2">
-          <Form.Label>Rut</Form.Label>
-          <Form.Control placeholder="1234567-8" />
-        </div>
-
-        <div className="col-md-6" controlId="formGridEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </div>
-        <div className="col-md-6" controlId="formGridEmail">
-          <Form.Label>RepeatEmail</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </div>
-        <div className="col-md-6" controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </div>
-        <div className="col-md-6" controlId="formGridPassword">
-          <Form.Label>RepeatPassword</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </div>
+          <div className="col-md-6">
+            <label className="form-label">Nombre de Usuario</label>
+            <input type="username" className="form-control"
+              onChange={e => setUsername(e.target.value)}
+              value={signup_username}
+              id="username" aria-describedby="emailHelp"
+              placeholder="Username" />
+          </div>
 
 
-        <div className="col-md-6" controlId="formGridAddress1">
-          <Form.Label>direccion</Form.Label>
-          <Form.Control placeholder="1234 Main St" />
-        </div>
 
-        <div className="col-md-6" controlId="formGridAddress2">
-          <Form.Label>casa o depto</Form.Label>
-          <Form.Control placeholder="casa o depto" />
-        </div>
+          <div className="col-md-6">
+            <label className="form-label">Email</label>
+            <input type="Nombre" className="form-control"
+              onChange={e => setEmail(e.target.value)}
+              value={signup_email}
+              id="email" aria-describedby="emailHelp"
+              placeholder="email@ejemplo.cl" />
+          </div>
+
+          <div className="col-md-6">
+            <label className="form-label">Repetir Email</label>
+            <input type="Nombre" className="form-control"
+              id="repetir_email" aria-describedby="emailHelp"
+              placeholder="email@ejemplo.cl" />
+          </div>
+
+          <div className="col-md-6">
+            <label className="form-label">Contraseña</label>
+            <input type="password" className="form-control"
+              onChange={e => setPassword(e.target.value)}
+              value={signup_password}
+              id="password" aria-describedby="emailHelp"
+              placeholder="password" />
+          </div>
 
 
-        <div className="col-md-6" controlId="formGridCity">
-          <Form.Label>City</Form.Label>
-          <Form.Control />
-        </div>
+          <div className="col-md-6">
+            <label className="form-label">Repetir Contraseña</label>
+            <input type="password" className="form-control"
 
-        <div className="col-md-6" controlId="formGridState">
-          <Form.Label>State</Form.Label>
-          <Form.Select defaultValue="Choose...">
-            <option>Choose...</option>
-            <option>Region Metropolitana</option>
-          </Form.Select>
-        </div>
+              id="repeat_password" aria-describedby="emailHelp"
+              placeholder="password" />
+          </div>
 
-        <div className="col-md-6" controlId="formGridZip">
-          <Form.Label>Zip</Form.Label>
-          <Form.Control />
+          <div className="col-md-6">
+            <label className="form-label">RUT</label>
+            <input type="RUT" className="form-control"
+              onChange={e => setRut(e.target.value)}
+              value={rut}
+              id="RUT" aria-describedby="emailHelp"
+              placeholder="RUT" />
+          </div>
+
+          <Link to="/Home">
+            <Button variant="primary" type="submit"
+              onClick={(e) => {
+                e.preventDefault();
+                console.log(datos_registro)
+                
+              }}
+            >
+              Submit
+            </Button>
+          </Link>
         </div>
-        <Link to="/Home">
-          <Button variant="primary" type="submit" >
-            Submit
-          </Button>
-        </Link>
       </div>
-
 
     </Form>
 

@@ -105,12 +105,16 @@ function Registration() {
               placeholder="RUT" />
           </div>
 
+
+
+
           <Link to="/Home">
             <Button variant="primary" type="submit"
               onClick={(e) => {
                 e.preventDefault();
-                console.log(datos_registro)
-                
+                console.log(datos_registro);
+                actions.registro_funcion(datos_registro);
+
               }}
             >
               Submit

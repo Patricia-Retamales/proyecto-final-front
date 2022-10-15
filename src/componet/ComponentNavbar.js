@@ -23,9 +23,6 @@ function ComponentNabar() {
           <Nav className="me-auto">
             <Nav.Link href="#features"><Link to="productos">Productos</Link></Nav.Link>
 
-            
-            <NavDropdown  title="Tiendas" id="collasible-nav-dropdown">
-
               <NavDropdown.Item href="#action/3.1">
                 <Link to="/marcas"> Semillas</Link>
               </NavDropdown.Item>
@@ -39,6 +36,7 @@ function ComponentNabar() {
                 <Link to="/elestudiante">Utiles Escolares</Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.5">
+
               <Link to='/bellapandora'>joyas</Link> 
                 </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.6">
@@ -48,6 +46,7 @@ function ComponentNabar() {
               <Link to="/elquijotedelamancha">limpieza</Link> 
                 </NavDropdown.Item>
             
+
               <NavDropdown.Item href="#action/3.8">
                 <Link to="/latiendita">Ropa</Link>
               </NavDropdown.Item>
@@ -71,23 +70,31 @@ function ComponentNabar() {
 
               <NavDropdown.Item href="#action/3.2">
 
+               
+
+
                 <Link to="/Compras">
                Vender
                </Link>
+
 
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">
                 <Link to="/formulario">
                 Comprar
 
+              </NavDropdown.Item>
+
+
                 </Link>
                 </NavDropdown.Item>
+
 
               <NavDropdown.Item href="#action/3.2">
                 Mis favoritos
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-               Lista
+                Lista
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">

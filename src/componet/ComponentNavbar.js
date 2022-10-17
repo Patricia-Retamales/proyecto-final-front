@@ -86,8 +86,11 @@ function ComponentNabar() {
               </NavDropdown.Item>
 
               <NavDropdown.Item href="#action/3.2">
+                <Link to="/misfavoritos">
                 Mis favoritos
+                </Link>
               </NavDropdown.Item>
+              
               <NavDropdown.Item href="#action/3.2">
                 Lista
               </NavDropdown.Item>

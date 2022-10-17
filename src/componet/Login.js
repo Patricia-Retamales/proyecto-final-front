@@ -4,6 +4,7 @@ import ComponentNavbar from './ComponentNavbar';
 import React, { useEffect, useState, useContext } from "react";
 import Footer from "../componet/ComponenteFooter";
 import { Context } from "../store/AppContext.js"
+import { Link } from 'react-router-dom';
 
 function Login() {
   const { store, actions } = useContext(Context);
@@ -33,20 +34,21 @@ function Login() {
               value={login_password}
               id="exampleInputPassword1" placeholder="password" />
           </div>
-
-          <button type="submit" className="btn btn-primary"
-            onClick={(e) => {
-              e.preventDefault();
-              {
-                datos_login = {
-                  "email": login_email,
-                  "password": login_password
-                }
-              };
-              actions.login_function(datos_login);
-            }} >
-            Submit
-          </button>
+          <Link to="/">
+            <button type="submit" className="btn btn-primary"
+              onClick={(e) => {
+                e.preventDefault();
+                {
+                  datos_login = {
+                    "email": login_email,
+                    "password": login_password
+                  }
+                };
+                actions.login_function(datos_login);
+              }} >
+              Submit
+            </button>
+          </Link>
         </form>
       </div>
 

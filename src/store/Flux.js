@@ -65,8 +65,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 
 				fetch("https://3000-sneelyg-proyectofinalba-t9riffcpqgk.ws-us71.gitpod.io/registro", requestOptions)
-					.then(response => response.text())
-					.then(result => console.log(result))
+					.then(response => response.json())
+					.then(result => {
+						console.log(result)
+						if(result.registro == "ok"){alert("registro exitoso");}
+						else if (result.registro == "not"){alert(result.message);}
+						
+					
+					})
 					.catch(error => console.log('error', error));
 
 			},
@@ -93,6 +99,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(result => {
 						console.log(result)
 						localStorage.setItem("token", result.token)
+						if(result.login == "ok"){alert("login exitoso");}
 						/**Local */
 					})
 					.catch(error => console.log('error', error));

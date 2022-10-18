@@ -27,7 +27,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getMessage: async () => {
 				try {
 					// fetching data from the backend
-					const resp = await fetch("https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io" + "/api/hello")
+					const resp = await fetch("https://3000-sneelyg-proyectofinalba-t9riffcpqgk.ws-us71.gitpod.io" + "/api/hello")
 					const data = await resp.json()
 					setStore({ message: data.message })
 					// don't forget to return something, that is how the async resolves
@@ -64,9 +64,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io/registro", requestOptions)
-					.then(response => response.text())
-					.then(result => console.log(result))
+				fetch("https://3000-sneelyg-proyectofinalba-t9riffcpqgk.ws-us71.gitpod.io/registro", requestOptions)
+					.then(response => response.json())
+					.then(result => {
+						console.log(result)
+						if(result.registro == "ok"){alert("registro exitoso");}
+						else if (result.registro == "not"){alert(result.message);}
+						
+					
+					})
 					.catch(error => console.log('error', error));
 
 			},
@@ -88,11 +94,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io/login", requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-t9riffcpqgk.ws-us71.gitpod.io/login", requestOptions)
 					.then(response => response.json())
 					.then(result => {
 						console.log(result)
 						localStorage.setItem("token", result.token)
+						if(result.login == "ok"){alert("login exitoso");}
 						/**Local */
 					})
 					.catch(error => console.log('error', error));
@@ -120,7 +127,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/marcas/registro", requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-t9riffcpqgk.ws-us71.gitpod.io/marcas/registro", requestOptions)
 					.then(response => response.text())
 					.then(result => alert(result))
 					.catch(error => console.log('error', error));
@@ -145,7 +152,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/productos/registro", requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-t9riffcpqgk.ws-us71.gitpod.io/productos/registro", requestOptions)
 					.then(response => response.text())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));

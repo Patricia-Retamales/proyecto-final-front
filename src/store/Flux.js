@@ -54,7 +54,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"username": registro.username,
 					"nombre": registro.nombre,
 					"apellido": registro.apellido,
-					"rut": registro.rut
+					"rut": registro.rut,
+					"nombre_marca": registro.marca,
+					"descripcion": registro.descripcion,
+					"direccion": registro.direccion,
+					"tipo_pago": registro.tipo_pago,
+					"banco_cuenta": registro.banco,
+					"tipo_cuenta": registro.tipo_cuenta,
+					"numero_cuenta": registro.numero_cuenta
+
 				});
 
 				var requestOptions = {

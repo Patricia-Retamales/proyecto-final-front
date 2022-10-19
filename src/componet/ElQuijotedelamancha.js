@@ -11,7 +11,7 @@ import Footer from "../componet/ComponenteFooter";
 const ElQuijotedelaMancha = () => {
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
-            <ComponentNabar/>
+     
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -192,7 +192,7 @@ const ElQuijotedelaMancha = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-            <Footer/>
+      
 
         </div>
     );

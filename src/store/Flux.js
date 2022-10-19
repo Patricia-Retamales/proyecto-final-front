@@ -112,33 +112,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(error => console.log('error', error));
 			},
-			crear_marca_funcion: (datos_marca) => {
-				var myHeaders = new Headers();
-				myHeaders.append("Content-Type", "application/json");
-
-				var raw = JSON.stringify({
-					"vendedor": datos_marca.vendedor,
-					"nombre_marca": datos_marca.nombre_marca,
-					"descripcion": datos_marca.descripcion,
-					"direccion": datos_marca.direccion,
-					"tipo_pago": datos_marca.tipo_pago,
-					"banco_cuenta": datos_marca.banco_cuenta,
-					"tipo_cuenta": datos_marca.tipo_cuenta,
-					"numero_cuenta": datos_marca.numero_cuenta,
-					"rut_cuenta": datos_marca.rut_cuenta
-				});
-
-				var requestOptions = {
-					method: 'POST',
-					headers: myHeaders,
-					body: raw,
-					redirect: 'follow'
-				};
-
-				fetch("https://3000-sneelyg-proyectofinalba-t9riffcpqgk.ws-us71.gitpod.io/marcas/registro", requestOptions)
-					.then(response => response.text())
-					.then(result => alert(result))
-					.catch(error => console.log('error', error));
+			
 			},
 			crear_producto_funcion: (datos_producto) => {
 				var myHeaders = new Headers();
@@ -165,6 +139,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));
 			},
+
+
 			recuperar_clave_funcion: () => { },
 
 			getProductos: () => {
@@ -236,6 +212,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 		}
 	};
-};
+
 
 export default getState;

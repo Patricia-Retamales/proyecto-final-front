@@ -43,7 +43,7 @@ function Registration() {
   return (
 
     <Form>
-      <ComponentNabar />
+  
       <div>
         <div className="row mx-5">
 
@@ -105,12 +105,11 @@ function Registration() {
           <div className="col-md-6">
             <label className="form-label">Repetir Contraseña</label>
             <input type="password" className="form-control"
-
               id="repeat_password" aria-describedby="emailHelp"
               placeholder="password" />
           </div>
 
-       
+
 
           <p>Datos de tu marca</p>
 
@@ -140,11 +139,11 @@ function Registration() {
               id="direccion" aria-describedby="emailHelp"
               placeholder="Direccion" />
           </div>
+
+          
           /**Aca poner un dropdown */
-          //
-          //
-          // 
-          <div className="col-md-6"> 
+          
+          <div className="col-md-6">
             <label className="form-label">Tipo de Pago preferido</label>
             <input type="tipo_pago" className="form-control"
               onChange={e => setTipo_pago(e.target.value)}
@@ -179,7 +178,7 @@ function Registration() {
               id="numero_cuenta" aria-describedby="emailHelp"
               placeholder="Numero de Cuenta" />
           </div>
-          
+
           <div className="col-md-6">
             <label className="form-label">RUT</label>
             <input type="RUT" className="form-control"
@@ -206,86 +205,8 @@ function Registration() {
           </Link>
         </div>
       </div>
-
-
-      {/* <Form className=''>
-        <ComponentNabar />
-        <Row>
-
-          <Col>
-            <Form.Control placeholder=" name" />
-          </Col>
-          <Col>
-            <Form.Control placeholder="surname" />
-          </Col>
-        </Row>
-        <Form.Group className="mb-3" controlId="formGridAddress2">
-          <Form.Label>Rut</Form.Label>
-          <Form.Control placeholder="enter the route" />
-        </Form.Group>
-        <Row className="mb-3">
-          <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-          </Form.Group>
-          <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>RepeatEmail</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-          </Form.Group>
-          <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-          </Form.Group>
-          <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label>RepeatPassword</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-          </Form.Group>
-        </Row>
-
-        <Form.Group className="mb-3" controlId="formGridAddress1">
-          <Form.Label>direccion</Form.Label>
-          <Form.Control placeholder="1234 Main St" />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formGridAddress2">
-          <Form.Label>casa o depto</Form.Label>
-          <Form.Control placeholder="casa o depto" />
-        </Form.Group>
-
-        <Row className="mb-3">
-          <Form.Group as={Col} controlId="formGridCity">
-            <Form.Label>City</Form.Label>
-            <Form.Control />
-          </Form.Group>
-
-          <Form.Group as={Col} controlId="formGridState">
-            <Form.Label>State</Form.Label>
-            <Form.Select defaultValue="Choose...">
-              <option>Choose...</option>
-              <option>Region Metropolitana</option>
-            </Form.Select>
-          </Form.Group>
-
-          <Form.Group as={Col} controlId="formGridZip">
-            <Form.Label>Zip</Form.Label>
-            <Form.Control />
-          </Form.Group>
-        </Row>
-
-        <Form.Group className="mb-3" id="formGridCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-        <Link to="/Home">
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Link>
-
-      </Form> */}
-
-
     </Form>
-  );
+  )
 }
 
 export default Registration;

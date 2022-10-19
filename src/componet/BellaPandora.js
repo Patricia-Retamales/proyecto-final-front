@@ -11,7 +11,7 @@ import Footer from "../componet/ComponenteFooter";
 const BellaPandora = () => {
     return (
         <div className='semillas' style={{background:'#ffffec'}}>
-            <ComponentNabar/>
+           
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -193,7 +193,7 @@ Su intención no era dedicarse a la joyería, pero la experiencia de crear ese a
                 </Accordion.Item>
             </Accordion>
 
-            <Footer/>
+           
         </div>
     );
 }

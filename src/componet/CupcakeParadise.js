@@ -11,7 +11,7 @@ import Footer from "../componet/ComponenteFooter";
 const CupcakeParadise = () => {
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
-             <ComponentNabar/>
+       
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -192,7 +192,7 @@ const CupcakeParadise = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-            <Footer/>
+          
 
         </div>
     );

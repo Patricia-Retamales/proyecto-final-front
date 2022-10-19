@@ -10,7 +10,7 @@ import ComponentNabar from './ComponentNavbar';
 function DatosUsuario() {
   return (
     <Form>
-       <ComponentNabar/>
+      
       <Row>
      
         <Col>

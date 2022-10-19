@@ -17,8 +17,8 @@ const Registro_Producto = () => {
 
 
     let datos_producto = {
-        "vendedor": "vendedor",
-        "marca": marca,
+        "vendedor": "01",
+        "marca": "01",
         "nombre_producto": nombre_producto,
         "descripcion": descripcion,
         "precio": precio,
@@ -78,7 +78,6 @@ const Registro_Producto = () => {
                         <Button variant="primary" type="submit"
                             onClick={(e) => {
                                 e.preventDefault();
-                                console.log(datos_producto);
                                 actions.crear_producto_funcion(datos_producto);
 
                             }}

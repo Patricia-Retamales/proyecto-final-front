@@ -18,10 +18,16 @@ import DatosUsuario from "./componet/DatosUsuario";
 import Formulario from "./componet/Formulario";
 import Compras from "./componet/Compras";
 import Misfavoritos from "./componet/Misfavoritos";
+import Registro_Producto from "./componet/Registro_Producto"
+
+import Footer from "./componet/ComponenteFooter";
+import ComponentNabar from "./componet/ComponentNavbar";
+
 
 function App() {
     return (
         <BrowserRouter>
+       <ComponentNabar/>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={< Login />} />
@@ -34,6 +40,7 @@ function App() {
                 <Route path="/ElQuijotedelaMancha" element={<ElQuijotedelaMancha/>} />
                 <Route path="/LaTiendita" element={<LaTiendita/>} />
                 <Route path="/Marcas" element={<Marcas />} />
+                <Route path="/productos/registro" element={<  Registro_Producto />} />
                 <Route path="/SaborDivino" element={<SaborDivino />} />
                 <Route path="BellaPandora" element={<BellaPandora/>} />
                 <Route path="/DatosUsuario" element={<DatosUsuario/>} />
@@ -46,6 +53,7 @@ function App() {
                
 
             </Routes>
+            <Footer/>
         </BrowserRouter>
     );
 }

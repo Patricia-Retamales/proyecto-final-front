@@ -74,7 +74,7 @@ function ComponentNabar() {
               </NavDropdown.Item>
 
               <NavDropdown.Item href="#action/3.2">
-                <Link to="/Compras">
+                <Link to="/productos/registro">
                   Vender
                 </Link>
 

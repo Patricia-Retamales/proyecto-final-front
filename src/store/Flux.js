@@ -27,7 +27,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getMessage: async () => {
 				try {
 					// fetching data from the backend
+
 					const resp = await fetch("https://3000-sneelyg-proyectofinalba-s3t5es4wucl.ws-us71.gitpod.io" + "/api/hello")
+
 					const data = await resp.json()
 					setStore({ message: data.message })
 					// don't forget to return something, that is how the async resolves
@@ -72,12 +74,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
+
 				fetch("https://3000-sneelyg-proyectofinalba-s3t5es4wucl.ws-us71.gitpod.io/registro", requestOptions)
 					.then(response => response.json())
 					.then(result => {
 						console.log(result)
 						if (result.registro == "ok") { alert("registro exitoso"); }
 						else if (result.registro == "not") { alert(result.message); }
+
 
 					})
 					.catch(error => console.log('error', error));
@@ -101,16 +105,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
+
 				fetch("https://3000-sneelyg-proyectofinalba-s3t5es4wucl.ws-us71.gitpod.io/login", requestOptions)
+
+			
 					.then(response => response.json())
 					.then(result => {
 						console.log(result)
 						localStorage.setItem("token", result.token)
+
 						if (result.login == "ok") { alert("login exitoso"); }
+
 						/**Local */
 					})
 					.catch(error => console.log('error', error));
 			},
+
 
 			crear_producto_funcion: (datos_producto) => {
 				console.log(datos_producto);
@@ -133,7 +143,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
+
 				fetch("https://3000-sneelyg-proyectofinalba-s3t5es4wucl.ws-us71.gitpod.io/productos/registro", requestOptions)
+
 					.then(response => response.text())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));

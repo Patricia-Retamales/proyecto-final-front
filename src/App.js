@@ -22,6 +22,7 @@ import Registro_Producto from "./componet/Registro_Producto"
 
 import Footer from "./componet/ComponenteFooter";
 import ComponentNabar from "./componet/ComponentNavbar";
+import Recuperar_Clave from "./componet/Recuperar_clave";
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
                 <Route path="/Formulario" element={<Formulario/>} />
                 <Route path="/Compras" element={<Compras/>} />
                 <Route path="/Misfavoritos" element={<Misfavoritos/>} />
+                <Route path="/recuperar/clave" element={<Recuperar_Clave/>} />
 
                 
                 

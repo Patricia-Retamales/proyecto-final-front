@@ -6,10 +6,9 @@ import Footer from "../componet/ComponenteFooter";
 import { Context } from "../store/AppContext.js"
 import { Link } from 'react-router-dom';
 
-function Login() {
+function Recuperar_Clave() {
   const { store, actions } = useContext(Context);
   const [login_email, setEmail] = useState("");
-  const [login_password, setPassword] = useState("");
 
   let datos_login = {};
   return (
@@ -19,7 +18,7 @@ function Login() {
       <div>
         <form justify="center" style={{ width: "38rem" }}>
           <div className="mb-3">
-            <label className="form-label">Email address</label>
+            <label className="form-label">Ingresa tu correo</label>
             <input type="email" className="form-control"
               onChange={e => setEmail(e.target.value)}
               value={login_email}
@@ -27,13 +26,7 @@ function Login() {
               placeholder="email@e-mail.com" />
             <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
           </div>
-          <div className="mb-3">
-            <label className="form-label">Password</label>
-            <input type="password" className="form-control"
-              onChange={e => setPassword(e.target.value)}
-              value={login_password}
-              id="exampleInputPassword1" placeholder="password" />
-          </div>
+        
           <Link to="/">
             <button type="submit" className="btn btn-primary"
               onClick={(e) => {
@@ -41,17 +34,13 @@ function Login() {
                 {
                   datos_login = {
                     "email": login_email,
-                    "password": login_password
                   }
                 };
-                actions.login_function(datos_login);
+                actions.recuperar_clave_funcion(login_email);
               }} >
               Submit
             </button>
-
-            
           </Link>
-          <Link to="/recuperar/clave"><p>Recuperar Contraseña</p></Link>
         </form>
       </div>
 
@@ -61,4 +50,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Recuperar_Clave;

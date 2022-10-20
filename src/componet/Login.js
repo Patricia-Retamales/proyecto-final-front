@@ -14,11 +14,13 @@ function Login() {
   let datos_login = {};
   return (
 
-    <Form>
-   
-      <div>
+    <Form style={{ backgroundImage:"linear-gradient(#d8af97, #edb8fa)", }}>
+      <ComponentNavbar />
+      <div style={{ margin: "18%", color: "#d1052a", background: "white", height: "80%", width: "50%", borderRadius: "9px black", boxShadow: "0 2px 4px 0 black, 0 3px 10px 0 black", padding: "10px", alignItems:"stretch" }}>
+      <h1 style={{ padding: "2px", textShadow:"2px 2px 5px #000000" }}>Ingresar</h1>
         <form justify="center" style={{ width: "38rem" }}>
-          <div className="mb-3">
+
+          <div className="mb-3" style={{ width: "38rem", position:"relative", margin:"40px", }}>
             <label className="form-label">Email address</label>
             <input type="email" className="form-control"
               onChange={e => setEmail(e.target.value)}
@@ -27,7 +29,7 @@ function Login() {
               placeholder="email@e-mail.com" />
             <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
           </div>
-          <div className="mb-3">
+          <div className="mb-3" style={{ width: "38rem", position:"relative", margin:"40px", }}>
             <label className="form-label">Password</label>
             <input type="password" className="form-control"
               onChange={e => setPassword(e.target.value)}
@@ -35,7 +37,7 @@ function Login() {
               id="exampleInputPassword1" placeholder="password" />
           </div>
           <Link to="/">
-            <button type="submit" className="btn btn-primary"
+            <button style={{ width: "38rem", position:"relative", margin:"40px", }} type="submit" className="btn btn-outline-secondary"
               onClick={(e) => {
                 e.preventDefault();
                 {
@@ -52,9 +54,9 @@ function Login() {
         </form>
       </div>
 
-    
+  <Footer/>
     </Form>
-
+  
   );
 }
 

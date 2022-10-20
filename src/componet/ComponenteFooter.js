@@ -10,7 +10,7 @@ function Footer() {
 
 
 
-				<div className="row p-5 bg-dark text-white">
+				<div className="row p-5 bg- text-white"  style={{background:"#888a8a", border:"##9b9b9b 5px solid"}}>
 
 					<div className="col-xs-12 col-md-6 col-lg-3">
 						<p className="h3"> Contenido </p>

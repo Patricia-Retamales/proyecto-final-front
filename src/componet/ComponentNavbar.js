@@ -8,16 +8,16 @@ import { Link } from "react-router-dom";
 
 function ComponentNabar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" style={{background:"#888a8a", border:"#9b9b9b 5px solid"}}>
       <Container>
         <img
-          src="https://c8.alamy.com/compes/wwcbtt/icono-de-compras-online-en-el-comic-de-estilo-tienda-smartphone-cartoon-vectoriales-ilustracion-sobre-fondo-blanco-aisladas-concepto-de-negocio-en-el-mercado-efecto-splash-wwcbtt.jpg"
+          src="https://cdn-icons-png.flaticon.com/512/5175/5175268.png"
           width="100"
-          height="50"
+          height="60"
           className="d-inline-block align-top"
           alt=""
         />
-        <Navbar.Brand href="#home"><Link to="/">De todo un poco</Link></Navbar.Brand>
+        <Navbar.Brand href="#home"><Link to="/"  style={{ padding: "4px", textShadow:" 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue"}}>De todo un poco</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

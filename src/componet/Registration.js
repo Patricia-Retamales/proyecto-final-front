@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import ComponentNabar from './ComponentNavbar';
 import { Context } from "../store/AppContext.js"
 import React, { useEffect, useState, useContext } from "react";
+import Footer from "../componet/ComponenteFooter";
 
 function Registration() {
   const { store, actions } = useContext(Context);
@@ -42,12 +43,13 @@ function Registration() {
 
   return (
 
-    <Form>
-  
-      <div>
+    <Form style={{ backgroundImage: "linear-gradient(#d8af97, #edb8fa)", }}>
+      <ComponentNabar />
+      <div style={{ margin: "18%", color: "#d1052a", background: "white", height: "80%", width: "50%", borderRadius: "9px black", boxShadow: "0 2px 4px 0 black, 0 3px 10px 0 black", padding: "10px", alignItems: "stretch" }}>
         <div className="row mx-5">
+          <h1 style={{ padding: "2px", textShadow: "2px 2px 5px #000000" }}>Regristrar</h1>
 
-          <div className="col-md-6">
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Nombre</label>
             <input type="Nombre" className="form-control"
               onChange={e => setNombre(e.target.value)}
@@ -56,7 +58,7 @@ function Registration() {
               placeholder="Nombre" />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Apellido</label>
             <input type="Nombre" className="form-control"
               onChange={e => setApellido(e.target.value)}
@@ -65,7 +67,7 @@ function Registration() {
               placeholder="Apellido" />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Nombre de Usuario</label>
             <input type="username" className="form-control"
               onChange={e => setUsername(e.target.value)}
@@ -76,7 +78,7 @@ function Registration() {
 
 
 
-          <div className="col-md-6">
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Email</label>
             <input type="Nombre" className="form-control"
               onChange={e => setEmail(e.target.value)}
@@ -85,14 +87,14 @@ function Registration() {
               placeholder="email@ejemplo.cl" />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Repetir Email</label>
             <input type="Nombre" className="form-control"
               id="repetir_email" aria-describedby="emailHelp"
               placeholder="email@ejemplo.cl" />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Contraseña</label>
             <input type="password" className="form-control"
               onChange={e => setPassword(e.target.value)}
@@ -102,7 +104,7 @@ function Registration() {
           </div>
 
 
-          <div className="col-md-6">
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Repetir Contraseña</label>
             <input type="password" className="form-control"
               id="repeat_password" aria-describedby="emailHelp"
@@ -110,8 +112,8 @@ function Registration() {
           </div>
 
 
-
-          <p>Datos de tu marca</p>
+          <h1 style={{ padding: "2px", textShadow: "2px 2px 5px #000000" }}>Datos de tu marca</h1>
+         
 
           <div className="col-md-6">
             <label className="form-label">Nombre de la marca</label>
@@ -140,9 +142,9 @@ function Registration() {
               placeholder="Direccion" />
           </div>
 
-          
+
           /**Aca poner un dropdown */
-          
+
           <div className="col-md-6">
             <label className="form-label">Tipo de Pago preferido</label>
             <input type="tipo_pago" className="form-control"
@@ -188,11 +190,8 @@ function Registration() {
               placeholder="RUT" />
           </div>
 
-
-
-
           <Link to="/">
-            <Button variant="primary" type="submit"
+            <Button variant="outline-secondary" style={{ width: "32rem", position: "static", margin: "10px", justifyContent: "center" }} type="submit"
               onClick={(e) => {
                 e.preventDefault();
                 console.log(datos_registro);
@@ -203,7 +202,9 @@ function Registration() {
               Submit
             </Button>
           </Link>
+
         </div>
+
       </div>
     </Form>
   )

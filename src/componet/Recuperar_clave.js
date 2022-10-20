@@ -9,12 +9,10 @@ import { Link } from 'react-router-dom';
 function Recuperar_Clave() {
   const { store, actions } = useContext(Context);
   const [login_email, setEmail] = useState("");
-
-  let datos_login = {};
   return (
 
     <Form>
-   
+
       <div>
         <form justify="center" style={{ width: "38rem" }}>
           <div className="mb-3">
@@ -26,26 +24,23 @@ function Recuperar_Clave() {
               placeholder="email@e-mail.com" />
             <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
           </div>
-        
+
           <Link to="/">
             <button type="submit" className="btn btn-primary"
               onClick={(e) => {
                 e.preventDefault();
-                {
-                  datos_login = {
-                    "email": login_email,
-                  }
-                };
                 actions.recuperar_clave_funcion(login_email);
+
+                
               }} >
-              Submit
-            </button>
-          </Link>
-        </form>
-      </div>
+            Submit
+          </button>
+        </Link>
+      </form>
+    </div>
 
     
-    </Form>
+    </Form >
 
   );
 }

@@ -23,6 +23,7 @@ import Registro_Producto from "./componet/Registro_Producto"
 import Footer from "./componet/ComponenteFooter";
 import ComponentNabar from "./componet/ComponentNavbar";
 import Recuperar_Clave from "./componet/Recuperar_clave";
+import Cambiar_Clave from "./componet/Cambiar_Clave";
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
                 <Route path="/Compras" element={<Compras/>} />
                 <Route path="/Misfavoritos" element={<Misfavoritos/>} />
                 <Route path="/recuperar/clave" element={<Recuperar_Clave/>} />
+                <Route path="/cambiar/clave/:token" element={<Cambiar_Clave/>} />
 
                 
                 

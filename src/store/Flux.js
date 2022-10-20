@@ -224,6 +224,33 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			},
 
+			cambiar_clave_funcion: (nueva_clave, email, token) => {
+				console.log("Cambiando Clave")
+				var myHeaders = new Headers();
+				myHeaders.append("Authorization", "Bearer " + token);
+				myHeaders.append("Content-Type", "application/json");
+
+				var raw = JSON.stringify({
+					"email": email,
+					"password": nueva_clave
+				});
+
+				var requestOptions = {
+					method: 'POST',
+					headers: myHeaders,
+					body: raw,
+					redirect: 'follow'
+				};
+
+				fetch("https://3000-sneelyg-proyectofinalba-tvacgmaa6t1.ws-us72.gitpod.io/cambiar/clave", requestOptions)
+					.then(response => response.json())
+					.then(result => console.log(result))
+					.catch(error => console.log('error', error));
+
+
+
+			},
+
 			getProductos: () => {
 
 

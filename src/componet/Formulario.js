@@ -10,7 +10,7 @@ import ComponentNabar from './ComponentNavbar';
 function Formulario() {
     return (
         <Form style={{ margin: "25px", background:"#ede6db"}}>
-            <ComponentNabar />
+  
             <Row>
                 <h1 style={{ margin: "25px", }}> Datos del Cliente</h1>
 

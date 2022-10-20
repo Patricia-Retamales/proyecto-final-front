@@ -11,7 +11,7 @@ import Footer from "../componet/ComponenteFooter";
 const Marcas = () => {
     return (
         <div className='semillas' style={{background:'#ffffec'}}>
-            <ComponentNabar/>
+    
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -200,7 +200,7 @@ const Marcas = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-            <Footer/>
+  
 
         </div>
     );

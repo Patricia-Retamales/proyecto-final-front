@@ -13,7 +13,7 @@ const CardTajetas = () => {
 
   return (
     <div className="row">
-      <ComponentNabar />
+
 
 
       <Card style={{ width: '18rem', margin: '22px', }}>
@@ -139,7 +139,7 @@ const CardTajetas = () => {
           </Link>
         </Card.Body>
       </Card>
-      <Footer/>
+
     </div>
   );
 

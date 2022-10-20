@@ -1,4 +1,4 @@
-import Button from 'react-bootstrap/Button';
+
 import Form from 'react-bootstrap/Form';
 import ComponentNavbar from './ComponentNavbar';
 import React, { useEffect, useState, useContext } from "react";
@@ -15,7 +15,7 @@ function Login() {
   return (
 
     <Form>
-      <ComponentNavbar />
+   
       <div>
         <form justify="center" style={{ width: "38rem" }}>
           <div className="mb-3">
@@ -52,7 +52,7 @@ function Login() {
         </form>
       </div>
 
-      <Footer />
+    
     </Form>
 
   );

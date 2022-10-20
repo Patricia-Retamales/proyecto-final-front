@@ -7,6 +7,8 @@ import Footer from "../componet/ComponenteFooter";
 import { Context } from "../store/AppContext.js"
 import { Link } from 'react-router-dom';
 
+
+
 const Registro_Producto = () => {
     const { store, actions } = useContext(Context);
     const [marca, setMarca] = useState("");
@@ -14,6 +16,12 @@ const Registro_Producto = () => {
     const [descripcion, setDescripcion] = useState("");
     const [precio, setPrecio] = useState("");
     const [url_foto, setUrlfoto] = useState("");
+
+    useEffect(() => {
+       actions.acceso_privado()
+
+
+    }, []);
 
 
     let datos_producto = {
@@ -29,7 +37,7 @@ const Registro_Producto = () => {
         <>
 
             <div className="wrapper" style={{ width: '50%' }}>
-
+                {store.acceso.usuario}
 
                 <div className="row mx-5 justify-content-center">
 

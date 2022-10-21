@@ -6,12 +6,13 @@ import Table from 'react-bootstrap/Table';
 import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
 
+import { FcLike } from "react-icons/fc";
 
 
 const Marcas = () => {
     return (
-        <div className='semillas' style={{background:'#ffffec'}}>
-    
+        <div className='semillas' style={{ background: '#ffffec' }}>
+<ComponentNabar/>
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -49,7 +50,7 @@ const Marcas = () => {
                     <Carousel.Caption>
                         <h3>El jardin Mistico</h3>
                         <p>
-                        Te ofrecemos variedades de Semillas
+                            Te ofrecemos variedades de Semillas
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -138,36 +139,38 @@ const Marcas = () => {
                         <td>1</td>
                         <td>semillas de Zapallo</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Semillas de Girasol</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Semillas de Linaza</td>
                         <td>$1990</td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
 
                     <tr>
                         <td>4</td>
                         <td>semillas de Zapallo</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Semillas de Girasol</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Semillas de Linaza</td>
                         <td>$ 1990</td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                 </tbody>
             </Table>
@@ -200,8 +203,8 @@ const Marcas = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-  
 
+            <Footer />
         </div>
     );
 }

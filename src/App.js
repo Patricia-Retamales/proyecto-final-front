@@ -17,11 +17,10 @@ import Productos from "./componet/Productos";
 import DatosUsuario from "./componet/DatosUsuario";
 import Formulario from "./componet/Formulario";
 import Compras from "./componet/Compras";
-import Misfavoritos from "./componet/Misfavoritos";
+
 import Registro_Producto from "./componet/Registro_Producto"
 
-import Footer from "./componet/ComponenteFooter";
-import ComponentNabar from "./componet/ComponentNavbar";
+
 import Recuperar_Clave from "./componet/Recuperar_clave";
 import Cambiar_Clave from "./componet/Cambiar_Clave";
 
@@ -29,7 +28,7 @@ import Cambiar_Clave from "./componet/Cambiar_Clave";
 function App() {
     return (
         <BrowserRouter>
-       <ComponentNabar/>
+       
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={< Login />} />
@@ -48,16 +47,14 @@ function App() {
                 <Route path="/DatosUsuario" element={<DatosUsuario/>} />
                 <Route path="/Formulario" element={<Formulario/>} />
                 <Route path="/Compras" element={<Compras/>} />
-                <Route path="/Misfavoritos" element={<Misfavoritos/>} />
-                <Route path="/recuperar/clave" element={<Recuperar_Clave/>} />
-                <Route path="/cambiar/clave/:token" element={<Cambiar_Clave/>} />
+                
 
                 
                 
                
 
             </Routes>
-            <Footer/>
+           
         </BrowserRouter>
     );
 }

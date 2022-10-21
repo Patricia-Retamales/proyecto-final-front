@@ -6,7 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{"email": "santiago@123.cl",
 				"password": "123",
 				"is_active": "True",
-				"username": "sasntiago123"
+				"username": "sasntiago123",
 				"nombre": "Santiago",
 				"apellido": "Neely",
 				"rut": "24626970",
@@ -22,7 +22,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				"password": "456",
 				"is_active": "True",
 				"username": "paty",
-				"nombre": Patricia,
+				"nombre": "Patricia",
 				"apellido": "Retamales",
 				"rut": "30453677",
 				"nombre_marca": "Semillas Paty",
@@ -68,10 +68,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"id":"4",
 					"vendedor": "02",
 					"marca": "02",
-					"nombre_producto": nombre_producto,
-					"descripcion": descripcion,
-					"precio": precio,
-					"url_foto": url_foto
+					"nombre_producto": "nombre_producto",
+					"descripcion": "descripcion",
+					"precio": "precio",
+					"url_foto": "url_foto"
 				},
 				{
 					"id":"5",
@@ -144,81 +144,40 @@ const getState = ({ getStore, getActions, setStore }) => {
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
-
-			//Verificacion de acceso privado
-			acceso_privado: () => {
-				const store = getStore();
-				const token = localStorage.getItem('token');
-				const autorizacion = "Bearer " + token;
-				console.log("funcion acceso privado")
-				var myHeaders = new Headers();
-				myHeaders.append("Authorization", autorizacion);
-				myHeaders.append("Content-Type", "application/json");
-
-
-
-				var requestOptions = {
-					method: 'GET',
-					headers: myHeaders,
-					redirect: 'follow'
-				};
-
-				fetch("https://3000-sneelyg-proyectofinalba-tvacgmaa6t1.ws-us72.gitpod.io/privada", requestOptions)
-					.then(response => response.json())
-					.then(result => {
-						setStore({ acceso: result });
-						if (result.success == "ok") {
-							console.log(result)
-						}
-						else {
-							window.location.href = "/login"
-						}
-					})
-					.catch(error => console.log('error', error));
-
-
-
-
-
-			},
-
-
-
 			/**Función de Registro acá abajo */
 			registro_funcion: (registro) => {
 				console.log("Creando Usuario")
 				var myHeaders = new Headers();
 				myHeaders.append("Content-Type", "application/json");
 
-				var raw = JSON.stringify({
+				/*var raw = JSON.stringify({
 					"email": registro.email,
 					"password": registro.password,
 					"is_active": "True",
 					"username": registro.username,
 					"nombre": registro.nombre,
 					"apellido": registro.apellido,
-					"rut": registro.rut
+					"rut": registro.rut,
+					"nombre_marca": registro.marca,
+					"descripcion": registro.descripcion,
+					"direccion": registro.direccion,
+					"tipo_pago": registro.tipo_pago,
+					"banco_cuenta": registro.banco,
+					"tipo_cuenta": registro.tipo_cuenta,
+					"numero_cuenta": registro.numero_cuenta
+	
 				});
-
+	*/
 				var requestOptions = {
 					method: 'POST',
 					headers: myHeaders,
-					body: raw,
+					body: JSON.stringify(registro),
 					redirect: 'follow'
 				};
 
-
-
-				fetch("https://3000-sneelyg-proyectofinalba-tvacgmaa6t1.ws-us72.gitpod.io/registro", requestOptions)
-					.then(response => response.json())
-					.then(result => {
-						console.log(result)
-						if (result.registro == "ok") { alert("registro exitoso"); }
-						else if (result.registro == "not") { alert(result.message); }
-
-
-					})
-
+				fetch("https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io/registro", requestOptions)
+					.then(response => response.text())
+					.then(result => console.log(result))
 					.catch(error => console.log('error', error));
 
 			},
@@ -240,48 +199,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-
-
-				fetch("https://3000-sneelyg-proyectofinalba-tvacgmaa6t1.ws-us72.gitpod.io/login", requestOptions)
-
-
+				fetch("https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io/login", requestOptions)
 					.then(response => response.json())
 					.then(result => {
 						console.log(result)
 						localStorage.setItem("token", result.token)
+
+						if (result.login == "ok") { alert("login exitoso"); }
+
 						/**Local */
 					})
 					.catch(error => console.log('error', error));
 			},
-			crear_marca_funcion: (datos_marca) => {
-				var myHeaders = new Headers();
-				myHeaders.append("Content-Type", "application/json");
 
-				var raw = JSON.stringify({
-					"vendedor": datos_marca.vendedor,
-					"nombre_marca": datos_marca.nombre_marca,
-					"descripcion": datos_marca.descripcion,
-					"direccion": datos_marca.direccion,
-					"tipo_pago": datos_marca.tipo_pago,
-					"banco_cuenta": datos_marca.banco_cuenta,
-					"tipo_cuenta": datos_marca.tipo_cuenta,
-					"numero_cuenta": datos_marca.numero_cuenta,
-					"rut_cuenta": datos_marca.rut_cuenta
-				});
 
-				var requestOptions = {
-					method: 'POST',
-					headers: myHeaders,
-					body: raw,
-					redirect: 'follow'
-				};
-
-				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/marcas/registro", requestOptions)
-					.then(response => response.text())
-					.then(result => alert(result))
-					.catch(error => console.log('error', error));
-			},
 			crear_producto_funcion: (datos_producto) => {
+				console.log(datos_producto);
 				var myHeaders = new Headers();
 
 				const store = getStore();
@@ -292,89 +225,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 				myHeaders.append("Authorization", autorizacion);
 				myHeaders.append("Content-Type", "application/json");
 
-
-				/*var raw = JSON.stringify({
-
+				var raw = JSON.stringify({
 					"vendedor": datos_producto.vendedor,
 					"marca": datos_producto.marca,
 					"nombre_producto": datos_producto.nombre_producto,
 					"descripcion": datos_producto.descripcion,
 					"precio": datos_producto.precio,
-					"url_foto": datos_producto.url_foto,
-					
+					"url_foto": datos_producto.url_foto
 				});
-
+	
 				var requestOptions = {
 					method: 'POST',
 					headers: myHeaders,
-					body: raw,
+					body: JSON.stringify(datos_producto),
 					redirect: 'follow'
 				};
 
-
-
-				fetch("https://3000-sneelyg-proyectofinalba-tvacgmaa6t1.ws-us72.gitpod.io/productos/registro", requestOptions)
-
-
+				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/productos/registro", requestOptions)
 					.then(response => response.text())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));
 			},
-
-
-
-			recuperar_clave_funcion: (email_usuario) => {
-				console.log("Recuperando Clave para " + email_usuario)
-				var myHeaders = new Headers();
-				myHeaders.append("Content-Type", "application/json");
-
-				var raw = JSON.stringify({
-					"email": email_usuario
-				});
-
-				var requestOptions = {
-					method: 'POST',
-					headers: myHeaders,
-					body: raw,
-					redirect: 'follow'
-				};
-
-				fetch("https://3000-sneelyg-proyectofinalba-tvacgmaa6t1.ws-us72.gitpod.io/recuperar/clave", requestOptions)
-					.then(response => response.json())
-					.then(result => console.log(result))
-					.catch(error => console.log('error', error));
-
-
-
-			},
-
-			cambiar_clave_funcion: (nueva_clave, email, token) => {
-				console.log("Cambiando Clave")
-				var myHeaders = new Headers();
-				myHeaders.append("Authorization", "Bearer " + token);
-				myHeaders.append("Content-Type", "application/json");
-
-				var raw = JSON.stringify({
-					"email": email,
-					"password": nueva_clave
-				});
-
-				var requestOptions = {
-					method: 'POST',
-					headers: myHeaders,
-					body: raw,
-					redirect: 'follow'
-				};
-
-				fetch("https://3000-sneelyg-proyectofinalba-tvacgmaa6t1.ws-us72.gitpod.io/cambiar/clave", requestOptions)
-					.then(response => response.json())
-					.then(result => console.log(result))
-					.catch(error => console.log('error', error));
-
-
-
-			},
-
+			recuperar_clave_funcion: () => { },
 
 			getProductos: () => {
 
@@ -384,9 +256,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-
-				fetch("https://3000-sneelyg-proyectofinalba-tvacgmaa6t1.ws-us72.gitpod.io/productos/", requestOptions)
-
+				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/productos/", requestOptions)
 					.then(response => response.text())
 					.then(result => setStore({ productos: result }))
 					.catch(error => console.log('error', error));
@@ -417,36 +287,37 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/productos/"+id_producto, requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/productos/" + id_producto, requestOptions)
 					.then(response => response.text())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));
 			},
 			addFavorite: (favorite) => {
-                const store = getStore();
-                const actions = getActions();
-                if(!store.favoriteList.includes(favorite)){
-                    setStore({
-                        favoriteList: [...store.favoriteList, favorite]
-                    });
-                }else{
-                    const array = store.favoriteList;
-                    const exist = currentFavorite => currentFavorite === favorite;
-                    let index = array.findIndex(exist);
-                    if( index > -1) actions.removeFavorite(index);
-                }
-            },
-            removeFavorite: (index) => {
-                const store = getStore();
-                store.favoriteList.splice(index, 1);
-                setStore({
-                    favoriteList: store.favoriteList
-                });
-            }
+				const store = getStore();
+				const actions = getActions();
+				if (!store.favoriteList.includes(favorite)) {
+					setStore({
+						favoriteList: [...store.favoriteList, favorite]
+					});
+				} else {
+					const array = store.favoriteList;
+					const exist = currentFavorite => currentFavorite === favorite;
+					let index = array.findIndex(exist);
+					if (index > -1) actions.removeFavorite(index);
+				}
+			},
+			removeFavorite: (index) => {
+				const store = getStore();
+				store.favoriteList.splice(index, 1);
+				setStore({
+					favoriteList: store.favoriteList
+				});
+			}
 
 
 		}
-	};
+	}
 };
+
 
 export default getState;

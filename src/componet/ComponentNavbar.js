@@ -8,6 +8,7 @@ import { Context } from "../store/AppContext";
 import React, { useContext } from 'react';
 import { HiOutlineTrash } from "react-icons/hi";
 import Badge from 'react-bootstrap/Badge';
+ import { SlBasket } from "react-icons/sl";
 
 
 function ComponentNabar() {
@@ -34,7 +35,7 @@ function ComponentNabar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#features">
-              <Link to="productos">
+              <Link to="/productos">
                 Productos
               </Link>
             </Nav.Link>
@@ -71,10 +72,10 @@ function ComponentNabar() {
           </Nav>
 
           <Link to="/login">
-            <button className="btn btn-primary">Ingresar</button>
+            <button   className="btn btn-primary" variant="outlined" ><th>Ingresar</th></button>
           </Link>
           <Link to="/registration">
-            <button className="btn btn-primary">Registrar</button>
+            <button className="btn btn-primary"><th>Registrar</th></button>
           </Link>
 
 
@@ -82,30 +83,18 @@ function ComponentNabar() {
           <Nav className="me-auto">
             <NavDropdown title="Usuario" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
-                <Link to="/datosusuario">configuracion</Link>
+                <Link to="/datosusuario">
+                  <th>configuracion</th>
+                  </Link>
               </NavDropdown.Item>
 
-              <NavDropdown.Item href="#action/3.2">
-                <Link to="/productos/registro">
-                  Vender
-                </Link>
-
-              </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">
                 <Link to="/formulario">
-                  Comprar
+                 <th>Comprar</th> 
                 </Link>
               </NavDropdown.Item>
 
-              <NavDropdown.Item href="#action/3.2">
-                <Link to="/misfavoritos">
-                Mis favoritos
-                </Link>
-              </NavDropdown.Item>
-              
-              <NavDropdown.Item href="#action/3.2">
-                Lista
-              </NavDropdown.Item>
+          
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Cerrar sesion
@@ -118,14 +107,14 @@ function ComponentNabar() {
         <Dropdown>
               <Dropdown.Toggle variant="primary" id="nav-dropdown-dark-example"
               title="Dropdown">
-                Favoritos <Badge bg="secondary" >{store.favoriteList.length}</Badge>
+               <button >{store.favoriteList.length}<SlBasket/> </button>
 
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
                 {(
                   store.favoriteList.length === 0) ?
-                  <Dropdown.Item><h6>Aun no se han agregado Like</h6></Dropdown.Item> :
+                  <Dropdown.Item><h6>vasio</h6></Dropdown.Item> :
                   store.favoriteList.map((favorite, index) =>
                     <Dropdown.Item>{favorite}
                       <button className='icons' onClick={() => { deleteFavorite(index) }}><HiOutlineTrash /></button>

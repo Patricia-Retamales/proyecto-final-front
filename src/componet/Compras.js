@@ -4,13 +4,14 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import ComponentNabar from './ComponentNavbar';
+import Footer from "../componet/ComponenteFooter";
 
 
 
 function Compras() {
     return (
-        <Form style={{ margin: "25px", background:"#ede6db"}}>
- 
+        <Form style={{ margin: "25px", background: "#ede6db" }}>
+            <ComponentNabar />
             <Row>
                 <h1 style={{ margin: "25px", }}> Datos del Cliente</h1>
 
@@ -169,7 +170,7 @@ function Compras() {
 
 
 
-
+            <Footer />
 
         </Form>
 

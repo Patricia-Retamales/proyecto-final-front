@@ -6,12 +6,15 @@ import Table from 'react-bootstrap/Table';
 import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
 
+import { FcLike } from "react-icons/fc";
+
 
 
 const ElQuijotedelaMancha = () => {
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
-     
+
+            <ComponentNabar />
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -138,36 +141,38 @@ const ElQuijotedelaMancha = () => {
                         <td>1</td>
                         <td>Poett</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Suavizante</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Cloro Gel</td>
                         <td>$1990</td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
 
                     <tr>
                         <td>4</td>
                         <td>Limpia Vidrios</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Omo</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Cloro</td>
                         <td>$ 1990</td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                 </tbody>
             </Table>
@@ -192,8 +197,8 @@ const ElQuijotedelaMancha = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-      
 
+            <Footer />
         </div>
     );
 }

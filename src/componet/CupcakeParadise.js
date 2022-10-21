@@ -5,13 +5,15 @@ import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
 import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
+import { FcLike } from "react-icons/fc";
 
 
 
 const CupcakeParadise = () => {
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
-       
+            <ComponentNabar />
+
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -138,36 +140,38 @@ const CupcakeParadise = () => {
                         <td>1</td>
                         <td>Chalecos</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Tortas</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Milhoja</td>
                         <td>$1990</td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
 
                     <tr>
                         <td>4</td>
                         <td>Trenzas</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Donas</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Cupcake </td>
                         <td>$ 1990</td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                 </tbody>
             </Table>
@@ -192,8 +196,8 @@ const CupcakeParadise = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-          
 
+            <Footer />
         </div>
     );
 }

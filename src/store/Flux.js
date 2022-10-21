@@ -29,7 +29,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				try {
 					// fetching data from the backend
 
-					const resp = await fetch("https://3000-sneelyg-proyectofinalba-s3t5es4wucl.ws-us71.gitpod.io" + "/api/hello")
+
+					const resp = await fetch("https://3000-sneelyg-proyectofinalba-tvacgmaa6t1.ws-us72.gitpod.io" + "/api/hello")
+
+
 
 					const data = await resp.json()
 					setStore({ message: data.message })
@@ -44,44 +47,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
-			//Verificacion de acceso privado
-			acceso_privado: () => {
-				const store = getStore();
-				const token = localStorage.getItem('token');
-				const autorizacion = "Bearer " + token;
-				console.log("funcion acceso privado")
-				var myHeaders = new Headers();
-				myHeaders.append("Authorization", autorizacion);
-				myHeaders.append("Content-Type", "application/json");
-
-
-
-				var requestOptions = {
-					method: 'GET',
-					headers: myHeaders,
-					redirect: 'follow'
-				};
-
-				fetch("https://3000-sneelyg-proyectofinalba-s3t5es4wucl.ws-us71.gitpod.io/privada", requestOptions)
-					.then(response => response.json())
-					.then(result => {
-						setStore({ acceso: result });
-						if (result.success == "ok") {
-							console.log(result)
-						}
-						else {
-							window.location.href = "/login"
-						}
-					})
-					.catch(error => console.log('error', error));
-					
-				
-
-
-
-			},
-
-
 			/**Función de Registro acá abajo */
 			registro_funcion: (registro) => {
 				console.log("Creando Usuario")
@@ -113,16 +78,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-
-				fetch("https://3000-sneelyg-proyectofinalba-s3t5es4wucl.ws-us71.gitpod.io/registro", requestOptions)
-					.then(response => response.json())
-					.then(result => {
-						console.log(result)
-						if (result.registro == "ok") { alert("registro exitoso"); }
-						else if (result.registro == "not") { alert(result.message); }
-
-
-					})
+				fetch("https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io/registro", requestOptions)
+					.then(response => response.text())
+					.then(result => console.log(result))
 					.catch(error => console.log('error', error));
 
 			},
@@ -144,10 +102,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-
-				fetch("https://3000-sneelyg-proyectofinalba-s3t5es4wucl.ws-us71.gitpod.io/login", requestOptions)
-
-
+				fetch("https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io/login", requestOptions)
 					.then(response => response.json())
 					.then(result => {
 						console.log(result)
@@ -164,9 +119,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 			crear_producto_funcion: (datos_producto) => {
 				console.log(datos_producto);
 				var myHeaders = new Headers();
+
+				const store = getStore();
+				const token = localStorage.getItem('token');
+				const autorizacion = "Bearer " + token;
+
+				var myHeaders = new Headers();
+				myHeaders.append("Authorization", autorizacion);
 				myHeaders.append("Content-Type", "application/json");
 
-				/*var raw = JSON.stringify({
+				var raw = JSON.stringify({
 					"vendedor": datos_producto.vendedor,
 					"marca": datos_producto.marca,
 					"nombre_producto": datos_producto.nombre_producto,
@@ -174,7 +136,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"precio": datos_producto.precio,
 					"url_foto": datos_producto.url_foto
 				});
-	*/
+	
 				var requestOptions = {
 					method: 'POST',
 					headers: myHeaders,
@@ -182,15 +144,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-
-				fetch("https://3000-sneelyg-proyectofinalba-s3t5es4wucl.ws-us71.gitpod.io/productos/registro", requestOptions)
-
+				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/productos/registro", requestOptions)
 					.then(response => response.text())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));
 			},
-
-
 			recuperar_clave_funcion: () => { },
 
 			getProductos: () => {
@@ -201,7 +159,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-s3t5es4wucl.ws-us71.gitpod.io/productos/", requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/productos/", requestOptions)
 					.then(response => response.text())
 					.then(result => setStore({ productos: result }))
 					.catch(error => console.log('error', error));

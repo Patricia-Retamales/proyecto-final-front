@@ -5,13 +5,33 @@ import Accordion from 'react-bootstrap/Accordion';
 import Table from 'react-bootstrap/Table';
 import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
+import { FcLike } from "react-icons/fc";
+
+import { Context } from "../store/AppContext";
+import React, { useContext } from 'react';
 
 
+const BellaPandora = (props) => {
+    const { store, actions } = useContext(Context);
 
-const BellaPandora = () => {
+    console.log("ComponetVehicles props", props);
+
+    function addLink(id) {
+        const favorite = props.bellaPandora.filter(fav => {
+            console.log("uid", fav.uid);
+            if (fav.uid == id) {
+                return fav;
+            }
+        });
+        const name = favorite[0].name;
+        actions.addFavorite(name);
+    }
+
+
     return (
+
         <div className='semillas' style={{background:'#ffffec'}}>
-         
+           <ComponentNabar/>
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -138,36 +158,38 @@ const BellaPandora = () => {
                         <td>1</td>
                         <td>Anillos</td>
                         <td>$ 1990</td>
-                        <td></td>
+                       <td> <button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Pulseras</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Aros</td>
                         <td>$1990</td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
 
                     <tr>
                         <td>4</td>
                         <td>Cadenas</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Tobilleras</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Pircing </td>
                         <td>$ 1990</td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                 </tbody>
             </Table>
@@ -193,7 +215,7 @@ Su intención no era dedicarse a la joyería, pero la experiencia de crear ese a
                 </Accordion.Item>
             </Accordion>
 
-           
+           <Footer/>
         </div>
     );
 }

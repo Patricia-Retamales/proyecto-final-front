@@ -11,7 +11,7 @@ import Footer from "../componet/ComponenteFooter";
 function DatosUsuario() {
   return (
     <Form>
-    
+    <ComponentNabar/>
       <Row>
      
         <Col>
@@ -82,7 +82,7 @@ function DatosUsuario() {
           Submit
         </Button>
       </Link>
-      
+      <Footer/>
     </Form>
 
   );

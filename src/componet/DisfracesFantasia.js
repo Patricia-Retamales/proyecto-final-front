@@ -6,9 +6,13 @@ import Table from 'react-bootstrap/Table';
 import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
 
+import { FcLike } from "react-icons/fc";
+
+
 const DisfracesFantasia = () => {
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
+            <ComponentNabar/>
     
             <Carousel slide={false}>
                 <Carousel.Item>
@@ -136,36 +140,38 @@ const DisfracesFantasia = () => {
                         <td>1</td>
                         <td>spiderman</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Tarzan</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Sirenita</td>
                         <td>$1990</td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
 
                     <tr>
                         <td>4</td>
                         <td>Gato Cosmico</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Minnion</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Perrito </td>
-                        <td>$ 1990</td>
+                        <td>$ 2990</td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                 </tbody>
             </Table>
@@ -191,7 +197,7 @@ const DisfracesFantasia = () => {
                 </Accordion.Item>
             </Accordion>
 
-          
+          <Footer/>
         </div>
     );
 }

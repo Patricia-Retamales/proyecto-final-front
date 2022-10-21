@@ -17,17 +17,17 @@ import Productos from "./componet/Productos";
 import DatosUsuario from "./componet/DatosUsuario";
 import Formulario from "./componet/Formulario";
 import Compras from "./componet/Compras";
-import Misfavoritos from "./componet/Misfavoritos";
+
 import Registro_Producto from "./componet/Registro_Producto"
 
-import Footer from "./componet/ComponenteFooter";
-import ComponentNabar from "./componet/ComponentNavbar";
+
+
 
 
 function App() {
     return (
         <BrowserRouter>
-       <ComponentNabar/>
+       
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={< Login />} />
@@ -46,14 +46,14 @@ function App() {
                 <Route path="/DatosUsuario" element={<DatosUsuario/>} />
                 <Route path="/Formulario" element={<Formulario/>} />
                 <Route path="/Compras" element={<Compras/>} />
-                <Route path="/Misfavoritos" element={<Misfavoritos/>} />
+               
 
                 
                 
                
 
             </Routes>
-            <Footer/>
+           
         </BrowserRouter>
     );
 }

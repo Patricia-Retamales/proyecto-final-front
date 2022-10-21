@@ -14,7 +14,7 @@ const CardTajetas = () => {
   return (
     <div className="row">
 
-
+<ComponentNabar/>
 
       <Card style={{ width: '18rem', margin: '22px', }}>
         <Card.Img variant="top" src="https://mmedia.eluniversal.com/18780/tortas-75946.jpg" />
@@ -139,7 +139,7 @@ const CardTajetas = () => {
           </Link>
         </Card.Body>
       </Card>
-
+<Footer/>
     </div>
   );
 

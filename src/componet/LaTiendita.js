@@ -6,12 +6,14 @@ import Table from 'react-bootstrap/Table';
 import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
 
+import { FcLike } from "react-icons/fc";
+
 
 
 const LaTiendita = () => {
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
-            
+            <ComponentNabar/>
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -138,36 +140,38 @@ const LaTiendita = () => {
                         <td>1</td>
                         <td>Chalecos</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Poleras</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Pantalones</td>
                         <td>$1990</td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
 
                     <tr>
                         <td>4</td>
                         <td>Calzas</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Chaquetas</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Vestidos </td>
                         <td>$ 1990</td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                 </tbody>
             </Table>
@@ -192,7 +196,7 @@ const LaTiendita = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-        
+        <Footer/>
 
         </div>
     );

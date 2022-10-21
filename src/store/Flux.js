@@ -5,7 +5,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			productos: [],
 			marcas: [],
 			url_api : ["https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io"],
-			favoriteList: []
+			favoriteList: [],
+			bellapandora:{}
 
 			// demo: [
 			// 	{
@@ -137,7 +138,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"descripcion": datos_producto.descripcion,
 					"precio": datos_producto.precio,
 					"url_foto": datos_producto.url_foto,
-					
+					"productos" : datos_producto.productos
 				});
 
 				var requestOptions = {

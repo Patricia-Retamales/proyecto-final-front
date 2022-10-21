@@ -6,12 +6,15 @@ import Table from 'react-bootstrap/Table';
 import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
 
+import { FcLike } from "react-icons/fc";
+
 
 
 function ElEstudiante() {
     return (
-        <div className='semillas' style={{background:'#ffffec'}}>
-        
+        <div className='semillas' style={{ background: '#ffffec' }}>
+            <ComponentNabar />
+
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -49,7 +52,7 @@ function ElEstudiante() {
                     <Carousel.Caption>
                         <h3>El Estudinate 24/7</h3>
                         <p>
-                        Te ofrecemos variedades de productos 
+                            Te ofrecemos variedades de productos
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -64,7 +67,7 @@ function ElEstudiante() {
                     src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pumahue.cl%2Ftemuco%2Frecepcion-de-utiles-escolares%2F&psig=AOvVaw3RubPKpVGvtX5zD2FL9po2&ust=1665790252929000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNi8lrSu3voCFQAAAAAdAAAAABAE"
                 />
                 <Figure.Caption>
-                    Lapices<br/>
+                    Lapices<br />
                     $1.990
                 </Figure.Caption>
             </Figure>
@@ -118,7 +121,7 @@ function ElEstudiante() {
                     src="https://cdnx.jumpseller.com/librerias-blue-mix/image/19179199/resize/640/500?1656445026"
                 />
                 <Figure.Caption>
-                stick fix<br/>
+                    stick fix<br />
                     $1990
                 </Figure.Caption>
             </Figure>
@@ -138,36 +141,38 @@ function ElEstudiante() {
                         <td>1</td>
                         <td>calculadora</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Cuadernos</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Lapices</td>
                         <td>$1990</td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
 
                     <tr>
                         <td>4</td>
                         <td>papel lustre</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Lapiz Mina</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Corrector </td>
                         <td>$ 1990</td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                 </tbody>
             </Table>
@@ -179,11 +184,11 @@ function ElEstudiante() {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Informaciones sobre nosotros</Accordion.Header>
                     <Accordion.Body>
-                    Sus fundadores, Manuel y Claudia, en el momento que decidieron contraer matrimonio se dieron cuenta de la importancia que tienen los símbolos que representan al amor.
+                        Sus fundadores, Manuel y Claudia, en el momento que decidieron contraer matrimonio se dieron cuenta de la importancia que tienen los símbolos que representan al amor.
 
-Así fue como Manuel, siguiendo con el oficio familiar de la joyería, creó con sus manos el anillo de compromiso con el que pediría matrimonio al amor de su vida.
+                        Así fue como Manuel, siguiendo con el oficio familiar de la joyería, creó con sus manos el anillo de compromiso con el que pediría matrimonio al amor de su vida.
 
-Su intención no era dedicarse a la joyería, pero la experiencia de crear ese anillo tan especial, le hizo cambiar de idea, inspirándolo a compartir con otras parejas, este momento tan único y especial.<br />
+                        Su intención no era dedicarse a la joyería, pero la experiencia de crear ese anillo tan especial, le hizo cambiar de idea, inspirándolo a compartir con otras parejas, este momento tan único y especial.<br />
 
 
                         * Vendemos al mayor y al detalle<br />
@@ -192,8 +197,8 @@ Su intención no era dedicarse a la joyería, pero la experiencia de crear ese a
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-          
 
+            <Footer />
         </div>
     );
 }

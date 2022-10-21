@@ -6,11 +6,13 @@ import Table from 'react-bootstrap/Table';
 import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
 
+import { FcLike } from "react-icons/fc";
+
 
 const  SaborDivino = () => {
     return (
         <div className='semillas' style={{background:'#ffffec'}}>
-
+<ComponentNabar/>
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -136,37 +138,38 @@ const  SaborDivino = () => {
                     <tr>
                         <td>1</td>
                         <td>chocolate rellenos</td>
-                        <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Corazones de chocolate</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>BomBones</td>
                         <td>$1990</td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
 
                     <tr>
                         <td>4</td>
                         <td>chocolates</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Bombones rellenos</td>
                         <td>$ 1990</td>
-                        <td></td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Dulce de leche </td>
                         <td>$ 1990</td>
+                        <td><button ><FcLike/></button></td>
                     </tr>
                 </tbody>
             </Table>
@@ -191,7 +194,7 @@ Su intención no era dedicarse a la joyería, pero la experiencia de crear ese a
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-        
+        <Footer/>
         </div>
     );
 }

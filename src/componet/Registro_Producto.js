@@ -18,7 +18,7 @@ const Registro_Producto = () => {
     const [url_foto, setUrlfoto] = useState("");
 
     useEffect(() => {
-       actions.acceso_privado()
+        actions.acceso_privado()
 
 
     }, []);
@@ -39,6 +39,7 @@ const Registro_Producto = () => {
             <div className="wrapper" style={{ width: '50%' }}>
                 {store.acceso.usuario}
 
+                <ComponentNabar />
                 <div className="row mx-5 justify-content-center">
 
                     <div className="col-md-6">
@@ -94,6 +95,7 @@ const Registro_Producto = () => {
                         </Button>
                     </Link>
                 </div>
+                <Footer />
             </div>
 
         </>

@@ -1,5 +1,3 @@
-import React, { useEffect, useContext } from 'react';
-import { Context } from "../store/AppContext";
 import ComponentNavbar from "../componet/ComponentNavbar";
 
 import ComponentCarrusel from "../componet/ComponentCarrusel";
@@ -10,6 +8,7 @@ const Home = () =>{
     return(
 <div style={{ backgroundImage:"linear-gradient(#d8af97, #edb8fa)", }}>
 
+<ComponentNavbar/>
 <br/>
 
 <ComponentCarrusel/>
@@ -24,8 +23,9 @@ const Home = () =>{
 <br/>
 
 <CardsdeGrupo/>
-
-
+<br/>
+<br/>
+<Footer/>
 
 
 </div>

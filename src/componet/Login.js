@@ -66,7 +66,10 @@ function Login() {
               }} >
               Submit
             </button>
+
+            
           </Link>
+          <Link to="/recuperar/clave"><p>Recuperar Contraseña</p></Link>
         </form>
       </div>
 

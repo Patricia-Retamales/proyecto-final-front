@@ -11,7 +11,7 @@ import Footer from "../componet/ComponenteFooter";
 function ElEstudiante() {
     return (
         <div className='semillas' style={{background:'#ffffec'}}>
-         
+        
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
@@ -192,7 +192,7 @@ Su intención no era dedicarse a la joyería, pero la experiencia de crear ese a
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-           
+          
 
         </div>
     );

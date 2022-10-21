@@ -191,7 +191,7 @@ const DisfracesFantasia = () => {
                 </Accordion.Item>
             </Accordion>
 
-           
+          
         </div>
     );
 }

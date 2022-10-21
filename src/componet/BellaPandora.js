@@ -11,7 +11,7 @@ import Footer from "../componet/ComponenteFooter";
 const BellaPandora = () => {
     return (
         <div className='semillas' style={{background:'#ffffec'}}>
-           
+         
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img

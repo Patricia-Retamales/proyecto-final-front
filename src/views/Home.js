@@ -9,7 +9,7 @@ import CardsdeGrupo from "./CardsdeGrupo";
 const Home = () =>{
     return(
 <div style={{ backgroundImage:"linear-gradient(#d8af97, #edb8fa)", }}>
-<ComponentNavbar/>
+
 <br/>
 
 <ComponentCarrusel/>

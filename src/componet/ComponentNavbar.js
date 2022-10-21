@@ -3,10 +3,22 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from "react-router-dom";
-
+import Dropdown from 'react-bootstrap/Dropdown';
+import { Context } from "../store/AppContext";
+import React, { useContext } from 'react';
+import { HiOutlineTrash } from "react-icons/hi";
+import Badge from 'react-bootstrap/Badge';
 
 
 function ComponentNabar() {
+
+  const { store, actions } = useContext(Context); 
+
+  function deleteFavorite(index) {
+    actions.removeFavorite(index);
+  }
+
+
   return (
     <Navbar collapseOnSelect expand="lg" style={{background:"#888a8a", border:"#9b9b9b 5px solid"}}>
       <Container>
@@ -102,6 +114,25 @@ function ComponentNabar() {
           </Nav>
 
         </Navbar.Collapse>
+
+        <Dropdown>
+              <Dropdown.Toggle variant="primary" id="nav-dropdown-dark-example"
+              title="Dropdown">
+                Favoritos <Badge bg="secondary" >{store.favoriteList.length}</Badge>
+
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                {(
+                  store.favoriteList.length === 0) ?
+                  <Dropdown.Item><h6>Aun no se han agregado Like</h6></Dropdown.Item> :
+                  store.favoriteList.map((favorite, index) =>
+                    <Dropdown.Item>{favorite}
+                      <button className='icons' onClick={() => { deleteFavorite(index) }}><HiOutlineTrash /></button>
+                    </Dropdown.Item>
+                  )}
+              </Dropdown.Menu>
+            </Dropdown>
       </Container >
     </Navbar >
   );

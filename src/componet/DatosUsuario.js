@@ -4,13 +4,14 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import ComponentNabar from './ComponentNavbar';
+import Footer from "../componet/ComponenteFooter";
 
 
 
 function DatosUsuario() {
   return (
     <Form>
-      
+    
       <Row>
      
         <Col>
@@ -81,6 +82,7 @@ function DatosUsuario() {
           Submit
         </Button>
       </Link>
+      
     </Form>
 
   );

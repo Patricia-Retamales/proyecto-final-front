@@ -31,7 +31,7 @@ const BellaPandora = (props) => {
     return (
 
         <div className='semillas' style={{background:'#ffffec'}}>
-         
+         <ComponentNabar/>
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img

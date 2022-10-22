@@ -12,15 +12,16 @@ import { FcLike } from "react-icons/fc";
 const DisfracesFantasia = () => {
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
-            <ComponentNabar/>
-    
+            <ComponentNabar />
+            <br />
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
                         src="https://arcoirisjugueteria.cl/wp-content/uploads/2020/12/AMAN-C00101-1.jpg"
                         alt="First slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
                     <Carousel.Caption>
                         <h3>Disfraces Fantasía</h3>
@@ -32,7 +33,8 @@ const DisfracesFantasia = () => {
                         className="d-block w-100"
                         src="https://static1.funidelia.com/img/fr_landing_block/funidelia6/landings/20210908_LANDING_3COLS_DISFRACES_HALLOWEEN.jpg"
                         alt="Second slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
 
                     <Carousel.Caption>
@@ -45,7 +47,8 @@ const DisfracesFantasia = () => {
                         className="d-block w-100"
                         src="https://prensaeventos.cl/wp-content/uploads/2017/10/El-mejor-dato-de-Meiggs-para-comprar-disfraces-y-disfrutar-Halloween.jpg"
                         alt="Third slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
 
                     <Carousel.Caption>
@@ -140,38 +143,38 @@ const DisfracesFantasia = () => {
                         <td>1</td>
                         <td>spiderman</td>
                         <td>$ 1990</td>
-                        <td><button ><FcLike/></button></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Tarzan</td>
                         <td>$ 1990</td>
-                        <td><button ><FcLike/></button></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Sirenita</td>
                         <td>$1990</td>
-                        <td><button ><FcLike/></button></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
 
                     <tr>
                         <td>4</td>
                         <td>Gato Cosmico</td>
                         <td>$ 1990</td>
-                        <td><button ><FcLike/></button></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Minnion</td>
                         <td>$ 1990</td>
-                        <td><button ><FcLike/></button></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Perrito </td>
                         <td>$ 2990</td>
-                        <td><button ><FcLike/></button></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                 </tbody>
             </Table>
@@ -197,7 +200,7 @@ const DisfracesFantasia = () => {
                 </Accordion.Item>
             </Accordion>
 
-          
+
         </div>
     );
 }

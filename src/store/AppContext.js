@@ -121,7 +121,10 @@ let productos = [
         "nombre_producto": "nombre_producto",
         "descripcion": "descripcion",
         "precio": "precio",
+
+
         "url_foto": "url_foto",
+
     },
 	{
 		"id":"5",

@@ -15,13 +15,15 @@ const ElQuijotedelaMancha = () => {
         <div className='semillas' style={{ background: '#ffffec' }}>
 
             <ComponentNabar />
+            <br />
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
                         src="https://static.wixstatic.com/media/8dd0c1_15a1f40bfda947849713aaa8eeb64910~mv2.png/v1/fill/w_538,h_302,al_c,lg_1/8dd0c1_15a1f40bfda947849713aaa8eeb64910~mv2.png"
                         alt="First slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
                     <Carousel.Caption>
                         <h3>El Quijote de la Mancha</h3>
@@ -33,7 +35,8 @@ const ElQuijotedelaMancha = () => {
                         className="d-block w-100"
                         src="https://productos.webcindario.com/img/Aseo%203.jpg"
                         alt="Second slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
 
                     <Carousel.Caption>
@@ -46,7 +49,8 @@ const ElQuijotedelaMancha = () => {
                         className="d-block w-100"
                         src="https://klimper.cl/wp-content/uploads/2018/08/Limpieza-Todos-Klimper.png"
                         alt="Third slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
 
                     <Carousel.Caption>

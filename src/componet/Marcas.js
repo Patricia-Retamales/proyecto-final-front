@@ -12,14 +12,16 @@ import { FcLike } from "react-icons/fc";
 const Marcas = () => {
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
-<ComponentNabar/>
+            <ComponentNabar />
+            <br />
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
                         src="https://i.blogs.es/13d967/1366_20001/1366_2000.jpg"
                         alt="First slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
                     <Carousel.Caption>
                         <h3>El jardin Mistico</h3>
@@ -31,7 +33,8 @@ const Marcas = () => {
                         className="d-block w-100"
                         src="https://www.eluniversal.com.mx/sites/default/files/2021/05/17/munara_ciclo_de_semillas_portada.jpg"
                         alt="Second slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
 
                     <Carousel.Caption>
@@ -44,7 +47,8 @@ const Marcas = () => {
                         className="d-block w-100"
                         src="https://thumbs.dreamstime.com/z/venta-de-semillas-envasadas-en-el-almacén-para-jardinero-minsk-belarus-junio-189021275.jpg"
                         alt="Third slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
 
                     <Carousel.Caption>

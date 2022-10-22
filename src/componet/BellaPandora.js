@@ -32,13 +32,16 @@ const BellaPandora = (props) => {
 
         <div className='semillas' style={{background:'#ffffec'}}>
          <ComponentNabar/>
+         <br/>
+         
             <Carousel slide={false}>
-                <Carousel.Item>
+                <Carousel.Item  style={{borderRadius:"50px"}}>
                     <img
                         className="d-block w-100"
                         src="https://media.glamour.mx/photos/6190a765a6e030d648101a97/master/w_1600%2Cc_limit/173437.jpg"
                         alt="First slide"
-                        height={500}
+                        height={350}
+                        style={{objectFit:"cover", borderRadius:"50px",  border:"#fdfd96 5px solid"}}
                     />
                     <Carousel.Caption>
                         <h3>Bella Pandora</h3>
@@ -50,7 +53,8 @@ const BellaPandora = (props) => {
                         className="d-block w-100"
                         src="https://static.abc.es/media/estilo/2021/05/07/apertura-joyas-small-ku5B--1248x698@abc.jpg"
                         alt="Second slide"
-                        height={500}
+                        height={350}
+                        style={{objectFit:"cover", borderRadius:"50px",  border:"#fdfd96 5px solid"}}
                     />
 
                     <Carousel.Caption>
@@ -63,7 +67,8 @@ const BellaPandora = (props) => {
                         className="d-block w-100"
                         src="https://boutiquebellariel.cl/1/storage_21239-Tocona-8pcs-juegos-hueco-anillos-para-las-mujeres-los/cdn.jpg"
                         alt="Third slide"
-                        height={500}
+                        height={350}
+                        style={{objectFit:"cover", borderRadius:"50px",  border:"#fdfd96 5px solid"}}
                     />
 
                     <Carousel.Caption>
@@ -74,6 +79,8 @@ const BellaPandora = (props) => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+
+
 
             <Figure style={{ margin: '50px' }}>
                 <Figure.Image

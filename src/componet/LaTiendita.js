@@ -13,14 +13,16 @@ import { FcLike } from "react-icons/fc";
 const LaTiendita = () => {
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
-            <ComponentNabar/>
+            <ComponentNabar />
+            <br />
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
                         src="https://www.esdesignbarcelona.com/sites/default/files/imagenes/haz-crecer-tu-marca-de-ropa-frente-la-competencia_1.jpg"
                         alt="First slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
                     <Carousel.Caption>
                         <h3>La Tiendita</h3>
@@ -32,7 +34,8 @@ const LaTiendita = () => {
                         className="d-block w-100"
                         src="https://www.hogarmania.com/archivos/201911/ropa-listado-belleza-848x477x80xX.jpg"
                         alt="Second slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
 
                     <Carousel.Caption>
@@ -45,7 +48,8 @@ const LaTiendita = () => {
                         className="d-block w-100"
                         src="https://blog.oxfamintermon.org/wp-content/uploads/2017/03/iStock-500395950.jpg"
                         alt="Third slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
 
                     <Carousel.Caption>
@@ -140,38 +144,38 @@ const LaTiendita = () => {
                         <td>1</td>
                         <td>Chalecos</td>
                         <td>$ 1990</td>
-                        <td><button ><FcLike/></button></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Poleras</td>
                         <td>$ 1990</td>
-                        <td><button ><FcLike/></button></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Pantalones</td>
                         <td>$1990</td>
-                        <td><button ><FcLike/></button></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
 
                     <tr>
                         <td>4</td>
                         <td>Calzas</td>
                         <td>$ 1990</td>
-                        <td><button ><FcLike/></button></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Chaquetas</td>
                         <td>$ 1990</td>
-                        <td><button ><FcLike/></button></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Vestidos </td>
                         <td>$ 1990</td>
-                        <td><button ><FcLike/></button></td>
+                        <td><button ><FcLike /></button></td>
                     </tr>
                 </tbody>
             </Table>
@@ -196,7 +200,7 @@ const LaTiendita = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-        <Footer/>
+            <Footer />
 
         </div>
     );

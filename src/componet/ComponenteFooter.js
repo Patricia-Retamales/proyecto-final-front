@@ -46,7 +46,7 @@ function Footer() {
 
 
 					<div className="col-xs-12 pt-5">
-						<p className="text-white text-center">Colaboradores Santiago ,Angelica, Patricia y joceline .2022</p>
+						<p className="text-white text-center">Colaboradores Santiago, Angelica, Patricia y joceline * 2022</p>
 					</div>
 
 				</div>

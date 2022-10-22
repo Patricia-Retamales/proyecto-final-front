@@ -13,13 +13,15 @@ const  SaborDivino = () => {
     return (
         <div className='semillas' style={{background:'#ffffec'}}>
 <ComponentNabar/>
+<br/>
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
                         src="https://thumbs.dreamstime.com/b/chocolates-hechos-mano-con-diferentes-sabores-y-formas-artesanales-185294147.jpg"
                         alt="First slide"
-                        height={500}
+                        height={350}
+                        style={{objectFit:"cover", borderRadius:"50px",  border:"#fdfd96 5px solid"}}
                     />
                     <Carousel.Caption>
                         <h3>Sabor Divino</h3>
@@ -31,7 +33,8 @@ const  SaborDivino = () => {
                         className="d-block w-100"
                         src="https://thumbs.dreamstime.com/z/chocolates-con-diversas-formas-85831853.jpg"
                         alt="Second slide"
-                        height={500}
+                        height={350}
+                        style={{objectFit:"cover", borderRadius:"50px",  border:"#fdfd96 5px solid"}}
                     />
 
                     <Carousel.Caption>
@@ -44,7 +47,8 @@ const  SaborDivino = () => {
                         className="d-block w-100"
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqqLS-F0oLXBCpC3woEbazWLe5etzFXG7G-g&usqp=CAU"
                         alt="Third slide"
-                        height={500}
+                        height={350}
+                        style={{objectFit:"cover", borderRadius:"50px",  border:"#fdfd96 5px solid"}}
                     />
 
                     <Carousel.Caption>

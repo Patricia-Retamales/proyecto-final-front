@@ -56,7 +56,7 @@ let usuarios = [
 	{"email": "santiago@123.cl",
     "password": "123",
     "is_active": "True",
-    "username": "sasntiago123"
+    "username": "sasntiago123",
     "nombre": "Santiago",
     "apellido": "Neely",
     "rut": "24626970",
@@ -72,7 +72,7 @@ let usuarios = [
     "password": "456",
     "is_active": "True",
     "username": "paty",
-    "nombre": Patricia,
+    "nombre": "Patricia",
     "apellido": "Retamales",
     "rut": "30453677",
     "nombre_marca": "Semillas Paty",
@@ -118,10 +118,10 @@ let productos = [
 		"id":"4",
         "vendedor": "02",
         "marca": "02",
-        "nombre_producto": nombre_producto,
-        "descripcion": descripcion,
-        "precio": precio,
-        "url_foto": url_foto
+        "nombre_producto": "nombre_producto",
+        "descripcion": "descripcion",
+        "precio": "precio",
+        "url_foto": "url_foto}"
     },
 	{
 		"id":"5",

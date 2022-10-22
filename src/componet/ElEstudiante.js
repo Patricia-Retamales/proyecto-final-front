@@ -14,14 +14,15 @@ function ElEstudiante() {
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
             <ComponentNabar />
-
+            <br />
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
                         src="https://florence.cl/wp-content/uploads/2022/01/Utiles-escolares.jpg"
                         alt="First slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
                     <Carousel.Caption>
                         <h3>El Estudinate 24/7</h3>
@@ -33,7 +34,8 @@ function ElEstudiante() {
                         className="d-block w-100"
                         src="https://cdn.bonosdelgobierno.com/wp-content/uploads/2017/01/05130103/utiles-escolares.jpg"
                         alt="Second slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
 
                     <Carousel.Caption>
@@ -46,7 +48,8 @@ function ElEstudiante() {
                         className="d-block w-100"
                         src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fweb.escuelasanjoseobrero.cl%2Flistas-de-utiles-escolares%2F&psig=AOvVaw07TfhdnbeF-NcBznO_2IW8&ust=1665790037674000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCKijtc2t3voCFQAAAAAdAAAAABAO"
                         alt="Third slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
 
                     <Carousel.Caption>

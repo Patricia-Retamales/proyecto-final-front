@@ -13,14 +13,15 @@ const CupcakeParadise = () => {
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
             <ComponentNabar />
-
+            <br />
             <Carousel slide={false}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
                         src="https://i.pinimg.com/originals/5a/eb/7c/5aeb7cbae3b6318c64495f221eb61990.png"
                         alt="First slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
                     <Carousel.Caption>
                         <h3>Cupcake Paradise</h3>
@@ -32,7 +33,8 @@ const CupcakeParadise = () => {
                         className="d-block w-100"
                         src="https://abracadabra.cl/wp-content/uploads/2018/09/XDEU5264.jpg"
                         alt="Second slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
 
                     <Carousel.Caption>
@@ -45,7 +47,8 @@ const CupcakeParadise = () => {
                         className="d-block w-100"
                         src="https://images.aws.nestle.recipes/resized/e89d19d331ac413811e3b1c11a893991_torta-princesa_1200_600.jpg"
                         alt="Third slide"
-                        height={500}
+                        height={350}
+                        style={{ objectFit: "cover", borderRadius: "50px", border: "#fdfd96 5px solid" }}
                     />
 
                     <Carousel.Caption>

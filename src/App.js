@@ -47,7 +47,8 @@ function App() {
                 <Route path="/DatosUsuario" element={<DatosUsuario/>} />
                 <Route path="/Formulario" element={<Formulario/>} />
                 <Route path="/Compras" element={<Compras/>} />
-                
+                <Route path="/recuperar_clave" element={<Recuperar_Clave/>} />
+                <Route path="/cambiar_clave" element={<Cambiar_Clave/>} />
 
                 
                 

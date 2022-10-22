@@ -106,6 +106,8 @@ function Compras() {
                         <option>10</option>
                     </Form.Select>
                 </Form.Group>
+
+                
                 <Form.Group as={Col} controlId="formGridState">
                     <Form.Label>stock</Form.Label>
                     <Form.Select defaultValue="Quantity">

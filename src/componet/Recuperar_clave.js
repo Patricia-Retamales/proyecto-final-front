@@ -12,10 +12,10 @@ function Recuperar_Clave() {
   return (
 
     <Form>
-
+<ComponentNavbar />
       <div>
         <form justify="center" style={{ width: "38rem" }}>
-          <ComponentNavbar />
+          
           <div className="mb-3">
             <label className="form-label">Ingresa tu correo</label>
             <input type="email" className="form-control"

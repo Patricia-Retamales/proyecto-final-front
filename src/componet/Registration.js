@@ -43,8 +43,8 @@ function Registration() {
 
   return (
 
-    <Form style={{ backgroundImage: "linear-gradient(#d8af97, #edb8fa)",  height:"50%"}}>
-     <ComponentNabar/>
+    <Form style={{ backgroundImage: "linear-gradient(#d8af97, #edb8fa)", height: "50%" }}>
+      <ComponentNabar />
       <div style={{ margin: "18%", color: "#d1052a", background: "white", height: "80%", width: "50%", borderRadius: "9px black", boxShadow: "0 2px 4px 0 black, 0 3px 10px 0 black", padding: "10px", alignItems: "stretch" }}>
         <div className="row mx-5">
           <h1 style={{ padding: "2px", textShadow: "2px 2px 5px #000000" }}>Regristrar</h1>
@@ -113,10 +113,10 @@ function Registration() {
 
 
           <h1 style={{ padding: "2px", textShadow: "2px 2px 5px #000000" }}>Datos de tu marca</h1>
-         
 
-          <div className="col-md-6">
-            <label className="form-label">Nombre de la marca</label>
+
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
+            <label className="form-label">Nombre de la Marca</label>
             <input type="marca" className="form-control"
               onChange={e => setMarca(e.target.value)}
               value={marca}
@@ -124,7 +124,7 @@ function Registration() {
               placeholder="marca" />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Breve descripción de lo que vendes</label>
             <input type="RUT" className="form-control"
               onChange={e => setDescripcion(e.target.value)}
@@ -133,7 +133,7 @@ function Registration() {
               placeholder="Descripcion" />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Dirección de la tienda / lugar de retiro</label>
             <input type="direccion" className="form-control"
               onChange={e => setDireccion(e.target.value)}
@@ -143,18 +143,22 @@ function Registration() {
           </div>
 
 
-          /**Aca poner un dropdown */
 
-          <div className="col-md-6">
-            <label className="form-label">Tipo de Pago preferido</label>
+
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
+            <label className="form-label">Forma de Pago</label>
             <input type="tipo_pago" className="form-control"
               onChange={e => setTipo_pago(e.target.value)}
               value={tipo_pago}
               id="tipo_pago" aria-describedby="emailHelp"
               placeholder="Transferencia / Efectivo" />
+            <Form.Group as={Col} controlId="formGridState">
+            
+            </Form.Group>
           </div>
 
-          <div className="col-md-6">
+
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Banco para depósito</label>
             <input type="banco" className="form-control"
               onChange={e => setBanco(e.target.value)}
@@ -163,7 +167,7 @@ function Registration() {
               placeholder="Banco" />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Tipo de Cuenta</label>
             <input type="tipo_cuenta" className="form-control"
               onChange={e => setTipo_cuenta(e.target.value)}
@@ -172,7 +176,7 @@ function Registration() {
               placeholder="Tipo de Cuenta" />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Numero de cuenta para transferencia</label>
             <input type="nro_cuenta" className="form-control"
               onChange={e => setNumero_cuenta(e.target.value)}
@@ -181,7 +185,7 @@ function Registration() {
               placeholder="Numero de Cuenta" />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">RUT</label>
             <input type="RUT" className="form-control"
               onChange={e => setRut(e.target.value)}
@@ -199,14 +203,14 @@ function Registration() {
 
               }}
             >
-              Submit
+              Confirmar
             </Button>
           </Link>
 
         </div>
 
       </div>
-      <Footer/>
+      <Footer />
     </Form>
   )
 }

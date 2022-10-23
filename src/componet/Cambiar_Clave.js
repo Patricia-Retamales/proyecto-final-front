@@ -6,6 +6,9 @@ import { Context } from "../store/AppContext.js"
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 
+
+
+
 function Cambiar_Clave() {
   const { store, actions } = useContext(Context);
   const [nueva_clave, setClave] = useState("");
@@ -44,6 +47,36 @@ function Cambiar_Clave() {
 
     <Form style={{ backgroundImage: "linear-gradient(#d8af97, #edb8fa)" }}>
       <ComponentNavbar />
+
+
+      <form justify="center" style={{ width: "38rem" }}>
+        <div className="mb-3">
+          <label className="form-label">Ingresa tu nueva contraseña</label>
+          <input type="email" className="form-control"
+            onChange={e => setClave(e.target.value)}
+            value={nueva_clave}
+            id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="password" />
+          <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        
+
+        <Link to="/">
+          <button type="submit" className="btn btn-primary"
+            onClick={(e) => {
+              e.preventDefault();
+              actions.cambiar_clave_funcion(nueva_clave, email, token);
+            }}>
+
+
+            Submit
+          </button>
+        </Link>
+      </form>
+
+
+
      
       <div style={{ margin: "18%", color: "#d1052a", background: "white", height: "80%", width: "50%", borderRadius: "9px black", boxShadow: "0 2px 4px 0 black, 0 3px 10px 0 black", padding: "10px", alignItems: "stretch" }}>
       <h1 style={{ padding: "2px", textShadow: "2px 2px 5px #000000" }}>Ingresa tu nueva contraseña</h1>
@@ -72,6 +105,7 @@ function Cambiar_Clave() {
         </form>
 
       </div>
+
       <Footer />
     </Form >
 

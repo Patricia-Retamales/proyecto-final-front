@@ -7,9 +7,29 @@ import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
 
 import { FcLike } from "react-icons/fc";
+import { Context } from "../store/AppContext";
+import React, { useContext, useState } from 'react';
 
 
 const DisfracesFantasia = () => {
+
+    const { store, actions } = useContext(Context);
+    let disfraces = store.productos.filter(producto => producto.marca === "05");
+    console.log(disfraces);
+    const [productos, setProductos] = useState(disfraces);
+
+    console.log("productos disfraces", productos);
+    function addLink(id_producto) {
+        console.log("productos disfraces", productos);
+        const favorite = productos.filter(fav => {
+            console.log("id_producto", fav);
+            if (fav.id == id_producto) {
+                return fav;
+            }
+        });
+        const name = favorite[0].nombre_producto;
+        actions.addFavorite(name);
+    }
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
             <ComponentNabar />
@@ -59,74 +79,25 @@ const DisfracesFantasia = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            {productos.map((producto, index) => {
+                return (
+                    <Figure style={{ margin: '50px' }}>
+                        <Figure.Image
+                            width={171}
+                            height={180}
 
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
+                            alt="171x180"
+                            src={producto.url_foto}
+                        />
+                        <Figure.Caption>
+                            {producto.nombre_producto}<br />
+                            {producto.precio}
+                        </Figure.Caption>
+                    </Figure>
 
-                    alt="171x180"
-                    src="https://cf.shopee.cl/file/71a14371ee395e416a4233684ca8795e"
-                />
-                <Figure.Caption>
-                    Salchicha<br />
-                    $1.990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://static1.mujerhoy.com/www/multimedia/201910/28/media/cortadas/disfraces-halloween-baratos-primark-14-k1D--739x555@MujerHoy.jpg"
-                />
-                <Figure.Caption>
-                    Calabaza<br></br>
-                    $1.590
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-
-                    alt="171x180"
-                    src="https://static.guiainfantil.com/media/2788/blobid0.jpg"
-
-                />
-                <Figure.Caption>
-                    Fantasma<br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://www.dondisfraz.com/media/catalog/product/cache/1b7efd9c23603a41861e943185fdf7f2/d/i/disfraz-de-diablesa-presumida-para-nina.jpg.jpg"
-                />
-                <Figure.Caption>
-                    Diablita <br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://www.hola.com/imagenes/seleccion/20211006197191/mejores-disfraces-halloween-para-ninos/1-6-682/baby-joda-z.jpg"
-                />
-                <Figure.Caption>
-                    Baby Yoda<br />
-                    $1990
-                </Figure.Caption>
-            </Figure>
+                )
+            })}
+            
 
 
             <Table striped bordered hover size="sm">
@@ -139,43 +110,18 @@ const DisfracesFantasia = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>spiderman</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Tarzan</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Sirenita</td>
-                        <td>$1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>Gato Cosmico</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Minnion</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Perrito </td>
-                        <td>$ 2990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
+                {productos.map((producto,index) =>{
+                        return(
+                            <tr>
+                            <td>{producto.id}</td>
+                            <td>{producto.nombre_producto}</td>
+                            <td>$ {producto.precio}</td>
+                            <td><button onClick={() => addLink(producto.id)}><FcLike /></button></td>
+                        </tr>
+                        )
+                    })}
+                   
+                    
                 </tbody>
             </Table>
 

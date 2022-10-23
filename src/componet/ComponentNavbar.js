@@ -89,12 +89,21 @@ function ComponentNabar() {
               </NavDropdown.Item>
 
               <NavDropdown.Item href="#action/3.3">
-                <Link to="/Cambiar_clave">
-                 <th>Cambiar Clave</th> 
+
+                <Link to="/cambiar_clave">
+                 <th>cambiar clave</th> 
+
+                
+
                 </Link>
               </NavDropdown.Item>
 
           
+              <NavDropdown.Item href="#action/3.3">
+                <Link to="/registro_producto">
+                 <th>Registro_Producto</th> 
+                </Link>
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Cerrar Sesion

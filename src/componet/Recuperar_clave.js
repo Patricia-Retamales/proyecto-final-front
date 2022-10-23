@@ -11,11 +11,11 @@ function Recuperar_Clave() {
   const [login_email, setEmail] = useState("");
   return (
 
-    <Form>
+    <form>
 
       <ComponentNavbar />
 
-      <form justify="center" style={{ width: "38rem" }}>
+      <Form justify="center" style={{ width: "38rem" }}>
 
         <div className="mb-3">
           <label className="form-label">Ingresa tu correo</label>
@@ -27,8 +27,19 @@ function Recuperar_Clave() {
           <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
         </div>
 
+        <Link to="/">
+          <button type="submit" className="btn btn-primary"
+            onClick={(e) => {
+              e.preventDefault();
+              actions.recuperar_clave_funcion(login_email);
 
 
+            }} >
+            Submit
+          </button>
+        </Link>
+
+        
         <Form.Label htmlFor="inputPassword5">Ingresar pin</Form.Label>
         <div style={{ width: "40%", display: "flex", justifyContent: "space-between" , }}>
           <Form.Control style={{right:"20px"}}
@@ -53,18 +64,9 @@ function Recuperar_Clave() {
             aria-describedby="passwordHelpBlock"
           />
         </div>
-        <Link to="/">
-          <button type="submit" className="btn btn-primary"
-            onClick={(e) => {
-              e.preventDefault();
-              actions.recuperar_clave_funcion(login_email);
 
-
-            }} >
-            Submit
-          </button>
-        </Link>
-      </form>
+     
+      </Form>
 
 
       <div>
@@ -95,10 +97,12 @@ function Recuperar_Clave() {
       </div>
 
 
-      <Footer />
-    </Form >
+        <Footer />
+    </form >
 
   );
 }
 
 export default Recuperar_Clave;
+
+

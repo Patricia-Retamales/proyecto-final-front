@@ -41,15 +41,14 @@ function App() {
                 <Route path="/ElQuijotedelaMancha" element={<ElQuijotedelaMancha/>} />
                 <Route path="/LaTiendita" element={<LaTiendita/>} />
                 <Route path="/Marcas" element={<Marcas />} />
-                <Route path="/productos_registro" element={<  Registro_Producto />} />
+                <Route path="/registro_producto" element={<  Registro_Producto />} />
                 <Route path="/SaborDivino" element={<SaborDivino />} />
                 <Route path="/BellaPandora" element={<BellaPandora/>} />
                 <Route path="/DatosUsuario" element={<DatosUsuario/>} />
                 <Route path="/Formulario" element={<Formulario/>} />
                 <Route path="/Compras" element={<Compras/>} />
                 <Route path="/recuperar_clave" element={<Recuperar_Clave/>} />
-                <Route path="/cambiar_clave" element={<Cambiar_Clave/>} />
-
+                <Route path="/cambiar/clave/:token" element={<Cambiar_Clave/>} />
                 
                 
                

@@ -37,7 +37,7 @@ const Registro_Producto = () => {
         <>
 
             <div className="wrapper" style={{ width: '50%' }}>
-                {store.acceso.usuario}
+                {/*store.acceso.usuario*/}
 
                 <ComponentNabar />
                 <div className="row mx-5 justify-content-center">

@@ -734,7 +734,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://3000-sneelyg-proyectofinalba-cx24m3v56wn.ws-us72.gitpod.io/privada", requestOptions)
 					.then(response => response.json())
 					.then(result => {
-						setEmail(result.usuario);
+					//	setEmail(result.usuario);
 						if (result.success == "ok") {
 							console.log(result)
 						}

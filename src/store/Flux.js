@@ -229,7 +229,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"url_foto": "https://invitajass.com/wp-content/uploads/2019/06/tortas-de-cumpleaños-para-niñas.png"
 				},
 
-			
+
 				{
 					"id": "20",
 					"vendedor": "06",
@@ -292,7 +292,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"descripcion": "xxxxxxxxxxxxxxxxxxxxx",
 					"precio": "1990",
 					"url_foto": "https://www.torre.cl/wp-content/uploads/2021/12/tipos-de-hoja-cuadernos.jpg"
-				},{
+				}, {
 					"id": "27",
 					"vendedor": "06",
 					"marca": "06",
@@ -300,7 +300,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"descripcion": "xxxxxxxxxxxxxxxxxxxxx",
 					"precio": "1990",
 					"url_foto": "https://www.latala.cl/wp-content/uploads/2020/08/PAPEL-LUSTRE-ARTEL.jpg"
-				},{
+				}, {
 					"id": "28",
 					"vendedor": "06",
 					"marca": "06",
@@ -318,7 +318,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"precio": "1990",
 					"url_foto": "https://cdnx.jumpseller.com/librerias-blue-mix/image/19179199/resize/640/500?1656445026"
 				},
-				
+
 				{
 					"id": "30",
 					"vendedor": "06",
@@ -356,7 +356,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"url_foto": "https://cdnx.jumpseller.com/comaac-spa/image/16542077/resize/540/540?1630076735"
 				},
 
-				
+
 				{
 					"id": "34",
 					"vendedor": "06",
@@ -537,12 +537,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"precio": "1990",
 					"url_foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLwps6PlwM37H7KSGCSIuQ_zOTflv_Z9hvVg&usqp=CAU"
 				},
-				
-				
+
+
 			],
 			favoriteList: [],
-			
-	
+
+
 
 			// demo: [
 			// 	{
@@ -590,7 +590,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				var myHeaders = new Headers();
 				myHeaders.append("Content-Type", "application/json");
 
-				/*var raw = JSON.stringify({
+				var raw = JSON.stringify({
 					"email": registro.email,
 					"password": registro.password,
 					"is_active": "True",
@@ -605,9 +605,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"banco_cuenta": registro.banco,
 					"tipo_cuenta": registro.tipo_cuenta,
 					"numero_cuenta": registro.numero_cuenta
-	
+
 				});
-	*/
+
 				var requestOptions = {
 					method: 'POST',
 					headers: myHeaders,
@@ -615,7 +615,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io/registro", requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-cx24m3v56wn.ws-us72.gitpod.io/registro", requestOptions)
 					.then(response => response.text())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));
@@ -639,7 +639,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io/login", requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-cx24m3v56wn.ws-us72.gitpod.io/login", requestOptions)
 					.then(response => response.json())
 					.then(result => {
 						console.log(result)
@@ -681,7 +681,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/productos/registro", requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-cx24m3v56wn.ws-us72.gitpod.io/productos/registro", requestOptions)
 					.then(response => response.text())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));
@@ -696,7 +696,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/productos/", requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-cx24m3v56wn.ws-us72.gitpod.io/productos/", requestOptions)
 					.then(response => response.text())
 					.then(result => setStore({ productos: result }))
 					.catch(error => console.log('error', error));
@@ -710,12 +710,41 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/marcas", requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-cx24m3v56wn.ws-us72.gitpod.io/marcas", requestOptions)
 					.then(response => response.text())
 					.then(result => setStore({ marcas: result }))
 					.catch(error => console.log('error', error));
 			},
 
+			acceso_privado: () => {
+
+				var myHeaders = new Headers();
+				const token = localStorage.getItem("token")
+				const autorizacion = "Bearer " + token;
+				console.log(autorizacion);
+				myHeaders.append("Authorization", autorizacion)
+
+
+				var requestOptions = {
+					method: 'GET',
+					headers: myHeaders,
+					redirect: 'follow'
+				};
+
+				fetch("https://3000-sneelyg-proyectofinalba-cx24m3v56wn.ws-us72.gitpod.io/privada", requestOptions)
+					.then(response => response.json())
+					.then(result => {
+						setEmail(result.usuario);
+						if (result.success == "ok") {
+							console.log(result)
+						}
+						 else {
+						   window.location.href = "/login"
+						 }
+					})
+					.catch(error => console.log('error', error));
+
+			},
 
 			borrar_producto_funcion: (id_producto) => {
 				var myHeaders = new Headers();
@@ -727,7 +756,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/productos/" + id_producto, requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-cx24m3v56wn.ws-us72.gitpod.io/productos/" + id_producto, requestOptions)
 					.then(response => response.text())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));

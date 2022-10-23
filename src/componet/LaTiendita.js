@@ -7,10 +7,29 @@ import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
 
 import { FcLike } from "react-icons/fc";
-
+import { Context } from "../store/AppContext";
+import React, { useContext, useState } from 'react';
 
 
 const LaTiendita = () => {
+
+    const { store, actions } = useContext(Context);
+    let ropa = store.productos.filter(producto => producto.marca === "08");
+    console.log(ropa);
+    const [productos, setProductos] = useState(ropa);
+
+    console.log("productos ropa", productos);
+    function addLink(id_producto) {
+        console.log("productos ropa", productos);
+        const favorite = productos.filter(fav => {
+            console.log("id_producto", fav);
+            if (fav.id == id_producto) {
+                return fav;
+            }
+        });
+        const name = favorite[0].nombre_producto;
+        actions.addFavorite(name);
+    }
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
             <ComponentNabar />
@@ -61,73 +80,25 @@ const LaTiendita = () => {
                 </Carousel.Item>
             </Carousel>
 
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
+            {productos.map((producto, index) => {
+                return (
+                    <Figure style={{ margin: '50px' }}>
+                        <Figure.Image
+                            width={171}
+                            height={180}
 
-                    alt="171x180"
-                    src="https://i.pinimg.com/736x/7f/47/f7/7f47f7cf94601d5ee87c1192e0bd492c.jpg"
-                />
-                <Figure.Caption>
-                    Conjuntos<br />
-                    $1.990
-                </Figure.Caption>
-            </Figure>
+                            alt="171x180"
+                            src={producto.url_foto}
+                        />
+                        <Figure.Caption>
+                            {producto.nombre_producto}<br />
+                            {producto.precio}
+                        </Figure.Caption>
+                    </Figure>
 
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://http2.mlstatic.com/D_NQ_NP_787221-MLC49436145703_032022-W.jpg"
-                />
-                <Figure.Caption>
-                    Pulceras<br></br>
-                    $1.590
-                </Figure.Caption>
-            </Figure>
+                )
+            })}
 
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-
-                    alt="171x180"
-                    src="https://www.chilepromo.cl/3056-large_default/polera-con-cuello-para-mujer-poliester.jpg"
-
-                />
-                <Figure.Caption>
-                    Poleras<br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://media.vozpopuli.com/2020/03/ZARA-Pantalon-PVP-BERSHKA-Supernenas_1335176561_14804356_660x371.jpg"
-                />
-                <Figure.Caption>
-                    Pantalon <br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://cf.shopee.cl/file/be52ba9190a403047c0e0b3d0f79ebae"
-                />
-                <Figure.Caption>
-                    Vestidos<br />
-                    $1990
-                </Figure.Caption>
-            </Figure>
 
 
             <Table striped bordered hover size="sm">
@@ -140,43 +111,18 @@ const LaTiendita = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Chalecos</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Poleras</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Pantalones</td>
-                        <td>$1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
 
-                    <tr>
-                        <td>4</td>
-                        <td>Calzas</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Chaquetas</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Vestidos </td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
+                {productos.map((producto,index) =>{
+                        return(
+                            <tr>
+                            <td>{producto.id}</td>
+                            <td>{producto.nombre_producto}</td>
+                            <td>$ {producto.precio}</td>
+                            <td><button onClick={() => addLink(producto.id)}><FcLike /></button></td>
+                        </tr>
+                        )
+                    })}
+                   
                 </tbody>
             </Table>
 

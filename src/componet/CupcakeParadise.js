@@ -6,10 +6,31 @@ import Table from 'react-bootstrap/Table';
 import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
 import { FcLike } from "react-icons/fc";
+import { Context } from "../store/AppContext";
+import React, { useContext, useState } from 'react';
 
 
 
 const CupcakeParadise = () => {
+
+    const { store, actions } = useContext(Context);
+    let cupcake = store.productos.filter(producto => producto.marca === "04");
+    console.log(cupcake);
+    const [productos, setProductos] = useState(cupcake);
+
+    console.log("productos cupcake", productos);
+    function addLink(id_producto) {
+        console.log("productos cupcake", productos);
+        const favorite = productos.filter(fav => {
+            console.log("id_producto", fav);
+            if (fav.id == id_producto) {
+                return fav;
+            }
+        });
+        const name = favorite[0].nombre_producto;
+        actions.addFavorite(name);
+    }
+
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
             <ComponentNabar />
@@ -59,74 +80,24 @@ const CupcakeParadise = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            {productos.map((producto, index) => {
+                return (
+                    <Figure style={{ margin: '50px' }}>
+                        <Figure.Image
+                            width={171}
+                            height={180}
 
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
+                            alt="171x180"
+                            src={producto.url_foto}
+                        />
+                        <Figure.Caption>
+                            {producto.nombre_producto}<br />
+                            {producto.precio}
+                        </Figure.Caption>
+                    </Figure>
+                )
+            })}
 
-                    alt="171x180"
-                    src="https://www.mendoza.gov.ar/wp-content/uploads/sites/49/2019/10/20191024_160959.jpg"
-                />
-                <Figure.Caption>
-                    Tortas<br />
-                    $1.990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://www.dulcesyregalos.com/comunes/productos/CUM07.jpg"
-                />
-                <Figure.Caption>
-                    Tortas<br></br>
-                    $1.590
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-
-                    alt="171x180"
-                    src="https://mascolombia.com/wp-content/uploads/2022/04/Tortas-decoradas.-Frozen.png"
-
-                />
-                <Figure.Caption>
-                    Tortas<br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKxy1YdKyp06jA9x7ZYYYdbPrVYAXGr6nVhLXKOhxDi8RtWvxdHBq2vO2o63rQIdJd5dU&usqp=CAU"
-                />
-                <Figure.Caption>
-                    Tortas <br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://invitajass.com/wp-content/uploads/2019/06/tortas-de-cumpleaños-para-niñas.png"
-                />
-                <Figure.Caption>
-                    Tortas<br />
-                    $1990
-                </Figure.Caption>
-            </Figure>
 
 
             <Table striped bordered hover size="sm">
@@ -139,43 +110,18 @@ const CupcakeParadise = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Chalecos</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Tortas</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Milhoja</td>
-                        <td>$1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>Trenzas</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Donas</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Cupcake </td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
+                    {productos.map((producto,index) =>{
+                        return(
+                            <tr>
+                            <td>{producto.id}</td>
+                            <td>{producto.nombre_producto}</td>
+                            <td>$ {producto.precio}</td>
+                            <td><button onClick={() => addLink(producto.id)}><FcLike /></button></td>
+                        </tr>
+                        )
+                    })}
+                   
+                    
                 </tbody>
             </Table>
 

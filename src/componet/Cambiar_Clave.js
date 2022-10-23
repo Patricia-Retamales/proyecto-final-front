@@ -6,6 +6,9 @@ import { Context } from "../store/AppContext.js"
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 
+
+
+
 function Cambiar_Clave() {
   const { store, actions } = useContext(Context);
   const [nueva_clave, setClave] = useState("");
@@ -55,6 +58,8 @@ function Cambiar_Clave() {
             placeholder="password" />
           <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
         </div>
+
+        
 
         <Link to="/">
           <button type="submit" className="btn btn-primary"

@@ -7,9 +7,30 @@ import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
 
 import { FcLike } from "react-icons/fc";
+import { Context } from "../store/AppContext";
+import React, { useContext, useState } from 'react';
 
 
 const  SaborDivino = () => {
+
+    const { store, actions } = useContext(Context);
+    let chocolate = store.productos.filter(producto => producto.marca === "10");
+    console.log(chocolate);
+    const [productos, setProductos] = useState(chocolate);
+
+    console.log("productos chocolate", productos);
+    function addLink(id_producto) {
+        console.log("productos chocolate", productos);
+        const favorite = productos.filter(fav => {
+            console.log("id_producto", fav);
+            if (fav.id == id_producto) {
+                return fav;
+            }
+        });
+        const name = favorite[0].nombre_producto;
+        actions.addFavorite(name);
+    }
+
     return (
         <div className='semillas' style={{background:'#ffffec'}}>
 <ComponentNabar/>
@@ -60,73 +81,26 @@ const  SaborDivino = () => {
                 </Carousel.Item>
             </Carousel>
 
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
+            {productos.map((producto, index) => {
+                return (
+                    <Figure style={{ margin: '50px' }}>
+                        <Figure.Image
+                            width={171}
+                            height={180}
 
-                    alt="171x180"
-                    src="https://i0.wp.com/www.johfrej.com/wp-content/uploads/2021/04/tortugas-de-chocolate-johfrej-cv.png?fit=700%2C467&ssl=1"
-                />
-                <Figure.Caption>
-                    Chocolate<br/>
-                    $1.990
-                </Figure.Caption>
-            </Figure>
+                            alt="171x180"
+                            src={producto.url_foto}
+                        />
+                        <Figure.Caption>
+                            {producto.nombre_producto}<br />
+                            {producto.precio}
+                        </Figure.Caption>
+                    </Figure>
 
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDlRzggYQQ0NNlauxzcm726WIfl3ezjIeVtQ&usqp=CAU"
-                />
-                <Figure.Caption>
-                    Corazon chocolatozo<br></br>
-                    $1.590
-                </Figure.Caption>
-            </Figure>
+                )
+            })}
 
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-
-                    alt="171x180"
-                    src="https://www.mendoza.gov.ar/wp-content/uploads/sites/49/2016/06/choco.jpg"
-
-                />
-                <Figure.Caption>
-                    Regalitos de Amor<br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://img.freepik.com/fotos-premium/composicion-sobre-fondo-madera-negra-chocolates-artesanales-al-estilo-raffaello-productos-naturales-organicos_200577-76.jpg"
-                />
-                <Figure.Caption>
-                    Cajitas <br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="http://innatia.info/images/galeria/chocolate-5.jpg"
-                />
-                <Figure.Caption>
-                100% Cacao<br/>
-                    $1990
-                </Figure.Caption>
-            </Figure>
+            
 
 
             <Table striped bordered hover size="sm">
@@ -139,42 +113,17 @@ const  SaborDivino = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>chocolate rellenos</td>
-                        <td><button ><FcLike/></button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Corazones de chocolate</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike/></button></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>BomBones</td>
-                        <td>$1990</td>
-                        <td><button ><FcLike/></button></td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>chocolates</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike/></button></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Bombones rellenos</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike/></button></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Dulce de leche </td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike/></button></td>
-                    </tr>
+                {productos.map((producto,index) =>{
+                        return(
+                            <tr>
+                            <td>{producto.id}</td>
+                            <td>{producto.nombre_producto}</td>
+                            <td>$ {producto.precio}</td>
+                            <td><button onClick={() => addLink(producto.id)}><FcLike /></button></td>
+                        </tr>
+                        )
+                    })}
+                   
                 </tbody>
             </Table>
 

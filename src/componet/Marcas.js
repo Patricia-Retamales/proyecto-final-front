@@ -7,9 +7,28 @@ import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
 
 import { FcLike } from "react-icons/fc";
-
+import { Context } from "../store/AppContext";
+import React, { useContext, useState } from 'react';
 
 const Marcas = () => {
+
+    const { store, actions } = useContext(Context);
+    let semilla = store.productos.filter(producto => producto.marca === "09");
+    console.log(semilla);
+    const [productos, setProductos] = useState(semilla);
+
+    console.log("productos semilla", productos);
+    function addLink(id_producto) {
+        console.log("productos semilla", productos);
+        const favorite = productos.filter(fav => {
+            console.log("id_producto", fav);
+            if (fav.id == id_producto) {
+                return fav;
+            }
+        });
+        const name = favorite[0].nombre_producto;
+        actions.addFavorite(name);
+    }
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
             <ComponentNabar />
@@ -60,74 +79,25 @@ const Marcas = () => {
                 </Carousel.Item>
             </Carousel>
 
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
+            {productos.map((producto, index) => {
+                return (
+                    <Figure style={{ margin: '50px' }}>
+                        <Figure.Image
+                            width={171}
+                            height={180}
 
-                    alt="171x180"
-                    src="https://jumbo.vtexassets.com/arquivos/ids/325530-360-360?width=360&height=360&aspect=true"
-                />
-                <Figure.Caption>
-                    Semilla Zapallo<br></br>
-                    $1.990
-                </Figure.Caption>
-            </Figure>
+                            alt="171x180"
+                            src={producto.url_foto}
+                        />
+                        <Figure.Caption>
+                            {producto.nombre_producto}<br />
+                            {producto.precio}
+                        </Figure.Caption>
+                    </Figure>
 
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/839/794/products/semillas-de-lino1-398dad853a54d9533516313012782087-1024-1024.png"
-                />
-                <Figure.Caption>
-                    Semilla Lino<br></br>
-                    $1.590
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-
-                    alt="171x180"
-                    src="https://floramedia.es/wp-content/uploads/2021/07/sobres-de-semillas-floramedia.jpg"
-
-                />
-                <Figure.Caption>
-                    Semillas varidad<br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://cdn.shopify.com/s/files/1/0293/8952/0975/products/4195_600x.jpg?v=1629944171"
-                />
-                <Figure.Caption>
-                    Linaza<br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://aldeanativa.cl/wp-content/uploads/1d1a0eb0-5159-4459-8cb0-6125afdfa455-606110105309-semillas-de-sesamo-negro-125gr-positiv-1.jpeg"
-                />
-                <Figure.Caption>
-                    Sesamo Negro<br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
+                )
+            })}
+            
 
             <Table striped bordered hover size="sm">
                 <thead>
@@ -139,43 +109,17 @@ const Marcas = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>semillas de Zapallo</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Semillas de Girasol</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Semillas de Linaza</td>
-                        <td>$1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>semillas de Zapallo</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Semillas de Girasol</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Semillas de Linaza</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
+                {productos.map((producto,index) =>{
+                        return(
+                            <tr>
+                            <td>{producto.id}</td>
+                            <td>{producto.nombre_producto}</td>
+                            <td>$ {producto.precio}</td>
+                            <td><button onClick={() => addLink(producto.id)}><FcLike /></button></td>
+                        </tr>
+                        )
+                    })}
+                   
                 </tbody>
             </Table>
 

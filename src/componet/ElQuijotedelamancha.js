@@ -7,10 +7,30 @@ import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
 
 import { FcLike } from "react-icons/fc";
+import { Context } from "../store/AppContext";
+import React, { useContext, useState } from 'react';
 
 
 
 const ElQuijotedelaMancha = () => {
+    const { store, actions } = useContext(Context);
+    let Mancha = store.productos.filter(producto => producto.marca === "07");
+    console.log(Mancha);
+    const [productos, setProductos] = useState(Mancha);
+
+    console.log("productos Mancha", productos);
+    function addLink(id_producto) {
+        console.log("productos Mancha", productos);
+        const favorite = productos.filter(fav => {
+            console.log("id_producto", fav);
+            if (fav.id == id_producto) {
+                return fav;
+            }
+        });
+        const name = favorite[0].nombre_producto;
+        actions.addFavorite(name);
+    }
+
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
 
@@ -61,74 +81,26 @@ const ElQuijotedelaMancha = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            {productos.map((producto, index) => {
+                return (
+                    <Figure style={{ margin: '50px' }}>
+                        <Figure.Image
+                            width={171}
+                            height={180}
 
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
+                            alt="171x180"
+                            src={producto.url_foto}
+                        />
+                        <Figure.Caption>
+                            {producto.nombre_producto}<br />
+                            {producto.precio}
+                        </Figure.Caption>
+                    </Figure>
 
-                    alt="171x180"
-                    src="https://magnomayorista.cl/wp-content/uploads/2021/05/1002997-magno-cloro-gel-lavanda-900cc-2.jpg"
-                />
-                <Figure.Caption>
-                    Cloro Gel<br />
-                    $1.990
-                </Figure.Caption>
-            </Figure>
+                )
+            })}
 
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://cdnx.jumpseller.com/ofimaster/image/17832677/resize/540/540?1645018925"
-                />
-                <Figure.Caption>
-                    Limpia Vidrios<br></br>
-                    $1.590
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-
-                    alt="171x180"
-                    src="https://cdn.dimerc.cl/media/catalog/product/cache/1/thumbnail/x600/040ec09b1e35df139433887a97daa66f/0/4/04c1719100cbc17f6a07280eec4ff27f.jpg"
-
-                />
-                <Figure.Caption>
-                    Poett<br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://dojiw2m9tvv09.cloudfront.net/42730/product/7805000317317-detergentes-detergente-omo-matic-2-7kg-puntobarato1184.jpg"
-                />
-                <Figure.Caption>
-                    Omo<br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://dojiw2m9tvv09.cloudfront.net/42730/product/7506195143834-suavizantes-suavizante-downy-concentrado-500ml-puntobarato3944.jpg"
-                />
-                <Figure.Caption>
-                    suavizante downy<br />
-                    $1990
-                </Figure.Caption>
-            </Figure>
+            
 
 
             <Table striped bordered hover size="sm">
@@ -141,43 +113,17 @@ const ElQuijotedelaMancha = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Poett</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Suavizante</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Cloro Gel</td>
-                        <td>$1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>Limpia Vidrios</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Omo</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Cloro</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
+                {productos.map((producto,index) =>{
+                        return(
+                            <tr>
+                            <td>{producto.id}</td>
+                            <td>{producto.nombre_producto}</td>
+                            <td>$ {producto.precio}</td>
+                            <td><button onClick={() => addLink(producto.id)}><FcLike /></button></td>
+                        </tr>
+                        )
+                    })}
+                    
                 </tbody>
             </Table>
 

@@ -7,10 +7,29 @@ import ComponentNabar from './ComponentNavbar';
 import Footer from "../componet/ComponenteFooter";
 
 import { FcLike } from "react-icons/fc";
-
+import { Context } from "../store/AppContext";
+import React, { useContext, useState } from 'react';
 
 
 function ElEstudiante() {
+    const { store, actions } = useContext(Context);
+    let estudiante = store.productos.filter(producto => producto.marca === "06");
+    console.log(estudiante);
+    const [productos, setProductos] = useState(estudiante);
+
+    console.log("productos estudiante", productos);
+    function addLink(id_producto) {
+        console.log("productos estudiante", productos);
+        const favorite = productos.filter(fav => {
+            console.log("id_producto", fav);
+            if (fav.id == id_producto) {
+                return fav;
+            }
+        });
+        const name = favorite[0].nombre_producto;
+        actions.addFavorite(name);
+    }
+
     return (
         <div className='semillas' style={{ background: '#ffffec' }}>
             <ComponentNabar />
@@ -60,74 +79,25 @@ function ElEstudiante() {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            {productos.map((producto, index) => {
+                return (
+                    <Figure style={{ margin: '50px' }}>
+                        <Figure.Image
+                            width={171}
+                            height={180}
 
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
+                            alt="171x180"
+                            src={producto.url_foto}
+                        />
+                        <Figure.Caption>
+                            {producto.nombre_producto}<br />
+                            {producto.precio}
+                        </Figure.Caption>
+                    </Figure>
 
-                    alt="171x180"
-                    src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pumahue.cl%2Ftemuco%2Frecepcion-de-utiles-escolares%2F&psig=AOvVaw3RubPKpVGvtX5zD2FL9po2&ust=1665790252929000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNi8lrSu3voCFQAAAAAdAAAAABAE"
-                />
-                <Figure.Caption>
-                    Lapices<br />
-                    $1.990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://www.torre.cl/wp-content/uploads/2021/12/tipos-de-hoja-cuadernos.jpg"
-                />
-                <Figure.Caption>
-                    Cuadernos<br></br>
-                    $1.590
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-
-                    alt="171x180"
-                    src="https://www.latala.cl/wp-content/uploads/2020/08/PAPEL-LUSTRE-ARTEL.jpg"
-
-                />
-                <Figure.Caption>
-                    Cartulinas<br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://media.vozpopuli.com/2020/03/ZARA-Pantalon-PVP-BERSHKA-Supernenas_1335176561_14804356_660x371.jpg"
-                />
-                <Figure.Caption>
-                    Pantalon <br></br>
-                    $1990
-                </Figure.Caption>
-            </Figure>
-
-            <Figure style={{ margin: '50px' }}>
-                <Figure.Image
-                    width={171}
-                    height={180}
-                    alt="171x180"
-                    src="https://cdnx.jumpseller.com/librerias-blue-mix/image/19179199/resize/640/500?1656445026"
-                />
-                <Figure.Caption>
-                    stick fix<br />
-                    $1990
-                </Figure.Caption>
-            </Figure>
+                )
+            })}
+            
 
 
             <Table striped bordered hover size="sm">
@@ -140,43 +110,17 @@ function ElEstudiante() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>calculadora</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Cuadernos</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Lapices</td>
-                        <td>$1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>papel lustre</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Lapiz Mina</td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Corrector </td>
-                        <td>$ 1990</td>
-                        <td><button ><FcLike /></button></td>
-                    </tr>
+                {productos.map((producto,index) =>{
+                        return(
+                            <tr>
+                            <td>{producto.id}</td>
+                            <td>{producto.nombre_producto}</td>
+                            <td>$ {producto.precio}</td>
+                            <td><button onClick={() => addLink(producto.id)}><FcLike /></button></td>
+                        </tr>
+                        )
+                    })}
+                    
                 </tbody>
             </Table>
 

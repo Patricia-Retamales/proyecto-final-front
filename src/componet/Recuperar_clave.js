@@ -12,6 +12,7 @@ function Recuperar_Clave() {
   return (
 
     <Form>
+
       <ComponentNavbar />
 
       <form justify="center" style={{ width: "38rem" }}>
@@ -64,6 +65,34 @@ function Recuperar_Clave() {
           </button>
         </Link>
       </form>
+
+
+      <div>
+        <form justify="center" style={{ width: "38rem" }}>
+          
+          <div className="mb-3">
+            <label className="form-label">Ingresa tu correo</label>
+            <input type="email" className="form-control"
+              onChange={e => setEmail(e.target.value)}
+              value={login_email}
+              id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="email@e-mail.com" />
+            <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+          </div>
+
+          <Link to="/cambiar_clave">
+            <button type="submit" className="btn btn-primary"
+              onClick={(e) => {
+                e.preventDefault();
+                actions.recuperar_clave_funcion(login_email);
+
+
+              }} >
+              Submit
+            </button>
+          </Link>
+        </form>
+      </div>
 
 
       <Footer />

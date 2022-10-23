@@ -55,7 +55,7 @@ function ComponentNabar() {
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.5">
 
-                <Link to='/bellapandora'>joyas</Link>
+                <Link to='/bellapandora'>Joyas</Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.6">
                 <Link to="/sabordivino">Chocolate</Link>
@@ -84,13 +84,17 @@ function ComponentNabar() {
             <NavDropdown title="Usuario" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
                 <Link to="/datosusuario">
-                  <th>configuracion</th>
+                  <th>Configuracion</th>
                   </Link>
               </NavDropdown.Item>
 
               <NavDropdown.Item href="#action/3.3">
+
                 <Link to="/cambiar_clave">
                  <th>cambiar clave</th> 
+
+                
+
                 </Link>
               </NavDropdown.Item>
 
@@ -102,7 +106,7 @@ function ComponentNabar() {
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Cerrar sesion
+                Cerrar Sesion
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
@@ -119,7 +123,7 @@ function ComponentNabar() {
               <Dropdown.Menu>
                 {(
                   store.favoriteList.length === 0) ?
-                  <Dropdown.Item><h6>vasio</h6></Dropdown.Item> :
+                  <Dropdown.Item><h6>Vacio</h6></Dropdown.Item> :
                   store.favoriteList.map((favorite, index) =>
                     <Dropdown.Item>{favorite}
                       <button className='icons' onClick={() => { deleteFavorite(index) }}><HiOutlineTrash /></button>

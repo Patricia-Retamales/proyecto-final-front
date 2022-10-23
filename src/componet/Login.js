@@ -62,7 +62,7 @@ function Login() {
                 };
                 actions.login_function(datos_login);
               }} >
-              Submit
+              Confirmar
             </button>
 
             

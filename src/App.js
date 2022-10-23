@@ -48,8 +48,7 @@ function App() {
                 <Route path="/Formulario" element={<Formulario/>} />
                 <Route path="/Compras" element={<Compras/>} />
                 <Route path="/recuperar_clave" element={<Recuperar_Clave/>} />
-                <Route path="/cambiar_clave" element={<Cambiar_Clave/>} />
-
+                <Route path="/cambiar/clave/:token" element={<Cambiar_Clave/>} />
                 
                 
                

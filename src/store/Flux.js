@@ -782,7 +782,59 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({
 					favoriteList: store.favoriteList
 				});
-			}
+			},
+			recuperar_clave_funcion: (email_usuario) => {
+				console.log("Recuperando Clave para " + email_usuario)
+				var myHeaders = new Headers();
+				myHeaders.append("Content-Type", "application/json");
+
+				var raw = JSON.stringify({
+					"email": email_usuario
+				});
+
+				var requestOptions = {
+					method: 'POST',
+					headers: myHeaders,
+					body: raw,
+					redirect: 'follow'
+				};
+
+				fetch("https://3000-sneelyg-proyectofinalba-cx24m3v56wn.ws-us72.gitpod.io//recuperar/clave", requestOptions)
+					.then(response => response.json())
+					.then(result => console.log(result))
+					.catch(error => console.log('error', error));
+
+
+
+			},
+
+			cambiar_clave_funcion: (nueva_clave, email, token) => {
+				console.log("Cambiando Clave")
+				var myHeaders = new Headers();
+				myHeaders.append("Authorization", "Bearer " + token);
+				myHeaders.append("Content-Type", "application/json");
+
+				var raw = JSON.stringify({
+					"email": email,
+					"password": nueva_clave
+				});
+
+				var requestOptions = {
+					method: 'POST',
+					headers: myHeaders,
+					body: raw,
+					redirect: 'follow'
+				};
+
+				fetch("https://3000-sneelyg-proyectofinalba-cx24m3v56wn.ws-us72.gitpod.io/cambiar/clave", requestOptions)
+					.then(response => response.json())
+					.then(result => console.log(result))
+					.catch(error => console.log('error', error));
+
+
+
+			},
+
 
 
 		}

@@ -29,7 +29,7 @@ function Cambiar_Clave() {
     redirect: 'follow'
   };
 
-  fetch("https://3000-sneelyg-proyectofinalba-tvacgmaa6t1.ws-us72.gitpod.io/privada", requestOptions)
+  fetch("https://3000-sneelyg-proyectofinalba-cx24m3v56wn.ws-us72.gitpod.io/privada", requestOptions)
     .then(response => response.json())
     .then(result => {
       setEmail(result.usuario);

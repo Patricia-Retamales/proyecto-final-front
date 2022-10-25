@@ -99,9 +99,9 @@ function ComponentNabar() {
               </NavDropdown.Item>
 
           
-              <NavDropdown.Item href="#action/3.3">
-                <Link to="/registro_producto">
-                 <th>Registro_Producto</th> 
+              <NavDropdown.Item href="#action/3.4">
+                <Link to="/productos_registro">
+                 <th>Registro Producto</th> 
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />

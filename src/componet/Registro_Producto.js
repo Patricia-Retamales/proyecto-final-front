@@ -16,9 +16,10 @@ const Registro_Producto = () => {
     const [descripcion, setDescripcion] = useState("");
     const [precio, setPrecio] = useState("");
     const [url_foto, setUrlfoto] = useState("");
+    const [cantidad, setCantidad] = useState("");
 
     useEffect(() => {
-        actions.acceso_privado()
+        // actions.acceso_privado()
 
 
     }, []);
@@ -27,20 +28,25 @@ const Registro_Producto = () => {
     let datos_producto = {
         "vendedor": "01",
         "marca": "01",
-        "nombre_producto": nombre_producto,
-        "descripcion": descripcion,
-        "precio": precio,
-        "url_foto": url_foto
+        "nombre_producto": "nombre_producto",
+        "descripcion": "descripcion",
+        "precio": "precio",
+        "url_foto": "url_foto"
     };
 
     return (
         <>
 
+
             <div className="wrapper" style={{ width: '50%' }}>
                 {/*store.acceso.usuario*/}
 
+            <div className="wrapper" style={{ width: '100%' }}>
+                {/* {store.acceso.usuario} */}
+
+
                 <ComponentNabar />
-                <div className="row mx-5 justify-content-center">
+                <div className="row mx-5 justify-content-center mt-3">
 
                     <div className="col-md-6">
                         <label className="form-label">Nombre Producto</label>
@@ -67,6 +73,24 @@ const Registro_Producto = () => {
                             value={precio}
                             id="precio" aria-describedby="emailHelp"
                             placeholder="Precio" />
+                    </div>
+
+                    <div className="col-md-6">
+                        <label className="form-label">Marca</label>
+                        <input type="marca" className="form-control"
+                            onChange={e => setMarca(e.target.value)}
+                            value={marca}
+                            id="precio" aria-describedby="emailHelp"
+                            placeholder="Marca" />
+                    </div>
+
+                    <div className="col-md-6">
+                        <label className="form-label">Cantidad</label>
+                        <input type="cantidad" className="form-control"
+                            onChange={e => setCantidad(e.target.value)}
+                            value={cantidad}
+                            id="cantidad" aria-describedby="emailHelp"
+                            placeholder="Cantdad" />
                     </div>
 
 

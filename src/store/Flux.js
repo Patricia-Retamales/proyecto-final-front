@@ -127,6 +127,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"nombre_producto": "Anillos",
 					"descripcion": "xxxxxxxxxxxxxxxxxxxxx",
 					"precio": "1990",
+					"stock": "20",
 					"url_foto": "https://www.paris.cl/dw/image/v2/BCHW_PRD/on/demandware.static/-/Sites-paris-marketplace/default/dwee8477e7/images/imagenes-productos/800/MKN9/MKN9VOPXRS-001.jpg?sw=320&sh=409&sm=fit"
 				},
 				{
@@ -136,6 +137,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"nombre_producto": "Pulseras",
 					"descripcion": "xxxxxxxxxxxxxxxxxxxxx",
 					"precio": "1990",
+					"stock": "2",
 					"url_foto": "https://i.pinimg.com/originals/43/3a/26/433a2696cab0e5c0eaab5e10ce4e5563.jpg"
 				},
 				{
@@ -145,6 +147,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"nombre_producto": "Aros",
 					"descripcion": "xxxxxxxxxxxxxxxxxxxxx",
 					"precio": "1990",
+					"stock": "13",
 					"url_foto": "https://falabella.scene7.com/is/image/Falabella/110436121_1?wid=800&hei=800&qlt=70"
 				},
 				{
@@ -154,6 +157,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"nombre_producto": "Cadenas",
 					"descripcion": "xxxxxxxxxxxxxxxxxxxxx",
 					"precio": "1990",
+					"stock": "34",
 					"url_foto": "https://static.sammit.cl/15928/cadena-grumet-130716-1024.jpg"
 				},
 				{
@@ -163,6 +167,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"nombre_producto": "Tobilleras",
 					"descripcion": "xxxxxxxxxxxxxxxxxxxxx",
 					"precio": "1990",
+					"stock": "20",
 					"url_foto": "https://ae01.alicdn.com/kf/Hfea8f71b004e44e097b168ae70a6ebb7V/1-2-3-unids-set-tobilleras-mujer-acero-inoxidable-joyeria-mujer-joyas-de-playa.jpg_Q90.jpg_.webp"
 				},
 				{
@@ -172,6 +177,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"nombre_producto": "Pircing",
 					"descripcion": "xxxxxxxxxxxxxxxxxxxxx",
 					"precio": "1990",
+					"stock": "20",
 					"url_foto": ""
 				},
 				{
@@ -590,7 +596,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				var myHeaders = new Headers();
 				myHeaders.append("Content-Type", "application/json");
 
-				/*var raw = JSON.stringify({
+				var raw = JSON.stringify({
 					"email": registro.email,
 					"password": registro.password,
 					"is_active": "True",
@@ -607,7 +613,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"numero_cuenta": registro.numero_cuenta
 	
 				});
-	*/
+	
 				var requestOptions = {
 					method: 'POST',
 					headers: myHeaders,
@@ -615,7 +621,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-ia72ais1p9x.ws-us71.gitpod.io/registro", requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-qob8sqet3o6.ws-us72.gitpod.io/?vscodeBrowserReqId=1666555993368/registro", requestOptions)
 					.then(response => response.text())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));
@@ -681,7 +687,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-sneelyg-proyectofinalba-eqkp9siy5pt.ws-us70.gitpod.io/productos/registro", requestOptions)
+				fetch("https://3000-sneelyg-proyectofinalba-qob8sqet3o6.ws-us72.gitpod.io/?vscodeBrowserReqId=1666550834852/productos/registro", requestOptions)
 					.then(response => response.text())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));

@@ -197,7 +197,7 @@ function Registration() {
           <Link to="/">
             <Button variant="outline-secondary" style={{ width: "32rem", position: "static", margin: "10px", justifyContent: "center" }} type="submit"
               onClick={(e) => {
-                e.preventDefault();
+                
                 console.log(datos_registro);
                 actions.registro_funcion(datos_registro);
 

@@ -37,8 +37,13 @@ const Registro_Producto = () => {
     return (
         <>
 
+
+            <div className="wrapper" style={{ width: '50%' }}>
+                {/*store.acceso.usuario*/}
+
             <div className="wrapper" style={{ width: '100%' }}>
                 {/* {store.acceso.usuario} */}
+
 
                 <ComponentNabar />
                 <div className="row mx-5 justify-content-center mt-3">

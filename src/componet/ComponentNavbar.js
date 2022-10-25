@@ -90,7 +90,7 @@ function ComponentNabar() {
 
               <NavDropdown.Item href="#action/3.3">
 
-                <Link to="/cambiar_clave">
+                <Link to="/cambiar/clave/token">
                  <th>cambiar clave</th> 
 
                 

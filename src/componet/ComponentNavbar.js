@@ -100,7 +100,7 @@ function ComponentNabar() {
 
 
               <NavDropdown.Item href="#action/3.4">
-                <Link to="/productos_registro">
+                <Link to="/registro_producto">
                   <th>Registro Producto</th>
                 </Link>
               </NavDropdown.Item>
@@ -114,7 +114,7 @@ function ComponentNabar() {
         </Navbar.Collapse>
 
         <Dropdown>
-          <Dropdown.Toggle variant="primary" id="nav-dropdown-dark-example"
+          <Dropdown.Toggle variant="secondary" id="nav-dropdown-dark-example"
             title="Dropdown">
             <button >{store.favoriteList.length}<SlBasket /> </button>
 
@@ -126,7 +126,7 @@ function ComponentNabar() {
               <Dropdown.Item><h6>Vacio</h6></Dropdown.Item> :
               store.favoriteList.map((favorite, index) =>
                 <Dropdown.Item>{favorite}
-                  <button className='icons' onClick={() => { deleteFavorite(index) }}><HiOutlineTrash /></button>
+                  <button className="btn btn-secondary" variant="outlined" style={{ marginleft: "20px" }}  onClick={() => { deleteFavorite(index) }}><HiOutlineTrash /></button>
                 </Dropdown.Item>
               )}
           </Dropdown.Menu>

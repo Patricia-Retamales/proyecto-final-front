@@ -102,6 +102,7 @@ const BellaPandora = () => {
                         <th>#</th>
                         <th>Nombres de Productos</th>
                         <th>Valores </th>
+                        <th>Stock</th>
                         <th>Agregar</th>
                     </tr>
                 </thead>
@@ -112,6 +113,7 @@ const BellaPandora = () => {
                                 <td>{producto.id}</td>
                                 <td>{producto.nombre_producto}</td>
                                 <td>$ {producto.precio}</td>
+                                <td>{producto.stock}</td>
                                 <td> <button onClick={() => addLink(producto.id)} ><FcLike /></button></td>
 
                             </tr>

@@ -1,4 +1,3 @@
-
 import Form from 'react-bootstrap/Form';
 import ComponentNavbar from './ComponentNavbar';
 import React, { useEffect, useState, useContext } from "react";
@@ -11,6 +10,7 @@ function Recuperar_Clave() {
   const [login_email, setEmail] = useState("");
   const [telefono, setTelefono]= useState("");
   return (
+
 
     <Form style={{ backgroundImage: "linear-gradient(#d8af97, #edb8fa)" }}>
       <ComponentNavbar />
@@ -54,9 +54,11 @@ function Recuperar_Clave() {
       <Footer />
     </Form>
 
+
   );
 }
 
 export default Recuperar_Clave;
+
 
 

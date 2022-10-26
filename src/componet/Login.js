@@ -67,7 +67,7 @@ function Login() {
 
             
           </Link>
-          <Link to="/recuperar_clave"><p>Recuperar Contraseña</p></Link>
+          <Link to="/recuperar/clave"><p>Recuperar Contraseña</p></Link>
         </form>
       </div>
 

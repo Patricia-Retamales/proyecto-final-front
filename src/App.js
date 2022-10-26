@@ -41,7 +41,7 @@ function App() {
                 <Route path="/ElQuijotedelaMancha" element={<ElQuijotedelaMancha/>} />
                 <Route path="/LaTiendita" element={<LaTiendita/>} />
                 <Route path="/Marcas" element={<Marcas />} />
-                <Route path="/registro_producto" element={<  Registro_Producto />} />
+                <Route path="/registro/producto" element={<  Registro_Producto />} />
                 <Route path="/SaborDivino" element={<SaborDivino />} />
                 <Route path="/BellaPandora" element={<BellaPandora/>} />
                 <Route path="/DatosUsuario" element={<DatosUsuario/>} />

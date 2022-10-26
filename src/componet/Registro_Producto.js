@@ -38,91 +38,95 @@ const Registro_Producto = () => {
 
 
 
-        <div className="wrapper" style={{ width: '50%' }}>
-            {/*store.acceso.usuario*/}
 
-            <div className="wrapper" style={{ width: '100%' }}>
-                {/* {store.acceso.usuario} */}
+        <form>
+
+            <ComponentNabar />
+            <div className="wrapper" style={{ width: '50%' }}>
+                {/*store.acceso.usuario*/}
+
+                <div className="wrapper" style={{ width: '100%' }}>
+                    {/* {store.acceso.usuario} */}
+
+                    <div className="row mx-5 justify-content-center mt-3">
+
+                        <div className="col-md-6">
+                            <label className="form-label">Nombre Producto</label>
+                            <input type="NombreProducto" className="form-control"
+                                onChange={e => setNombre(e.target.value)}
+                                value={nombre_producto}
+                                id="Nombre" aria-describedby="emailHelp"
+                                placeholder="Nombre Producto" />
+                        </div>
+
+                        <div className="col-md-6">
+                            <label className="form-label">Descripcion</label>
+                            <input type="descripcion" className="form-control"
+                                onChange={e => setDescripcion(e.target.value)}
+                                value={descripcion}
+                                id="Descripcion" aria-describedby="emailHelp"
+                                placeholder="Descripcion" />
+                        </div>
+
+                        <div className="col-md-6">
+                            <label className="form-label">Precio de Venta</label>
+                            <input type="precio" className="form-control"
+                                onChange={e => setPrecio(e.target.value)}
+                                value={precio}
+                                id="precio" aria-describedby="emailHelp"
+                                placeholder="Precio" />
+                        </div>
+
+                        <div className="col-md-6">
+                            <label className="form-label">Marca</label>
+                            <input type="marca" className="form-control"
+                                onChange={e => setMarca(e.target.value)}
+                                value={marca}
+                                id="precio" aria-describedby="emailHelp"
+                                placeholder="Marca" />
+                        </div>
+
+                        <div className="col-md-6">
+                            <label className="form-label">Cantidad</label>
+                            <input type="cantidad" className="form-control"
+                                onChange={e => setCantidad(e.target.value)}
+                                value={cantidad}
+                                id="cantidad" aria-describedby="emailHelp"
+                                placeholder="Cantdad" />
+                        </div>
 
 
-                <ComponentNabar />
-                <div className="row mx-5 justify-content-center mt-3">
 
-                    <div className="col-md-6">
-                        <label className="form-label">Nombre Producto</label>
-                        <input type="NombreProducto" className="form-control"
-                            onChange={e => setNombre(e.target.value)}
-                            value={nombre_producto}
-                            id="Nombre" aria-describedby="emailHelp"
-                            placeholder="Nombre Producto" />
+                        <div className="col-md-6">
+                            <label className="form-label">Foto</label>
+                            <input type="Nombre" className="form-control"
+                                onChange={e => setUrlfoto(e.target.value)}
+                                value={url_foto}
+                                id="url_foto" aria-describedby="emailHelp"
+                                placeholder="URL FOTO" />
+                        </div>
+
+
+
+
+                        <Link to="/">
+                            <Button variant="primary" type="submit"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    actions.crear_producto_funcion(datos_producto);
+
+                                }}
+                            >
+                                Submit
+                            </Button>
+                        </Link>
                     </div>
 
-                    <div className="col-md-6">
-                        <label className="form-label">Descripcion</label>
-                        <input type="descripcion" className="form-control"
-                            onChange={e => setDescripcion(e.target.value)}
-                            value={descripcion}
-                            id="Descripcion" aria-describedby="emailHelp"
-                            placeholder="Descripcion" />
-                    </div>
-
-                    <div className="col-md-6">
-                        <label className="form-label">Precio de Venta</label>
-                        <input type="precio" className="form-control"
-                            onChange={e => setPrecio(e.target.value)}
-                            value={precio}
-                            id="precio" aria-describedby="emailHelp"
-                            placeholder="Precio" />
-                    </div>
-
-                    <div className="col-md-6">
-                        <label className="form-label">Marca</label>
-                        <input type="marca" className="form-control"
-                            onChange={e => setMarca(e.target.value)}
-                            value={marca}
-                            id="precio" aria-describedby="emailHelp"
-                            placeholder="Marca" />
-                    </div>
-
-                    <div className="col-md-6">
-                        <label className="form-label">Cantidad</label>
-                        <input type="cantidad" className="form-control"
-                            onChange={e => setCantidad(e.target.value)}
-                            value={cantidad}
-                            id="cantidad" aria-describedby="emailHelp"
-                            placeholder="Cantdad" />
-                    </div>
-
-
-
-                    <div className="col-md-6">
-                        <label className="form-label">Foto</label>
-                        <input type="Nombre" className="form-control"
-                            onChange={e => setUrlfoto(e.target.value)}
-                            value={url_foto}
-                            id="url_foto" aria-describedby="emailHelp"
-                            placeholder="URL FOTO" />
-                    </div>
-
-
-
-
-                    <Link to="/">
-                        <Button variant="primary" type="submit"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                actions.crear_producto_funcion(datos_producto);
-
-                            }}
-                        >
-                            Submit
-                        </Button>
-                    </Link>
                 </div>
-                <Footer />
             </div>
-        </div>
+            <Footer />
 
+        </form>
     )
 
 }

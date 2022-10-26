@@ -35,11 +35,11 @@ const Registro_Producto = () => {
     };
 
     return (
-        <>
 
 
-            <div className="wrapper" style={{ width: '50%' }}>
-                {/*store.acceso.usuario*/}
+
+        <div className="wrapper" style={{ width: '50%' }}>
+            {/*store.acceso.usuario*/}
 
             <div className="wrapper" style={{ width: '100%' }}>
                 {/* {store.acceso.usuario} */}
@@ -121,8 +121,8 @@ const Registro_Producto = () => {
                 </div>
                 <Footer />
             </div>
+        </div>
 
-        </>
     )
 
 }

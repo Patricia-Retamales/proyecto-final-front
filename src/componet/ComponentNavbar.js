@@ -8,12 +8,12 @@ import { Context } from "../store/AppContext";
 import React, { useContext } from 'react';
 import { HiOutlineTrash } from "react-icons/hi";
 import Badge from 'react-bootstrap/Badge';
- import { SlBasket } from "react-icons/sl";
+import { SlBasket } from "react-icons/sl";
 
 
 function ComponentNabar() {
 
-  const { store, actions } = useContext(Context); 
+  const { store, actions } = useContext(Context);
 
   function deleteFavorite(index) {
     actions.removeFavorite(index);
@@ -21,7 +21,7 @@ function ComponentNabar() {
 
 
   return (
-    <Navbar collapseOnSelect expand="lg" style={{background:"#888a8a", border:"#9b9b9b 5px solid"}}>
+    <Navbar collapseOnSelect expand="lg" style={{ background: "#888a8a", border: "#9b9b9b 5px solid" }}>
       <Container>
         <img
           src="https://cdn-icons-png.flaticon.com/512/5175/5175268.png"
@@ -30,12 +30,12 @@ function ComponentNabar() {
           className="d-inline-block align-top"
           alt=""
         />
-        <Navbar.Brand href="#home"><Link to="/"  style={{ padding: "4px", textShadow:" 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue"}}>De todo un poco</Link></Navbar.Brand>
+        <Navbar.Brand href="#home"><Link to="/" style={{ padding: "4px", textShadow: " 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue" }}>De todo un poco</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#features">
-              <Link to="/productos">
+              < Link to="/productos" >
                 Productos
               </Link>
             </Nav.Link>
@@ -61,7 +61,7 @@ function ComponentNabar() {
                 <Link to="/sabordivino">Chocolate</Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.7">
-                <Link to="/elquijotedelamancha">limpieza</Link>
+                <Link to="/elquijotedelamancha">Limpieza</Link>
               </NavDropdown.Item>
 
 
@@ -72,10 +72,10 @@ function ComponentNabar() {
           </Nav>
 
           <Link to="/login">
-            <button   className="btn btn-primary" variant="outlined" ><th>Ingresar</th></button>
+            <button className="btn btn-secondary" style={{ margin: "20px" }} variant="outlined" ><th>Ingresar</th></button>
           </Link>
           <Link to="/registration">
-            <button className="btn btn-primary"><th>Registrar</th></button>
+            <button className="btn btn-secondary" style={{ marginleft: "20px" }}><th>Registrar</th></button>
           </Link>
 
 
@@ -85,23 +85,28 @@ function ComponentNabar() {
               <NavDropdown.Item href="#action/3.1">
                 <Link to="/datosusuario">
                   <th>Configuracion</th>
-                  </Link>
+                </Link>
               </NavDropdown.Item>
 
               <NavDropdown.Item href="#action/3.3">
 
                 <Link to="/cambiar/clave/token">
-                 <th>cambiar clave</th> 
+                  <th>cambiar clave</th>
 
-                
+
 
                 </Link>
               </NavDropdown.Item>
 
-          
+
               <NavDropdown.Item href="#action/3.4">
+<<<<<<< HEAD
+                <Link to="/productos_registro">
+                  <th>Registro Producto</th>
+=======
                 <Link to="/registro/producto">
                  <th>Registro Producto</th> 
+>>>>>>> origin/desarrollo
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
@@ -114,23 +119,23 @@ function ComponentNabar() {
         </Navbar.Collapse>
 
         <Dropdown>
-              <Dropdown.Toggle variant="primary" id="nav-dropdown-dark-example"
-              title="Dropdown">
-               <button >{store.favoriteList.length}<SlBasket/> </button>
+          <Dropdown.Toggle variant="primary" id="nav-dropdown-dark-example"
+            title="Dropdown">
+            <button >{store.favoriteList.length}<SlBasket /> </button>
 
-              </Dropdown.Toggle>
+          </Dropdown.Toggle>
 
-              <Dropdown.Menu>
-                {(
-                  store.favoriteList.length === 0) ?
-                  <Dropdown.Item><h6>Vacio</h6></Dropdown.Item> :
-                  store.favoriteList.map((favorite, index) =>
-                    <Dropdown.Item>{favorite}
-                      <button className='icons' onClick={() => { deleteFavorite(index) }}><HiOutlineTrash /></button>
-                    </Dropdown.Item>
-                  )}
-              </Dropdown.Menu>
-            </Dropdown>
+          <Dropdown.Menu>
+            {(
+              store.favoriteList.length === 0) ?
+              <Dropdown.Item><h6>Vacio</h6></Dropdown.Item> :
+              store.favoriteList.map((favorite, index) =>
+                <Dropdown.Item>{favorite}
+                  <button className='icons' onClick={() => { deleteFavorite(index) }}><HiOutlineTrash /></button>
+                </Dropdown.Item>
+              )}
+          </Dropdown.Menu>
+        </Dropdown>
       </Container >
     </Navbar >
   );

@@ -30,7 +30,7 @@ function Footer() {
 					<a className="text-white text-decoration-none" href="#"> 100% Confiable </a>
 				</div>
 
-				<div className="col-xs-12 col-md-6 col-lg-3">
+				<div className="col-xs-12 col-md-6 col-lg-3" style={{textAlign:"right"}}>
 					<p className="h5 mb-3"> Contacto </p>
 					<div className="mb-2">
 						<a className="text-white text-decoration-none" href> <h6> Instagram  < FaInstagram /></h6></a>

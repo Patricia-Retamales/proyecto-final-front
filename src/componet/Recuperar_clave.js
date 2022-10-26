@@ -9,52 +9,50 @@ import { Link } from 'react-router-dom';
 function Recuperar_Clave() {
   const { store, actions } = useContext(Context);
   const [login_email, setEmail] = useState("");
+  const [telefono, setTelefono]= useState("");
   return (
 
-    <form>
-
+    <Form style={{ backgroundImage: "linear-gradient(#d8af97, #edb8fa)" }}>
       <ComponentNavbar />
+      <div style={{ margin: "18%", color: "#d1052a", background: "white", height: "80%", width: "50%", borderRadius: "9px black", boxShadow: "0 2px 4px 0 black, 0 3px 10px 0 black", padding: "10px", alignItems: "stretch" }}>
 
-
-      <div>
+        <h1 style={{ padding: "2px", textShadow: "2px 2px 5px #000000" }}>Ingresar</h1>
         <form justify="center" style={{ width: "38rem" }}>
 
-          <div className="mb-3">
-          <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-        <Form.Control
-          placeholder="Username"
-          aria-label="Username"
-          aria-describedby="basic-addon1"
-        />
-      </InputGroup>
-              // onChange={e => setEmail(e.target.value)}
-              // value={login_email}
-              
+          <div className="mb-3" style={{ width: "30rem", position: "relative", margin: "40px", }}>
+            <label className="form-label">Ingresa tu email</label>
+            <input type="email" className="form-control"
+              onChange={e => setEmail(e.target.value)}
+              value={login_email}
+              id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="email@e-mail.com" />
+            <div id="emailHelp" className="form-text">Si tu correo existe, te enviaremos un SMS con tu nueva clave.</div>
           </div>
-
-          <div>
-            <label htmlFor="phone">celular</label>
-            <input id="phone" type="tel" placeholder="+56" />
+          <div className="mb-3" style={{ width: "30rem", position: "relative", margin: "40px", }}>
+            <label className="form-label">Teléfono</label>
+            <input type="text" className="form-control"
+              onChange={e => setTelefono(e.target.value)}
+              value={telefono}
+              id="exampleInputPassword1" placeholder="+569" />
           </div>
-          <br/>
-          <Link to="/cambiar_clave">
-            <button type="submit" className="btn btn-primary"
+          <Link to="/">
+            <button style={{ width: "20rem", position: "relative", margin: "40px", }} type="submit" className="btn btn-outline-secondary"
               onClick={(e) => {
                 e.preventDefault();
-                actions.recuperar_clave_funcion(login_email);
-
-
+                actions.recuperar_clave_funcion(login_email, telefono);
+                
               }} >
-              Submit
+              Recuperar Contraseña
             </button>
+
+
           </Link>
+          <Link to="/recuperar/clave"><p>Recuperar Contraseña</p></Link>
         </form>
       </div>
 
-
       <Footer />
-    </form >
+    </Form>
 
   );
 }

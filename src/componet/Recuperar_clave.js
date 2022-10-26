@@ -14,7 +14,11 @@ function Recuperar_Clave() {
 
     
     <form>
+      <div  style={{ backgroundImage: "linear-gradient(#d8af97, #edb8fa)" }}>
         <ComponentNavbar />
+
+       
+
         <div style={{ margin: "18%", color: "#d1052a", background: "white", height: "80%", width: "50%", borderRadius: "9px black", boxShadow: "0 2px 4px 0 black, 0 3px 10px 0 black", padding: "10px", alignItems: "stretch" }}>
           <h1 style={{ padding: "2px", textShadow: "2px 2px 5px #000000" }}>Cambio de clave</h1>
           <form justify="center" style={{ width: "38rem" }}>
@@ -61,7 +65,7 @@ function Recuperar_Clave() {
 
         </div >
         <Footer />
-      
+        </div>
         </form>
 
   );

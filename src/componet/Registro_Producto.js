@@ -35,20 +35,20 @@ const Registro_Producto = () => {
     };
 
     return (
-
-
-
+      
+<div  style={{ backgroundImage: "linear-gradient(#d8af97, #edb8fa)" }}>
+<ComponentNabar />
         <div className="wrapper" style={{ width: '50%' }}>
             {/*store.acceso.usuario*/}
 
             <div className="wrapper" style={{ width: '100%' }}>
                 {/* {store.acceso.usuario} */}
 
+                <div style={{ margin: "18%", color: "#d1052a", background: "white", height: "80%", width: "50%", borderRadius: "9px black", boxShadow: "0 2px 4px 0 black, 0 3px 10px 0 black", padding: "10px", alignItems: "stretch" }}>
+                <h1 style={{ padding: "2px", textShadow: "2px 2px 5px #000000" }}>Registra Producto</h1>
+                <div className="row mx-10 justify-content-center mt-3">
 
-                <ComponentNabar />
-                <div className="row mx-5 justify-content-center mt-3">
-
-                    <div className="col-md-6">
+                    <div className="col-md-9">
                         <label className="form-label">Nombre Producto</label>
                         <input type="NombreProducto" className="form-control"
                             onChange={e => setNombre(e.target.value)}
@@ -57,7 +57,7 @@ const Registro_Producto = () => {
                             placeholder="Nombre Producto" />
                     </div>
 
-                    <div className="col-md-6">
+                    <div className="col-md-9">
                         <label className="form-label">Descripcion</label>
                         <input type="descripcion" className="form-control"
                             onChange={e => setDescripcion(e.target.value)}
@@ -66,7 +66,7 @@ const Registro_Producto = () => {
                             placeholder="Descripcion" />
                     </div>
 
-                    <div className="col-md-6">
+                    <div className="col-md-9">
                         <label className="form-label">Precio de Venta</label>
                         <input type="precio" className="form-control"
                             onChange={e => setPrecio(e.target.value)}
@@ -75,7 +75,7 @@ const Registro_Producto = () => {
                             placeholder="Precio" />
                     </div>
 
-                    <div className="col-md-6">
+                    <div className="col-md-9">
                         <label className="form-label">Marca</label>
                         <input type="marca" className="form-control"
                             onChange={e => setMarca(e.target.value)}
@@ -84,7 +84,7 @@ const Registro_Producto = () => {
                             placeholder="Marca" />
                     </div>
 
-                    <div className="col-md-6">
+                    <div className="col-md-9">
                         <label className="form-label">Cantidad</label>
                         <input type="cantidad" className="form-control"
                             onChange={e => setCantidad(e.target.value)}
@@ -95,7 +95,7 @@ const Registro_Producto = () => {
 
 
 
-                    <div className="col-md-6">
+                    <div className="col-md-9">
                         <label className="form-label">Foto</label>
                         <input type="Nombre" className="form-control"
                             onChange={e => setUrlfoto(e.target.value)}
@@ -108,21 +108,24 @@ const Registro_Producto = () => {
 
 
                     <Link to="/">
-                        <Button variant="primary" type="submit"
+                        <Button variant="outline-secondary"  style={{ width: "10rem", position: "relative", margin: "40px", }} type="submit"
                             onClick={(e) => {
                                 e.preventDefault();
                                 actions.crear_producto_funcion(datos_producto);
 
                             }}
                         >
-                            Submit
+                            Confirmar
                         </Button>
                     </Link>
                 </div>
-                <Footer />
+             
             </div>
         </div>
-
+        </div>
+        <Footer />
+        </div>
+          
     )
 
 }

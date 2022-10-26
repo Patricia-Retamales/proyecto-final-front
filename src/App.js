@@ -17,8 +17,7 @@ import Productos from "./componet/Productos";
 import DatosUsuario from "./componet/DatosUsuario";
 import Formulario from "./componet/Formulario";
 import Compras from "./componet/Compras";
-
-import Registro_Producto from "./componet/Registro_Producto"
+import Registro_Producto from "./componet/Registro_Producto";
 
 
 import Recuperar_Clave from "./componet/Recuperar_clave";
@@ -41,7 +40,7 @@ function App() {
                 <Route path="/ElQuijotedelaMancha" element={<ElQuijotedelaMancha/>} />
                 <Route path="/LaTiendita" element={<LaTiendita/>} />
                 <Route path="/Marcas" element={<Marcas />} />
-                <Route path="/registro_producto" element={<  Registro_Producto />} />
+                <Route path="/registro_producto" element={<Registro_Producto/>} />
                 <Route path="/SaborDivino" element={<SaborDivino />} />
                 <Route path="/BellaPandora" element={<BellaPandora/>} />
                 <Route path="/DatosUsuario" element={<DatosUsuario/>} />

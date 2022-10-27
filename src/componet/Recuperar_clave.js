@@ -12,9 +12,7 @@ function Recuperar_Clave() {
   return (
 
 
-    <Form style={{ backgroundImage: "linear-gradient(#d8af97, #edb8fa)" }}>
-      <ComponentNavbar />
-      <div style={{ margin: "18%", color: "#d1052a", background: "white", height: "80%", width: "50%", borderRadius: "9px black", boxShadow: "0 2px 4px 0 black, 0 3px 10px 0 black", padding: "10px", alignItems: "stretch" }}>
+    
 
     
     <form>
@@ -71,10 +69,7 @@ function Recuperar_Clave() {
         <Footer />
         </div>
         </form>
-      </div>
-
-      <Footer />
-    </Form>
+     
 
 
   );

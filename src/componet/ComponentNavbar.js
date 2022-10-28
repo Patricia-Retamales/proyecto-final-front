@@ -104,10 +104,18 @@ function ComponentNabar() {
                   <th>Registro Producto</th>
                 </Link>
               </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item href="#action/3.4"   >
+                <button
+                  onClick={() => {
+                    localStorage.removeItem('token')
+                window.location.href = "/"
+                alert("Cesión Cerrada")
+                  }} 
+                
+                >
                 Cerrar Sesion
-              </NavDropdown.Item>
+              </button>
+            </NavDropdown.Item>
             </NavDropdown>
           </Nav>
 

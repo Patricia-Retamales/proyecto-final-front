@@ -43,13 +43,6 @@ function Recuperar_Clave() {
               <input id="phone" type="tel" aria-describedby="phoneHelp" placeholder="+569" />
             </div>
             <br />
-
-            <div style={{ margin: "10px" }}>
-              <label htmlFor="clave">incresa tu clave </label>
-              <br />
-              <input id="clave" type="text" placeholder="ingresa tu clave" />
-            </div>
-            <br />
             <br />
             <Link to="/cambiar_clave">
               <button type="submit" className="btn btn-primary"
@@ -62,8 +55,6 @@ function Recuperar_Clave() {
               </button>
             </Link>
           </form>
-
-
 
         </div >
         <Footer />

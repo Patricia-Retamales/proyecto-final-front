@@ -40,7 +40,11 @@ function Recuperar_Clave() {
             <div style={{ margin: "10px" }}>
               <label htmlFor="phone">Teléfono móvil</label>
               <br />
-              <input id="phone" type="tel" aria-describedby="phoneHelp" placeholder="+569" />
+              <input id="phone" type="tel" aria-describedby="phoneHelp" 
+              placeholder="+569" 
+              onChange={e => setTelefono(e.target.value)}
+              value={ telefono}
+              />
             </div>
             <br />
             <br />
@@ -48,7 +52,7 @@ function Recuperar_Clave() {
               <button type="submit" className="btn btn-primary"
                 onClick={(e) => {
                   e.preventDefault();
-                  actions.recuperar_clave_funcion(login_email);
+                  actions.recuperar_clave_funcion(login_email, telefono);
 
                 }} >
                 Submit

@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Context } from "../store/AppContext";
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { HiOutlineTrash } from "react-icons/hi";
 import Badge from 'react-bootstrap/Badge';
 import { SlBasket } from "react-icons/sl";
@@ -14,12 +14,13 @@ import { SlBasket } from "react-icons/sl";
 function ComponentNabar() {
 
   const { store, actions } = useContext(Context);
+  const [token, setToken] = useState(localStorage.getItem('token'));
 
   function deleteFavorite(index) {
     actions.removeFavorite(index);
   }
 
-
+  console.log("token", token);
   return (
     <Navbar collapseOnSelect expand="lg" style={{ background: "#888a8a", border: "#9b9b9b 5px solid" }}>
       <Container>
@@ -70,13 +71,21 @@ function ComponentNabar() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          
+          {token ? '' :
 
-          <Link to="/login">
-            <button className="btn btn-secondary" style={{ margin: "20px" }} variant="outlined" ><th>Ingresar</th></button>
-          </Link>
-          <Link to="/registration">
-            <button className="btn btn-secondary" style={{ marginleft: "20px" }}><th>Registrar</th></button>
-          </Link>
+            <Link to="/login">
+              <button className="btn btn-secondary" style={{ margin: "20px" }} variant="outlined" ><th>Ingresar</th></button>
+            </Link>
+          }
+
+          {token ? '' :
+
+            <Link to="/registration">
+              <button className="btn btn-secondary" style={{ marginleft: "20px" }}><th>Registrar</th></button>
+            </Link>
+          }
+
 
 
 
@@ -108,14 +117,14 @@ function ComponentNabar() {
                 <button
                   onClick={() => {
                     localStorage.removeItem('token')
-                window.location.href = "/"
-                alert("Cesión Cerrada")
-                  }} 
-                
+                    window.location.href = "/"
+                    alert("Cesión Cerrada")
+                  }}
+
                 >
-                Cerrar Sesion
-              </button>
-            </NavDropdown.Item>
+                  Cerrar Sesion
+                </button>
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
 
@@ -134,7 +143,7 @@ function ComponentNabar() {
               <Dropdown.Item><h6>Vacio</h6></Dropdown.Item> :
               store.favoriteList.map((favorite, index) =>
                 <Dropdown.Item>{favorite}
-                  <button className="btn btn-secondary" variant="outlined" style={{ marginleft: "20px" }}  onClick={() => { deleteFavorite(index) }}><HiOutlineTrash /></button>
+                  <button className="btn btn-secondary" variant="outlined" style={{ marginleft: "20px" }} onClick={() => { deleteFavorite(index) }}><HiOutlineTrash /></button>
                 </Dropdown.Item>
               )}
           </Dropdown.Menu>

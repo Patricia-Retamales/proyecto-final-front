@@ -23,6 +23,8 @@ function Registration() {
   const [banco, setBanco] = useState("");
   const [tipo_cuenta, setTipo_cuenta] = useState("");
   const [numero_cuenta, setNumero_cuenta] = useState("");
+ const [telefono, settelefono ] = useState("");
+
 
   let datos_registro = {
     "email": signup_email,
@@ -38,7 +40,8 @@ function Registration() {
     "tipo_pago": tipo_pago,
     "banco_cuenta": banco,
     "tipo_cuenta": tipo_cuenta,
-    "numero_cuenta": numero_cuenta
+    "numero_cuenta": numero_cuenta,
+    "telefono": telefono
   }
 
   return (
@@ -76,7 +79,14 @@ function Registration() {
               placeholder="Username" />
           </div>
 
-
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
+            <label className="form-label">telefono</label>
+            <input type="username" className="form-control"
+              onChange={e => settelefono(e.target.value)}
+              value={telefono}
+              id="telefono" aria-describedby="telefonoHelp"
+              placeholder="telefono" />
+          </div>
 
           <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Email</label>

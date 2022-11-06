@@ -71,7 +71,7 @@ function ComponentNabar() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          
+
           {token ? '' :
 
             <Link to="/login">
@@ -82,51 +82,55 @@ function ComponentNabar() {
           {token ? '' :
 
             <Link to="/registration">
-              <button className="btn btn-secondary" style={{ marginleft: "20px" }}><th>Registrar</th></button>
+              <button className="btn btn-secondary" style={{ marginRight: "15px" }}><th>Registrar</th></button>
             </Link>
           }
 
 
+          {token ?
+            <Nav className="me-auto">
+              <NavDropdown title="Usuario" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">
+                  <Link to="/datosusuario">
+                    <th>Configuracion</th>
+                  </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Item href="#action/3.3">
+
+                  <Link to="/cambiar/clave/token">
+                    <th>cambiar clave</th>
 
 
-          <Nav className="me-auto">
-            <NavDropdown title="Usuario" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">
-                <Link to="/datosusuario">
-                  <th>Configuracion</th>
-                </Link>
-              </NavDropdown.Item>
 
-              <NavDropdown.Item href="#action/3.3">
-
-                <Link to="/cambiar/clave/token">
-                  <th>cambiar clave</th>
+                  </Link>
+                </NavDropdown.Item>
 
 
+                <NavDropdown.Item href="#action/3.4">
+                  <Link to="/registro_producto">
+                    <th>Registro Producto</th>
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4"   >
+                  <button
+                    onClick={() => {
+                      localStorage.removeItem('token')
+                      window.location.href = "/"
+                      alert("Cesión Cerrada")
+                    }}
 
-                </Link>
-              </NavDropdown.Item>
+                  >
+                    Cerrar Sesion
+                  </button>
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav> :
 
 
-              <NavDropdown.Item href="#action/3.4">
-                <Link to="/registro_producto">
-                  <th>Registro Producto</th>
-                </Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4"   >
-                <button
-                  onClick={() => {
-                    localStorage.removeItem('token')
-                    window.location.href = "/"
-                    alert("Cesión Cerrada")
-                  }}
+            ""}
 
-                >
-                  Cerrar Sesion
-                </button>
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
+
 
         </Navbar.Collapse>
 

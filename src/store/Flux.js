@@ -573,7 +573,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					// fetching data from the backend
 
 
+
 					const resp = await fetch("https://3000-sneelyg-proyectofinalba-eytk4zutw6f.ws-us74.gitpod.io" + "/api/hello")
+
+
 
 
 
@@ -613,6 +616,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					"telefono": registro.telefono,
 					"numero_cuenta": registro.numero_cuenta
 
+
 				});
 
 				var requestOptions = {
@@ -623,7 +627,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 
 
+
 				fetch("https://3000-sneelyg-proyectofinalba-eytk4zutw6f.ws-us74.gitpod.io/registro", requestOptions)
+
 
 					.then(response => response.json())
 					.then(result => {
@@ -656,7 +662,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
+
 				fetch("https://3000-sneelyg-proyectofinalba-eytk4zutw6f.ws-us74.gitpod.io/login", requestOptions)
+
 					.then(response => response.json())
 					.then(result => {
 						console.log(result)
@@ -701,7 +709,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 
 
+
 				fetch("https://3000-sneelyg-proyectofinalba-eytk4zutw6f.ws-us74.gitpod.io/productos/registro", requestOptions)
+
 
 					.then(response => response.text())
 					.then(result => console.log(result))
@@ -717,7 +727,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
+
 				fetch("https://3000-sneelyg-proyectofinalba-eytk4zutw6f.ws-us74.gitpod.io/productos/", requestOptions)
+
 					.then(response => response.text())
 					.then(result => setStore({ productos: result }))
 					.catch(error => console.log('error', error));
@@ -731,7 +743,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
+
 				fetch("https://3000-sneelyg-proyectofinalba-eytk4zutw6f.ws-us74.gitpod.io/marcas", requestOptions)
+
 					.then(response => response.text())
 					.then(result => setStore({ marcas: result }))
 					.catch(error => console.log('error', error));
@@ -753,15 +767,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 
 				fetch("https://3000-sneelyg-proyectofinalba-eytk4zutw6f.ws-us74.gitpod.io/privada", requestOptions)
+
 					.then(response => response.json())
 					.then(result => {
-					//	setEmail(result.usuario);
+						//	setEmail(result.usuario);
 						if (result.success == "ok") {
 							console.log(result)
 						}
-						 else {
-						   window.location.href = "/login"
-						 }
+						else {
+							window.location.href = "/login"
+						}
 					})
 					.catch(error => console.log('error', error));
 
@@ -778,6 +793,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 
 				fetch("https://3000-sneelyg-proyectofinalba-eytk4zutw6f.ws-us74.gitpod.io/productos/" + id_producto, requestOptions)
+
 					.then(response => response.text())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));
@@ -821,7 +837,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
+
 				fetch("https://3000-sneelyg-proyectofinalba-eytk4zutw6f.ws-us74.gitpod.io/recuperar/clave", requestOptions)
+
 					.then(response => response.json())
 					.then(result => console.log(result))
 					.catch(error => console.log('error', error));
@@ -839,7 +857,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				var raw = JSON.stringify({
 					"new_password": nueva_clave,
-					"old_password":vieja_clave
+					"old_password": vieja_clave
 				});
 
 				var requestOptions = {
@@ -849,7 +867,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
+
 				fetch("https://3000-sneelyg-proyectofinalba-eytk4zutw6f.ws-us74.gitpod.io/cambiar/clave", requestOptions)
+
 					.then(response => response.json())
 					.then(result => {
 						console.log(result)

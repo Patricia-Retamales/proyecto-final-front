@@ -48,7 +48,7 @@ function Recuperar_Clave() {
             </div>
             <br />
             <br />
-            <Link to="/cambiar_clave">
+            <Link to="/cambiar/clave/:token">
               <button type="submit" className="btn btn-primary"
                 onClick={(e) => {
                   e.preventDefault();

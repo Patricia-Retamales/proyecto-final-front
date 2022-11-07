@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Context } from "../store/AppContext";
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { HiOutlineTrash } from "react-icons/hi";
 import Badge from 'react-bootstrap/Badge';
 import { SlBasket } from "react-icons/sl";
@@ -14,12 +14,13 @@ import { SlBasket } from "react-icons/sl";
 function ComponentNabar() {
 
   const { store, actions } = useContext(Context);
+  const [token, setToken] = useState(localStorage.getItem('token'));
 
   function deleteFavorite(index) {
     actions.removeFavorite(index);
   }
 
-
+  console.log("token", token);
   return (
     <Navbar collapseOnSelect expand="lg" style={{ background: "#888a8a", border: "#9b9b9b 5px solid" }}>
       <Container>
@@ -71,74 +72,88 @@ function ComponentNabar() {
             </NavDropdown>
           </Nav>
 
-          <Link to="/login">
-            <button className="btn btn-secondary" style={{ margin: "20px" }} variant="outlined" ><th>Ingresar</th></button>
-          </Link>
-          <Link to="/registration">
-            <button className="btn btn-secondary" style={{ marginleft: "20px" }}><th>Registrar</th></button>
-          </Link>
+          {token ? '' :
+
+            <Link to="/login">
+              <button className="btn btn-secondary" style={{ marginLeft: "140px" }} variant="outlined" ><th>Ingresar</th></button>
+            </Link>
+          }
+
+          {token ? '' :
+
+            <Link to="/registration">
+              <button className="btn btn-secondary" style={{ marginRight: "140px" }}><th>Registrar</th></button>
+            </Link>
+          }
+
+
+          {token ?
+            <Nav className="me-auto">
+              <NavDropdown title="Usuario" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">
+                  <Link to="/datosusuario">
+                    <th>Configuracion</th>
+                  </Link>
+                </NavDropdown.Item>
+
+                <NavDropdown.Item href="#action/3.3">
+
+                  <Link to="/cambiar/clave/token">
+                    <th>cambiar clave</th>
 
 
 
-          <Nav className="me-auto">
-            <NavDropdown title="Usuario" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">
-                <Link to="/datosusuario">
-                  <th>Configuracion</th>
-                </Link>
-              </NavDropdown.Item>
-
-              <NavDropdown.Item href="#action/3.3">
-
-                <Link to="/cambiar/clave/token">
-                  <th>cambiar clave</th>
+                  </Link>
+                </NavDropdown.Item>
 
 
+                <NavDropdown.Item href="#action/3.4">
+                  <Link to="/registro_producto">
+                    <th>Registro Producto</th>
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4"   >
+                  <button
+                    onClick={() => {
+                      localStorage.removeItem('token')
+                      window.location.href = "/"
+                      alert("Cesión Cerrada")
+                    }}
 
-                </Link>
-              </NavDropdown.Item>
+                  >
+                    Cerrar Sesion
+                  </button>
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav> :
 
 
-              <NavDropdown.Item href="#action/3.4">
-                <Link to="/registro_producto">
-                  <th>Registro Producto</th>
-                </Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4"   >
-                <button
-                  onClick={() => {
-                    localStorage.removeItem('token')
-                window.location.href = "/"
-                alert("Cesión Cerrada")
-                  }} 
-                
-                >
-                Cerrar Sesion
-              </button>
-            </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
+            ""}
+
+
 
         </Navbar.Collapse>
 
-        <Dropdown>
-          <Dropdown.Toggle variant="secondary" id="nav-dropdown-dark-example"
-            title="Dropdown">
-            <button >{store.favoriteList.length}<SlBasket /> </button>
+       
+          <Dropdown  style={{}}>
+            <Dropdown.Toggle variant="secondary" id="nav-dropdown-dark-example" 
+              title="Dropdown" >
+              <button  >{store.favoriteList.length}<SlBasket /> </button>
 
-          </Dropdown.Toggle>
+            </Dropdown.Toggle>
 
-          <Dropdown.Menu>
-            {(
-              store.favoriteList.length === 0) ?
-              <Dropdown.Item><h6>Vacio</h6></Dropdown.Item> :
-              store.favoriteList.map((favorite, index) =>
-                <Dropdown.Item>{favorite}
-                  <button className="btn btn-secondary" variant="outlined" style={{ marginleft: "20px" }}  onClick={() => { deleteFavorite(index) }}><HiOutlineTrash /></button>
-                </Dropdown.Item>
-              )}
-          </Dropdown.Menu>
-        </Dropdown>
+            <Dropdown.Menu style={{ }}>
+              {(
+                store.favoriteList.length === 0) ?
+                <Dropdown.Item><h6>Vacio</h6></Dropdown.Item> :
+                store.favoriteList.map((favorite, index) =>
+                  <Dropdown.Item>{favorite}
+                    <button className="btn btn-secondary" variant="outlined" style={{  height :'28px' , width:'20px'}} onClick={() => { deleteFavorite(index) }}><HiOutlineTrash /></button>
+                  </Dropdown.Item>
+                )}
+            </Dropdown.Menu>
+          </Dropdown>
+       
       </Container >
     </Navbar >
   );

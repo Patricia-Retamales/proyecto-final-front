@@ -27,6 +27,7 @@ function Registration() {
   const [numero_cuenta, setNumero_cuenta] = useState("");
   const [telefono, setTelefono] = useState("");
 
+
   let datos_registro = {
     "email": signup_email,
     "password": signup_password,
@@ -43,6 +44,7 @@ function Registration() {
     "tipo_cuenta": tipo_cuenta,
     "telefono": telefono,
     "numero_cuenta": numero_cuenta
+
   }
 
   const validarEmail =()=>{
@@ -98,7 +100,14 @@ function Registration() {
               required />
           </div>
 
-
+          <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
+            <label className="form-label">telefono</label>
+            <input type="username" className="form-control"
+              onChange={e => settelefono(e.target.value)}
+              value={telefono}
+              id="telefono" aria-describedby="telefonoHelp"
+              placeholder="telefono" />
+          </div>
 
           <div className="col-md-5" style={{ position: "relative", margin: "10px", }}>
             <label className="form-label">Email *</label>

@@ -75,14 +75,14 @@ function ComponentNabar() {
           {token ? '' :
 
             <Link to="/login">
-              <button className="btn btn-secondary" style={{ margin: "20px" }} variant="outlined" ><th>Ingresar</th></button>
+              <button className="btn btn-secondary" style={{ marginLeft: "140px" }} variant="outlined" ><th>Ingresar</th></button>
             </Link>
           }
 
           {token ? '' :
 
             <Link to="/registration">
-              <button className="btn btn-secondary" style={{ marginRight: "15px" }}><th>Registrar</th></button>
+              <button className="btn btn-secondary" style={{ marginRight: "140px" }}><th>Registrar</th></button>
             </Link>
           }
 
@@ -134,24 +134,26 @@ function ComponentNabar() {
 
         </Navbar.Collapse>
 
-        <Dropdown>
-          <Dropdown.Toggle variant="secondary" id="nav-dropdown-dark-example"
-            title="Dropdown">
-            <button >{store.favoriteList.length}<SlBasket /> </button>
+       
+          <Dropdown  style={{}}>
+            <Dropdown.Toggle variant="secondary" id="nav-dropdown-dark-example" 
+              title="Dropdown" >
+              <button  >{store.favoriteList.length}<SlBasket /> </button>
 
-          </Dropdown.Toggle>
+            </Dropdown.Toggle>
 
-          <Dropdown.Menu>
-            {(
-              store.favoriteList.length === 0) ?
-              <Dropdown.Item><h6>Vacio</h6></Dropdown.Item> :
-              store.favoriteList.map((favorite, index) =>
-                <Dropdown.Item>{favorite}
-                  <button className="btn btn-secondary" variant="outlined" style={{ marginleft: "20px" }} onClick={() => { deleteFavorite(index) }}><HiOutlineTrash /></button>
-                </Dropdown.Item>
-              )}
-          </Dropdown.Menu>
-        </Dropdown>
+            <Dropdown.Menu style={{ }}>
+              {(
+                store.favoriteList.length === 0) ?
+                <Dropdown.Item><h6>Vacio</h6></Dropdown.Item> :
+                store.favoriteList.map((favorite, index) =>
+                  <Dropdown.Item>{favorite}
+                    <button className="btn btn-secondary" variant="outlined" style={{  height :'28px' , width:'20px'}} onClick={() => { deleteFavorite(index) }}><HiOutlineTrash /></button>
+                  </Dropdown.Item>
+                )}
+            </Dropdown.Menu>
+          </Dropdown>
+       
       </Container >
     </Navbar >
   );

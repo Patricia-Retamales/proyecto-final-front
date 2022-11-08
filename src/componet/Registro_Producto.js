@@ -120,6 +120,8 @@ const Registro_Producto = () => {
                                     onClick={(e) => {
                                         e.preventDefault();
                                         actions.crear_producto_funcion(datos_producto);
+                                        alert("Producto Registrado "+nombre_producto);
+                                        window.location.href = "/";
 
                                     }}
                                 >

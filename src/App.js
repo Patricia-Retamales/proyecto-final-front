@@ -18,6 +18,7 @@ import DatosUsuario from "./componet/DatosUsuario";
 import Formulario from "./componet/Formulario";
 import Compras from "./componet/Compras";
 import Registro_Producto from "./componet/Registro_Producto";
+import MisProductos from "./componet/MisProductos";
 
 
 import Recuperar_Clave from "./componet/Recuperar_clave";
@@ -42,6 +43,7 @@ function App() {
                 <Route path="/Marcas" element={<Marcas />} />
                 <Route path="/registro_producto" element={<Registro_Producto/>} />
                 <Route path="/SaborDivino" element={<SaborDivino />} />
+                <Route path="/MisProductos" element={<MisProductos />} />
                 <Route path="/BellaPandora" element={<BellaPandora/>} />
                 <Route path="/DatosUsuario" element={<DatosUsuario/>} />
                 <Route path="/Formulario" element={<Formulario/>} />
